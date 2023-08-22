@@ -1,0 +1,67 @@
+
+.estiloTitulo {
+    text-align:center;
+    
+}
+
+h1 {
+    
+    text-align:left;
+    color:green!important;
+    background-color: black;
+}
+.resaltarCodigo {
+    font-size:18px;
+    color:chocolate;
+}
+
+/*
+.listaNav li a:active{
+    background-color:green;
+}
+
+.listaNav li a:visited{
+    color:violet;
+}
+*/
+blockquote{
+    color:cornflowerblue
+}
+
+#cita-benjen {
+    color:blue;
+}
+
+.cita-benjen{
+    color:goldenrod!important;
+}
+#cita-ned{
+    color:blue;
+}
+
+.cita-ned{
+    color:red;
+}
+
+#cita-aemon{
+    color:firebrick;
+}
+.cita-aemon{
+    color:blueviolet;
+}
+blockquote.cita-tirion{
+    color:tomato;
+}
+
+.cita-tirion{
+    color: crimson;
+}
+
+.cita-cersei{
+    color:white;
+    background-color: crimson;
+}
+
+.cita-cersei cite{
+    background-color:inherit;
+}

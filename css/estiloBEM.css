@@ -1,0 +1,8 @@
+.tituloPrincipal {
+    text-align:center;
+    color: red;
+}
+
+.contact-form__input:nth-child(1) {
+	color:red;
+}

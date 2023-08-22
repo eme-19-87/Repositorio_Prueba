@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <link rel="stylesheet" href="css/float.css">
+</head>
+<body>
+    <article id="menu">
+         <ul>
+            <li>
+                <a href="index.html">Volver Inicio</a>
+            </li>
+            
+            <li>
+                Float
+                <ul>    
+                    <li>
+                        <a href="float.html#concepto">
+                            Concepto 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="float.html#valores">
+                            Valores
+                        </a>
+                    </li>
+                </ul>
+                
+            </li>
+        </ul>
+    </article>
+    <hr/>
+    <article id="concepto">
+        <h1 class="tituloPrincipal">Float</h1>
+    <p>El atributo float es un atributo que, antiguamente, se utilizaba para ir armando 
+        la página mediante bloques. Hoy existen mejores formas de trabajar para posicionar los
+        elementos, por ejemplo mediante grid. Este atributo puede ser utilizado para flotar los elementos a izquierda y derecha. Podemos usar float para lograr efectos similares al mostrado a continuación.
+    </p>
+    <div class="contenedor">
+        <div class="primario">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident autem, veniam alias quaerat, inventore commodi et dignissimos ex quia unde sunt modi, natus fugit! Corporis error placeat animi ratione dolor.
+        </div>
+        <div class="secundario">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt facere ut amet autem similique deleniti, tempora cumque error doloribus sed, iste quasi, cum nam praesentium animi ipsa incidunt debitis itaque.
+        </div>
+    </div>
+    <img src="img/float1.jpg"/>
+    
+    <hr/>
+    <div id="valores">
+        <h2 class="tituloPrincipal">Valores Para Float</h2>
+        <p>
+            Los dos valores que puede tomar float son <code>left y rigth</code>. Cuando se usa rigth se hace flotar el contenido hacia la derecha tratando de acomodarse hacia esa dirección. Con left ocurre lo mismo, pero para la izquierda. Cuando los elementos hacen esto es como si los elementos perdieran la capacidad de seguir el flujo de las etiquetas html. Hoy por hoy, se considera mala práctica usar float. Como los elementos flotan puede haber un problema de superposición con los elementos que no flotan como tal. Veamos con el siguiente ejemlo
+        </p>
+        <div class="container-float">
+            <section class="flota-derecha">
+                flota a la derecha
+            </section>
+
+             <section>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </section>
+
+             <section class="flota-izquierda">
+                flota a la izquierda
+            </section><br/>
+
+        </div>
+        <p>
+                Notemos como el elemento que flota a la derecha se colocó lo más a la derecha posible y el elemento que flota a la izquierda se colocó lo más a la derecha posible. El texto del lorem ipsum no flota ni a izquierda ni a derecha. Ahora, debe notarse que el color de fondo para el elemento que flota a la izquierda no aparece.
+            </p>
+    </div>
+    </article>
+     
+</body>
+</html>
+<!--
+ <p>En la imagen inferior se puede apreciar el problema con el cambio de tamaño de las letras.<br/>
+        Podemos ver en el siguiente <a href="prueba/efectoConFloat.html">enlace</a> un ejemplo muy útil que se puede realizar con float
+    </p>
+    -->

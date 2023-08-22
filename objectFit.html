@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/objectFit.css">
+    <title>Object Fit</title>
+</head>
+<body>
+    <h1 class="tituloPrincipal">Object Fit</h1>
+    <p>
+        Este es un atributo utilizado para trabajar con imágenes. Vamos a ver inicialmente cuáles son los 
+        problemas que soluciona. Pongamos atención a la siguiente imagen
+    </p>
+    <div>
+        <img src="img/desplegarweb5.jpg"/>
+    </div>
+    <p>
+        La imagen es de 534x282 y está dentro de un contenedor de 600x600. Ahora bien, supongamos que ahora 
+        le damos un estilo a la imagen que está dentro del contenedor que sea width:100% y height:100%, la 
+        imagen pasaría a verse así
+    </p>
+    <div class="contenedor2">
+        <img src="img/desplegarweb5.jpg"/>
+    </div>
+    <p>
+        Con object fit podemos ir arreglando esos problemas que surgen al ir ajustando la imagen a su contenedor.
+        Este atributo tiene varios valores: <b/>
+    </p>
+    <ul>
+        <li>
+            <code>contain</code>: este valor hace que el las resoluciones de la imagen se ajusten al contenedor.
+            Si la imagen es de 100x100 y está en un contenedor de 200x100 dejará arriba y abajo un remanente 
+            equitativo, se colocará en el medio del contenedor y será de 100x100.
+        </li>
+        <li>
+            <code>cover</code>: La imagen se ajusta al contenedor recortando los bordes sobrantes. Es 
+            recomendable para imagenes de poca resolución, ya que las imagenes de mayor resolución al ser 
+            recortadas sólo se mostrará una pequeña parte de la misma.
+        </li>
+        <li>
+            <code>none</code>: Se utiliza con los valores por defecto de la imagen y coloca la 
+            imagen directamente con esos valores en el contenedor. No importa si las resoluciones de la imagen 
+            se adaptan o no a las dimensiones del contenedor.
+        </li>
+        <li>
+            <code>scale-down</code>: Básicamente, puede entenderse su funcionamiento como una comparación 
+            entre none y contain. Aquel cuyo resultado sea 'más pequeño' será el elegido.
+        </li>
+    </ul>
+    <hr/>
+    <h1 class="tituloPrincipal">Ejemplo contain</h1>
+    <div class="contenedorContain">
+        <img src="img/desplegarweb5.jpg"/>
+    </div>
+    <div class="contenedorContain">
+        <img src="img/objectFit1.jpg"/>
+    </div>
+    <hr/>
+    <h1 class="tituloPrincipal">Ejemplo cover</h1>
+    <div class="contenedorCover">
+        <img src="img/desplegarweb5.jpg"/>
+    </div>
+    <div class="contenedorContain">
+        <img src="img/objectFit2.jpg"/>
+    </div>
+    <hr/>
+    <h1 class="tituloPrincipal">Ejemplo none</h1>
+    <div class="contenedorNone">
+        <img src="img/desplegarweb5.jpg"/>
+    </div>
+    <div class="contenedorContain">
+        <img src="img/objectFit3.jpg"/>
+    </div>
+    <hr/>
+    <h1 class="tituloPrincipal">Ejemplo scale-down</h1>
+    <div class="contenedorScaleDown">
+        <img src="img/desplegarweb5.jpg"/>
+    </div>
+    <div class="contenedorContain">
+        <img src="img/objectFit4.jpg"/>
+    </div>
+</body>
+</html>

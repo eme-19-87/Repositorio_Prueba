@@ -1,0 +1,23 @@
+.tituloPrincipal {
+    text-align:center;
+    color: red;
+}
+
+.cajaHover{
+   background:hotpink;
+   max-width:500px;
+   max-height: 500px;
+   height:300px;
+   margin:auto;
+   /*por algún motivo, acepta a bakcground como propiedad para la transición, pero no
+   a heigth o width*/
+   transition: height 0.5s;
+   transition: background 0.5s;
+}
+
+.cajaHover:hover{
+    background:khaki;
+    height:300px;
+    width:300px;
+   
+}

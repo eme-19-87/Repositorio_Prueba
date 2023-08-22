@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo De Caja</title>
+    <link rel="stylesheet" href="css/estiloGlobal.css">
+    <link rel="stylesheet" href="css/estiloBoxModel.css">
+</head>
+<body>
+    <h1 class="tituloPrincipal">Modelo De Cajas</h1>
+    <article id="menu">
+        <ul>
+            <li>
+                <a href="index.html">Volve Inicio</a>
+            </li>
+            <li>
+                <a href="boxModel.html#concepto">Concepto</a>
+            </li>
+            <li>
+                <a href="boxModel.html#alto-ancho">Alto y ANcho En El Modelo De Caja</a>
+            </li>
+            <li>
+                <a href="boxModel.html#outline">Outline</a>
+            </li>
+            <li>
+                <a href="boxModel.html#normalizar">Normalizar</a>
+            </li>
+            <li>
+                <a href="boxModel.html#propiedades">Propiedades Caja</a>
+                <ul>
+                    <li><a href="boxModel.html#propiedades-box-shadow">box-shadow</a></li>
+                    <li><a href="boxModel.html#propiedades-shadow-text">shadow-text</a></li>
+                    <li><a href="boxModel.html#propiedades-max-width">max-width</a></li>
+                    <li><a href="boxModel.html#propiedades-margin-auto">margin:auto</a></li>
+                    <li><a href="boxModel.html#propiedades-margin-collapse">margin:collapse</a></li>
+                    <li>
+                        <a href="boxModel.html#propiedades-box-sizing">box-sizing</a>
+                        <ul>
+                            <li>
+                                <a href="boxModel.html#propiedades-box-sizing-irish">
+                                    Reseteo De Paul Irish
+                                </a>
+                                
+                            </li>
+                        </ul>
+                    </li>
+                <ul/>
+            </li>
+        </ul>
+
+    </article>
+    <hr/>
+    <article id="concepto">
+        <h2 class="tituloPrincipal">Concepto</h2>
+        <p>
+            El concepto de modelo de caja o box model establece que, básicamente, cada elemento html está envuelto 
+            por una caja. Es esa caja la que se conoce como box model.  Existen dos tipos de elementos en html: 
+            los que son en línea y los que son en bloque. Los elementos en bloque ocupan todo el ancho de la caja 
+            contenedora. Un elemento en línea tendrá un ancho que sea igual a su contenido, no ocupará todo el ancho de la caja contenedora.<br/>
+            Dos elementos en bloque no pueden ir juntos porque, al ocupar todo el ancho de la pantalla, el segundo 
+            elemento en bloque automáticamente pasa a estar debajo del primero.<br/>
+            En cambio, si podemos colocar dos elementos en línea juntos porque, al ocupar sólo el ancho de su
+            contenido, tendrán espacios para estar uno a lado del otro.<br/>
+            Una forma de hacer que un elemento en bloque se comporte como un elemento en línea es mediante la
+            propiedad display. Así, podemos hacer lo siguiente <code>display:inline</code>. Con el valor inline 
+            hacemos que el elemento en bloque, al cual se le está aplicando el estilo que modifica la propiedad 
+            display, se comporte como un elemento en línea.<br/>
+            Ciertas propiedades no se pueden aplicar a los elementos en línea como el height, width, entre otras.
+        </p>
+        <hr/>
+        <h2 class="tituloPrincipal">Explicación Del Modelo De Caja</h2>
+        <img src="img/boxModel1.jpg"/>
+        <p>
+            Lo que aparece señalado como "Content" hace referencia al contenido de la caja. Esto puede ser texto, 
+            una imagen, otros elementos html, etc. Lo que aparece señalado como "Padding" es el espacio que se 
+            tiene entre el contenido y el borde la caja. El padding puede medir cierta cantidad de pixeles en las
+            cuatro direcciones respecto de su contenedor, que es el borde (señalado como 'Border'). La forma en
+            que se aplicarán esos pixeles en las cuatro direcciones es siguiendo las agujas del reloj: primero
+            a la parte superior, luego a la parte derecha, seguido de la parte inferior y por último la parte 
+            izquierda.<br/>
+            El siguiente concepto después de contenido y padding para entender el modelo de caja es el borde.
+            El borde es aquello que envuelve a los elementos html. El margen (señalado como 'Margin') y el padding
+            son transparentes, pero el borde puede recibir algún color o estilo. Al igual que con el padding, cuando
+            queremos trabajar con las cuatro direcciones del borde debemos seguir el sentido de las agujas del reloj.<br/>
+            El margen (Margin) es el último elemento en el modelo de caja y su función es separar un elemento html del
+            resto de elementos html de nuestro documento. Al igual que con el borde y padding, se establecen pixeles en
+            sentido horario para que esos pixeles separen al elemento htm de otros elementos html en las cuatro 
+            direcciones.<br/>
+            Para calcular el alto y ancho de un elemento html debemos considerar a todos los componentes del modelo de
+            caja. Es decir que, por ejemplo, el ancho total del elemento debe considerarse el ancho del contenido,
+            el ancho del padding, el ancho del borde y el ancho del margen. Debe tenerse en cuenta que los tamaños 
+            mostrados están en pixeles.
+            
+        </p>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="boxModel.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+    
+    <hr/>
+
+    <article id="alto-ancho">
+        <h2 class="tituloPrincipal">Alto y Ancho En El Modelo De Caja</h2>
+    <p>El contenido del modelo de caja puede ser afectado por las propiedades width y heigth</p>
+
+    <div class="contenido1">
+        Mi contenido
+    </div><br/>
+    <div style="display: flex; margin-left:10px;">
+        <div style="display: flex">
+            <h3>Código del ejemplo superior</h3>
+            <img src="img/boxModel3.jpg"/>
+        </div>
+        <div style="display: flex;margin-left:20px;">
+            <h3>Detalles del inspector</h3>
+            <img src="img/boxModel2.jpg">
+        </div>
+    </div>
+    <p>
+        En el detalle del inspector podemos diferenciar los cuatro elementos del modelo de caja y los
+        valores de cada uno de ellos. El elemento azul del lado de la imagen 'Detalles del inspector' 
+        es el contenido y se ve que mide 300x18. Ese 300 es un ancho en pixeles. Pero, ese valor sólo es el
+        ancho del contenido. Para calcular el ancho total de todo el elemento html se deben sumar los anchos
+        del padding y border esos 300px del contenido. Se deben sumar los dos bordes: el izquierdo y derecho.
+        Igualmente debemos sumar los dos padding: el izquierdo y el derecho.<br/>
+        Entonces, el borde total del elemento será: <b>anchoContenido+paddingDerecho+paddingIzquierdo+bordeIzquierdo+bordeDerecho</b>.<br/>
+        Lo mismo establecido para el ancho del elemento html se aplica al alto del mismo elemento. El valor de los márgenes se tienen en 
+        cuenta cuando queremos saber el ancho total para conocer la separación entre los elementos html. Además, si tenemos dos elementos que sean inline-block (no se si se aplicará a otros elementos por igual) y a esos dos elementos le aplicamos un margen debe tenerse en cuenta que el espacio que haya entre ambos será la suma de dos márgenes: el margen derecho del elemento que está a la izquierda y el margen izquierdo del elemento que está a la derecha.
+    </p>
+    <img src="img/boxModel10.jpg"/>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="boxModel.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+   </article>
+
+    <hr/>
+    <article id="outline">
+        <h3 class="tituloPrincipal">Outline</h3>
+        <p>
+            Entre el margen y el borde existe un elemento conocido como <b>outline</b>. El ancho y alto del outline no se tiene en cuenta cuando
+            se calcula el ancho y alto totales. El outline puede sufrir también una modificación en color. El outline puede ser pensado que es como un borde, pero este no afecta a los demás elementos de la caja, no ocupa un 'espacio real' en el DOM y podemos pensar que sirve para resaltar elementos (esta es una explicación más vaga y coloquial). Así, si nosotros aplicaramos la propiedad border a una caja, el valor del borde se sumaría al de la caja dando el efecto que 'la caja se mueve arriba o abajo, o a izquierda o derecha' debido a que esa suma de medidas (las del borde y las del contenido) hacen que la caja ocupe más lugar. Con el outline no sucede esto: se logrará un efecto similar al de un borde o al de un 'resaltado en los bordes', pero que no ocupará espacio. Este efecto se puede apreciar más si la caja tiene su propiedad box-sizing con el valor content-box y no con el valor border-box. Recordar que cuando la propiedad box-sizing tiene el valor border-box, la caja siempre toma el valor en altura y anchura según se haya definido en las propiedades width y height.<br/>
+            Un elemento que tiene outline es el elemento input. Si se presta atención, cuando e input obtiene el foco se puede ver cómo aparece un pequeño borde azul sobre los límites del input. Esa sombra o borde azul es un outline.<br/><br/>
+        </p>
+        <div class="contenidoOutline">
+            OUTLINE
+        </div><br/>
+        <p>
+            Ese remarco de color azul es el outline donde su alto y ancho no se tiene en cuenta para calcular el alto y ancho total. Al outline se
+            le puede aplicar algunas propiedades de los bordes, como por ejemplo aplicarle un estilo solid, dashed y demás. También se pueden 
+            aplicar outline en las cuatro direcciones. Pero algo que se puede hacer con outline es crear un espacio entre éste y el borde mediante
+            una propiedad conocida como offset.
+    
+        </p>
+        <div class="contenidoOutlineOffset">
+            OUTLINE OFFSET
+        </div><br/>
+        <p>Debe notarse cómo ahora existe un espacio entre el borde carmesí y el oulinte azul. Ese espacio es el offset. El código se ve
+            a continuación
+        </p>
+        <img src="img/boxModel4.jpg"/>
+        <p>Una característica del atributo outline-offset es que sólo admite un parámetro, no admite dos, tres o cuatro como lo hace el
+            atributo padding o el atributo border.
+        </p>
+        <img src="img/boxModel5.jpg"/>
+        <p>Como ya se ha dicho el padding puede recibir un parámetro, dos parámetros, tres parámetros o cuatro 
+            parámetros.Si recibe un parámetro,aplica el mismo paddding en las cuatro direcciones. Si recibe dos 
+            parámetros aplica el primer valor como padding superior e inferior y el segundo valor como padding 
+            derecho e izquierdo. Si recibe tres parámetros, el primer parámetro se usa para la parte superior, el
+            segundo valor para la parte izquierda y derecha, y el último valor para la parte inferior. 
+            Si recibe cuatro parámetros, los valores se asignan a las direcciones, leyendo el código de izquierda a 
+            derecha, en sentido horario.<br/>
+            Si bien existen las propiedades <code>padding-top</code>, <code>padding-right</code>, 
+            <code>padding-bottom</code> y <code>padding-left</code>, se puede usar sólo <code>padding</code> 
+            con sus parámetros debido a que padding es un tipo de atributo conocido como short-hand propertie. Los
+            atributos que puedan ser usados de esta misma manera también son short-hand properties.
+        </p>
+        <div style="display: flex; margin-left:10px;">
+            <div style="display: flex;margin-left:20px;margin-right: 100px;">
+                <img src="img/boxModel6.jpg"/>
+            </div>
+            <div style="display: flex;margin-left:20px;margin-right: 100px;">
+                <img src="img/boxModel7.jpg">
+            </div>
+            <div style="display: flex;margin-left:20px;margin-right: 100px;">
+                <img src="img/boxModel8.jpg">
+            </div>
+            <div style="display: flex;margin-left:20px;margin-right: 20px;">
+                <img src="img/boxModel9.jpg">
+            </div>
+        </div>
+        <p>Nuevamente, lo explicado para padding en cuanto a cómo funcionan la cantidad de parámetros pasados 
+            también aplica para el margen y el borde.
+        </p>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="boxModel.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+    
+    <hr/>
+    <article id="normalizar">
+        <h3 class="tituloPrincipal">Normalizar</h3>
+    <p>
+        A la hora de trabajar siempre debe tenerse en cuenta que el ancho total de una caja será el ancho del 
+        contenido más el ancho del padding y el ancho del borde. Si, además, debemos tener en cuenta la 
+        separación con los demás elementos html de la página también debemos sumar el ancho del margen. Para 
+        establecer el ancho de la caja podemos usar una propiedad llamada <b>box-sizing</b>.<br/>
+        Si se hace <code>width:300px;box-sizing:border-box;</code> el ancho del contenido será de 300px y con 
+        border-box le diremos que esos 300 px incluyan al padding y al borde (pero no incluyen al margen). 
+        Podemos quitar el margen y el padding de los elementos que, por defecto, ya colocan un margen y un 
+        padding. Para ello usamos el selector universal <b>*</b> y colocamos en los atributos margin Y
+        padding el valor 0. El selector universal debe ir primero en el archivo css. Por lo visto en los vídeos, 
+        es importante quitar al principio los margenes y padding de los elementos html para poder darle los 
+        valores deseados y para posicionar mejor el contenido. En el enlace 
+        <a href="normalizar.html" target="_blank">normalización</a> se puede ver un poco más sobre cómo hacer para 
+        darle estos valores iniciales a los elementos html. Esto se denomina normalización.
+    </p>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="boxModel.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+</article>
+    <hr/>
+
+    <article id="propiedades">
+
+    
+    <h2 class="tituloPrincipal">Propiedades De Caja</h2>
+    <hr/>
+    <div id="propiedades-box-shadow">
+        <h3 class="tituloPrincipal">box-shadow</h3>
+        <p>La primera propiedad que se verá es la propiedad <code>box-shadow</code> la cual permite darle sombra a la caja. Su sintaxis es <br/>
+            <code>box-shadow= tamañoHorizontal tamañoVertical tamañoDesenfoque tamañoBorde color</code>
+            <h2 class="sombraCaja">Border-Shadow</h2>
+           </p>
+           <img src="img/boxModel11.jpg"/>
+           <ul>
+            <li >
+                <a class="inicio-pagina" href="boxModel.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </div>
+    <hr/>
+    <div id="propiedades-shadow-text">
+        <h3 class="tituloPrincipal">shadow-text</h3>
+        <p>
+            Otra propiedad es la propiedad <code>text-shadow</code>. Esta propiedad tiene la siguiente sintaxis 
+             <code>box-shadow= tamañoHorizontal tamañoVertical difuminado color</code><br/>
+             Algo que podemos hacer con box-shadow y text-shadow es separar con una coma varios conjuntos de parámetros para aumentar la intensidad del efecto de sombra
+           </p>
+          <img src="img/boxModel12.jpg"/>
+          <p>
+              En las imagenes superior podemos notar cómo se modifica la intensidad de la sombra a medida que colocamos 
+              repetidamente los parámetros de text-shadow separados cada grupo de parámetros mediante una coma.
+          </p>
+          <ul>
+            <li >
+                <a class="inicio-pagina" href="boxModel.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </div>
+    <hr/>
+   <div id="propiedades-max-width">
+    <h3 class="tituloPrincipal">max-width</h3>
+    <p>
+        La siguiente propiedad útil es la de max-width. Esta propiedad permite establecer el ancho máximo de una 
+        caja. Esto es útil por el siguiente motivo. Supongamos que nuestra caja tiene un ancho de 300px. Si la 
+        pantalla disminuye su resolución, como el tamaño es de 300 px, cuando la pantalla sea demasiado pequeña para
+        contener a la caja aparecerá una barra lateral para movernos a izquierda y derecha con tal de ver todo el 
+        contenido de la caja. Entonces, si establecemos el valor de max-width a 300 px, cuando la resolución de la 
+        pantalla no pueda albergar toda la caja ésta se irá adaptando al tamaño de la resolución hasta un punto en el
+        cual la resolución sea tan pequeña que, obligatoriamente, se deban colocar las barras laterales de 
+        desplazamiento para visualizar el contenido. Lo mismo podemos hacer para la altura mediante la propiedad
+        max-height.<br/>
+        En resumen, max-width y max-height permiten darle más flexibilidad al comportamiento de la caja asegurando
+        que se adapte lo más posible a la resolución de la pantalla cuando esta disminuya, pero no abarque más alto
+        y ancho del establecido en estas propiedades.
+  
+    </p>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="boxModel.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+   </div>
+  <div id="propiedades-margin-auto">
+    <h3 class="tituloPrincipal">margin:auto</h3>
+    <p>
+        Ahora hablemos del valor auto para la propiedad <code>margin</code>. El valor auto para el margin 
+        es útil para centrar elementos dentro de una caja. El margin con valor auto aplicará 
+        un margen igualitario a izquierda y derecha del contenido respecto de la caja.<br/>
+        Algo que noté al trabajar es que este efecto se nota cuando el contenido de la caja es
+        "más pequeño" que la caja en sí. Veamos el siguiente ejemplo<br/>
+    </p>
+    <div class="cajaContenedora" >
+        <div class="cajaAuto">
+          Contenido Centrado
+        </div>
+    </div>
+    <p>
+        Debe notarse que lo señalado en verde es la caja contenedora y aquello en rojo es la 
+        caja contenida. El código para ese ejemplo es el siguiente
+    </p>
+    <img src="img/marginAuto1.jpg"/>
+    <p>
+        Puede verse que se deja un espacio igual a izquierda y derecha de la caja contenedora y 
+        eso da el efecto de que la caja hija se centra.
+    </p>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="boxModel.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+  </div>
+   <hr/>
+   <div id="propiedades-margin-collapse">
+    <h3 class="tituloPrincipal">margin-collapse</h3>
+    <p>
+        Veamos la siguiente propiedad, la cual es <code>margin-collapse.</code> Cuando tenemos 
+        varias cajas, los bordes superiores e inferiores pueden comportarse de manera peculiar, 
+        mas no así los bordes izquierdo y derecho. Veamos el siguiente ejemplo<br/>
+    </p>
+    <div class="cajaEjemploCollapse">
+        <p>
+            Primera caja
+        </p>
+    </div>
+    <div class="cajaEjemploCollapse">
+      <p>
+          Segunda caja
+      </p>
+      </div>
+      <img src="img/marginCollapse1.jpg">
+      <p>
+          El caso es que ambas cajas tienen un margen de 20px en las cuatro esquinas. En ese 
+          caso, lo que debería pasar es que la segund caja tenga un espacio de 40px en la parte 
+          superior ya que serían 20px de la parte inferior de la primera caja y 20px de la parte 
+          superior de la segunda caja. Esto sucede porque el margen de la primera caja en la parte 
+          inferior se solapa con el margen superior de la segunda caja.
+      </p>
+      <img src="img/marginCollapse2.jpg">
+      <p>
+          Como se puede observar, la parte amarilla señala los margenes de ambas cajas. Eso 
+          puede verse mediante las herramientas de desarrollador. Si tuvieramos dos cajas, una 
+          debajo de otra, y las cajas tienen margenes diferentes cuando sucede este margin-collapse 
+          se toma el margen de mayor valor. Es decir, al solaparse los márgenes el valor que gana 
+          es el margen de mayor valor.
+      </p>
+      <ul>
+        <li >
+            <a class="inicio-pagina" href="boxModel.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+   </div>
+   <hr/>
+   <div id="propiedades-box-sizing">
+    <h3 class="tituloPrincipal">box-sizing</h3>
+    <p>
+        Esta propiedad permite establecer cómo se calcula el alto y ancho de una caja ya sea si incluye o no 
+        al padding y al borde. Tiene varios valores:<br/>
+        <ul>
+            <li>
+                <code>content-box:</code> el tamaño real de la caja será igual a la suma del alto y ancho 
+                del borde, padding y contenido. Eso quiere decir que si el contenido tiene un ancho de 30px, un
+                padding de 10px y sin borde, el ancho total será<br/>
+                <b>padding izquierdo+ancho del contenido+padding derecho=10+30+10=50px de ancho</b><br/>
+                Si acaso tuviera bordes en lo ancho, se deben sumar también el tamaño de los bordes izquierdo 
+                y derecho.
+            </li>
+            <li>
+                <code>border-box:</code> el tamaño total ya incorpora al borde y al padding.
+            </li>
+        </ul>
+        
+    </p>
+    <div>
+        <h4 class="tituloPrincipal">Ejemplo de content-box</h4>
+        <div class="content-box">
+            caja con content-box
+        </div>
+        <img src="img/box-sizing1.jpg"/>
+        <p>
+            Debe notarse en el ejemplo cómo el contenido tiene un ancho de 300px (indicado en la elipse roja),
+            pero el tamaño ancho total es de 330 (indicado en la elipse verde). Este valor se da porque si 
+            se nota la iamgen del modelo de caja a la izquierda y derecha hay un valor de 5px para los bordes,
+            y también a izquierda y derecha hay un valor de 10px para el padding. Sumando todos los valores da 
+            un total de 330px.
+        </p>
+        <hr/>
+        <h4 class="tituloPrincipal">Ejemplo de border-box</h4>
+        <div class="border-box">
+            caja con content-box
+        </div>
+        <img src="img/box-sizing2.jpg"/>
+        <p>
+            En este ejemplo notamos que el contenido tiene un ancho de 300px. Sume los valores de ancho para 
+            el contenido, borde y padding y notará que el ancho da como resultado 300px. Aquí esos 300px son el
+            tamaño total de la caja y el tamaño del contenido se adapta para que al sumarse con el tamaño del 
+            padding y borde cumpla esos 300px.
+        </p>
+    </div>
+    <p>
+        El código de ambas cajas anteriores es el siguiente. Por favor, note que el ancho en ambas cajas es de
+        300px. Con <code>border-box</code> se toma el tamaño de la caja desde el borde de la misma.
+    </p>
+    <img src="img/box-sizing3.jpg"/>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="boxModel.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+   </div>
+   <hr/>
+    <div id="propiedades-box-sizing-irish">
+        <h4 class="tituloPrincipal">Reseteo De Paul Irish</h4>
+       <p>
+            En la maquetación es recomendable que las cajas tengan 
+            <code>box-sixing: border-box</code> para trabajar más facilmente con los tamaños de caja. Obviamente, sería un trabajo muy tedioso el tener que estar colocando esa propiedad a cada caja con la cual se debe trabajar. Para ello, se puede utilizar el reseteo propuesto por Paul Irish el cual puede encontrase <a href="https://www.paulirish.com/2012/box-sizing-border-box-ftw/">hacienco click aquí</a>.<br/>
+            El código usado es el siguiente
+            <pre>
+                <code>
+                html{
+                    box-sizing:border-box;
+                }
+
+                *,
+                *:before,
+                *:after{
+                    box-sizing:inherit;
+                }
+                </code>
+            </pre><br/>
+            Este código debe aplicarse al inicio de tu hoja de estilo. Como dato personal, convendría colocar este código en la hoja css que aplica la normalización.
+       </p>
+   </div>
+  
+</article>
+
+</body>
+</html>

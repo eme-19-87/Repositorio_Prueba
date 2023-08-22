@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Position</title>
+    <link rel="stylesheet" href="css/objectPosition.css">
+</head>
+<body>
+    <h1 class="tituloPrincipal">Object Position</h1>
+    <p>
+        Esta propiedad sirve para establecer una posición de la imagen. Sus valores pueden ser top, bottom, 
+        left, rigth y también se le pueden dar valores en pixeles, rem, em,etc.
+    </p>
+    <hr/>
+    <div style="display:flex; margin:20px;">
+        
+    <div class="contenedor">
+    <h1 class="tituloPrincipal">Right</h1>
+        <img class="imgDerecha" src="img/desplegarweb5.jpg"/>
+    </div>
+    <div class="contenedor">
+    <h1 class="tituloPrincipal">Left</h1>
+
+        <img class="imgIzq" src="img/desplegarweb5.jpg"/>
+    </div>
+    </div>
+
+    <div style="display:flex; margin:100px 20px;">
+        
+        <div class="contenedor2">
+        <h1 class="tituloPrincipal">Top</h1>
+            <img class="imgArriba" src="img/desplegarweb5.jpg"/>
+        </div>
+        <div class="contenedor2">
+        <h1 class="tituloPrincipal">Bottom</h1>
+    
+            <img class="imgAbajo" src="img/desplegarweb5.jpg"/>
+        </div>
+    </div>
+    <p>
+        Para el caso de rigth y left se usa object-fit: cover para que se note mejor la diferencia. Lo que 
+        sucede es que la imagen dentro del contenedor se mueve hacia la izquierda o derecha según se indique.
+        Para el caso de top y bottom se utiliza contain y lo que sucede es que la imagen se mueve hacia 
+        arriba o abajo según se indique.
+    </p>
+</body>
+</html>

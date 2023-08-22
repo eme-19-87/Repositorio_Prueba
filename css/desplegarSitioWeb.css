@@ -1,0 +1,17 @@
+html {
+    font-size:30px;
+}
+
+.tituloPrincipal {
+    text-align:center;
+    color: red;
+}
+
+img {
+    width: 800px;
+    
+}
+
+.imagenEspecial {
+    width: 200px;
+}

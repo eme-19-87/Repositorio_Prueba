@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Especificidad</title>
+    <link rel="stylesheet" href="css/estilosEspecificidad.css">
+
+</head>
+<body>
+	<h1 class="tituloPrincipal">Especificidad</h1>
+	<p>La especificidad trata sobre qué sucede cuando los estilos se mezclan y entran en conflicto. Además, nos sirve para entender las prioridades al momento de asignar estilos a los elementos html. Las jerarquías se pueden ver en la siguiente imagen
+	</p>
+	<img src="img/especificidad1.jpg"/>
+	<p>Cuando nos referimos a jerarquías, estamos hablando de qué toma importancia. Por ejemplo, según se ve en la imagen los selectores de clase
+	tienen menos jerarquía que los selectores por id. Eso quiere decir que si una etiqueta tiene un estilo css ligado a su atributo class y otro estilo ligado a su atributo id, quien aplica el atributo a la etiqueta es aquel ligado al atributo id.<br/>
+	Normalmente, los estilos se aplican en cascada. Eso quiere decir que el último estilo definido para una etiqueta es el que cuenta, pero teniendo en cuenta la misma clase o el mismo selector. Así, si tenemos los códigos<br/>
+	<pre>
+			<code>
+				h1{
+					color: red;
+			   }
+
+			   h1 {
+			   	color: blue;
+			   }
+			    
+			</code>
+	</pre><br/>
+	El color que se aplica al texto de h1 es el color azul ¿Por qué? porque los estilos se aplican en cascada: de arriba hacia abajo. En realidad, si se cambio a color rojo el texto, pero posteriormente volvió a cambiar a un color azul. Cuando se está trabajando en la misma jerarquía los estilos se aplican en cascada. Eso quiere decir que, si coloco dos veces la definición de una clase y aplico dicha clase a una etiqueta, el estilo que se aplicará al final del todo será el que esté dentro de las llaves de la última definición de la clase.
+	En cambio, si tenemos
+	<pre>
+			<code>
+			  #estiloTitular{
+					color: red;
+			   }
+
+			   .titular {
+			   	color: blue;
+			   }
+			    
+			</code>
+	</pre><br/>
+	Y luego hacemos <code>&lt;h1 class="titular" id="estiloTitular"&gt;</code>, se aplica el estilo del selector por id. Esto puede verse en el siguiente ejemplo<br/>
+</p>
+<diV>
+	<p class="estiloParrafo" id="parrafo1">Parrafo de ejemplo</p>
+</diV>
+<div style="display: flex;justify-content:center;">
+	<img src="img/especificidad2.jpg"/>
+</div>
+<p></p>
+</body>
+</html>

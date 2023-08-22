@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <link rel="stylesheet" href="css/overflow.css">
+    <link rel="stylesheet" href="css/estiloGlobal.css">
+</head>
+<body>
+    <h1 class="tituloPrincipal">Overflow</h1>
+    <article id="menu">
+        <ul>
+            <li>
+                <a href="index.html">
+                    Volver Inicio
+                </a>
+            </li>
+            <li>
+                <a href="overflow.html#concepto">
+                    Concepto
+                </a>
+            </li>
+            <li>
+                <a href="overflow.html#valor">
+                    Valores de overflow
+                </a>
+                <ul>
+                    <li>
+                        <a href="overflow.html#valor-auto">
+                            auto
+                        </a>
+                    </li>
+                    <li>
+                        <a href="overflow.html#valor-scroll">
+                            scroll
+                        </a>
+                    </li>
+                    <li>
+                        <a href="overflow.html#valor-hidden">
+                            hidden
+                        </a>
+                    </li>
+                    <li>
+                        <a href="overflow.html#valor-x-y">
+                            valor en "x" e "y"
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="overflow.html#con-imagenes">
+                    overflow con imagenes
+                </a>
+            </li>
+        </ul>
+
+    </article>
+    <hr/>
+    <article id="concepto">
+        <h2 class="tituloPrincipal">Concepto</h2>
+        <p>
+            La propiedad de <code>overflow</code> nos permite establecer qué sucede con el contenido que 
+            desborda a su caja contenedora.
+        </p>
+        <div class="cajaDesbordada">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+        <p>
+            En el ejemplo superior notamos cómo existe una caja de la cual desborda el texto 
+            contenido en ella. Podemos pensar que el overflow es determinar qué sucede con lo
+            que 'sobra'. En nuestro ejemplo, imaginemos que el recuadro rojo es la pantalla y hay
+            texto que desborda esa pantalla. Nos preguntamos ¿qué hacemos con eso que sobra?
+            En este ejemplo, el valor de la propiedad es <code>overflow:visible.</code>
+        </p>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="overflow.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+
+    <hr/>
+
+    <article id="valor">
+        <h1 class="tituloPrincipal">Valores de overflow</h1>
+        <div id="valor-auto">
+            <h2 class="tituloPrincipal">Valor auto</h2>
+            <div class="cajaAuto">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+            <p>Podemos notar que si le damos el valor auto al atributo overflow, el contenido
+                de la caja se va adaptando al tamaño de la misma. Puede verse que aparece lo que se 
+                conoce como barra de scroll la cual permite movernos por el contenido de la caja.
+            </p>
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="overflow.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+        <hr/>
+        <div id="valor-scroll">
+            <h2 class="tituloPrincipal">Valor scroll</h2>
+            <div class="cajaScroll">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+            </div>
+            <p>
+                El valor scroll, al igual que auto, coloca barras de scroll. Pero el valor scroll coloca
+                ambas barras: la horizontal y la vertical. Estas barras son colocadas aunque no sean necesarias.
+                Por ejemplo, note la diferencia entre la caja para auto y la caja para scroll. En la caja para
+                auto no se ha colocado la barra de scroll horizontal, pero para la caja de scroll si se colocó la
+                barra horizontal a pesar de que no es necesario.
+            </p>
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="overflow.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+        <hr/>
+        <div id="valor-hidden">
+            <h2 class="tituloPrincipal">hidden</h2>
+            <p>
+                El valor <code>hidden</code> sirve para enmascarar el desbordamiento que se produce.
+            </p>
+            <div class="cajaDesbordada" style="margin-bottom:300px;">
+            <b>Cajas Desbordada</b><br/>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+            </div>
+            <div class="caja-hidden">
+                <b>Caja con el valor hidden</b><br/>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+            </div>
+            
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="overflow.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+        <hr/>
+        <div id="valor-x-y">
+            <h2 class="tituloPrincipal">overflow-x y overflow-y</h2>
+            <div class="caja-x-y">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis ex iure voluptatibus autem architecto veniam natus error iusto eligendi nam, nulla amet, assumenda fuga doloribus magni enim, quasi necessitatibus exercitationem!
+            </div>
+            <p>
+            Estos dos atributos nos permiten darle overflow a cada uno de las barras de overflow por 
+            separado. Como se vió existe una barra de overflow horizontal y otra vertical. Con 
+            overflow-y le damos valores para la barra vertical y con overflow-x para la barra horizontal.
+            </p>
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="overflow.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+        <hr/>
+    </article>
+    
+    <article id="con-imagenes">
+        <h2 class="tituloPrincipal">Utilizando overflow con imágenes</h2>
+        <p>
+        Algo que sucede con las imagenes es que éstas se adaptan al tamaño de la imagen.<br/>
+        Si a la imagen le damos position: relative y lo movemos de su contenedor se notará 
+        cómo sobresale de su contenedor.
+        Pero, si al contenedor le damos overflow: hidden ese sobrante no se observará y se 
+        dará un efecto como si la imagen se moviera dentro de su caja sin sobresalir.
+        </p>
+        <div style="display: flex; margin-left:10px;">
+            <h3>Imagen sin hiden</h3>
+            <div class="cajaImagen">
+                
+                <img src="img/fondos-pantalla-hd_5.webp"/>
+            </div>
+            <h3>Imagen con hiden</h3>
+            <div class="cajaImagenHidden">
+                <img src="img/fondos-pantalla-hd_5.webp"/>
+            </div>
+        </div>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="overflow.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+    <hr/>
+</body>
+</html>

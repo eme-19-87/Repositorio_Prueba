@@ -1,0 +1,90 @@
+html {
+    /*El documento html ocupará todo el ancho de la ventana*/
+    width:100%;
+}
+body {
+    /*Les quitamos el margen y padding para formatearlo a gusto*/
+    margin: 0;
+    padding: 0;
+    /**linear-gradient significa que se irá degradando desde el primer color hasta llegar al segundo color
+    Aplicado así en el body, el degradado se hace verticalmente.*/
+    background: linear-gradient(rgb(87, 217, 250),rgb(134, 139, 126));
+}
+
+.formatoFrm {
+    /*aplicará un margen superior e inferior de 300 px y se centrará*/
+    margin: 200px auto;
+    /*con el ancho establecido a todo el formulario se tiene que el auto de margin hace que se centre
+    porque aplica un margen automático teniendo en cuenta esos 400px dado al ancho del formulario.*/
+    width: 400px;
+    /*con el padding, el formulario se separa más de los bordes del div que lo contiene y permite darle
+    más aún un efecto de centrado.*/
+    padding:30px;
+    /*se le da un fondo al formulario*/
+    background-color: rgba(176,56,175,0.5);
+    border-radius:10px;
+}
+
+.formatoFrm h1 {
+    margin:0 0 30px;
+    padding:0;
+    text-align:center;
+}
+/*La forma .nombreClase1 .nombreClase2 ... .nombreClaseN etiqueta permite acceder a una etiqueta que se
+encuentra dentro de varias clases. En este caso quiero modificar las etiquetas label que se encuentra dentro
+de la clase elementosFrm, pero elementosFrm es una clase que está dentro de la clase formatoFrm*/
+.formatoFrm .elementosFrm label {
+    color:black;
+    font-weight: bold;
+    width:100%;
+    text-align:center;
+    display:inline-block;
+    
+}
+
+.formatoFrm .elementosFrm input {
+    /*con esto se ocupa todo el espacio del contenedor*/
+    width: 100%;
+    padding: 10px 0;
+    font-size:25px;
+    /*le da transparencia al input*/
+    background:transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 5px;
+}
+
+.formatoFrm .elementosFrm input {
+    /*con esto se ocupa todo el espacio del contenedor*/
+    width: 100%;
+    padding: 10px 0;
+    font-size:25px;
+    /*le da transparencia al input*/
+    background:transparent;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    margin-bottom: 5px;
+    /*Nota: Hay un error, cuando selecciono algo que ya fue escrito en el input no le aplica el estilo*/
+}
+
+/*Esta es una nueva variable para acceder a etiquetas hijas. Aquí accedemos sólo a los input de 
+tipo submit que se encuentran dentro de una clase elementosFrm que, a su vez, está dentro de una
+clase formatoFrm*/
+.formatoFrm .elementosFrm input[type="submit"]{
+    background-Color:rgb(255, 0, 170);
+    border-bottom:none;
+    /*sirve para espaciar las letras entre sí*/
+    letter-spacing:5px;
+    margin-top:5px;
+    /*coloca el texto en mayúsculas*/
+    text-transform: uppercase;
+    /*permite indicar que el elemento es 'cliqueable'*/
+    cursor: pointer;
+}
+
+.formatoFrm .elementosFrm input[type="submit"]:hover{
+    background-Color:rgb(255, 87, 170);
+    border-bottom:none;
+}

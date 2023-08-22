@@ -1,0 +1,48 @@
+div {
+	display:block;
+	background: yellow;
+	/*los divs que actuarán como cajas serán todos absolute*/
+	position:absolute;
+}
+.contenedor {
+	/*el contenedor debe ser relative para que se puedan mover las cajas dentro de él*/
+	position:relative;
+	border: 4px solid red;
+	margin: 50px auto;
+	height: 400px;
+	width: 400px;
+}
+
+
+.caja1 {
+	border:1px solid black;
+	left:0;
+}
+
+.caja2 {
+	border:1px solid black;
+	right:0;
+}
+
+.caja3 {
+	border:1px solid black;
+	right:0;
+	bottom:0;
+}
+
+.caja4{
+	border:1px solid black;
+	bottom:0;
+}
+
+/*Se presenta un problema al utilizar la quinta caja. Cuando se le dan los atributos mostrado en el vídeo, 
+la caja parece abarcar todo el ancho y alto del contenedor y no se centra. Como no sé el problema y no encuentro
+la solución, opto por usar sólo las cuatro cajas.*/
+/*
+.caja5 {
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	margin:auto;
+}*/

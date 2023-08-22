@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medidas</title>
+    <link rel="stylesheet" href="css/estiloMedidas.css">
+  </head>
+  <body>
+  	<h1 class="tituloPrincipal">Medidas</h1>
+  	<p>
+  		En css se tienen dos tipos de unidades de medidas: relativas y fijas. Las relativas dependen de algo y las fijas no (como pixeles, centímetros, etc). La fijas son: centímetros (cm), milimetros (mm), pixeles (px), puntos (pt). Las medidas fijas pueden darnos problemas al momento de adaptar nuestra página a dispositivos móviles.<br/>
+  		Para solventar el problema anterior es que se usan las medidas relativas. Las medidas relativas ayudan a que cuando cambia el tamaño la caja contenedora de los elementos, los elementos adapten sus medidas según el tamaño de esa caja contenedora.<br/>
+  		Hay dos medidas relativas: rem y em. Por defecto, 1em=16px, pero puede variar de navegador a navegador. El valor de em se hereda del valor que el contenedor establezca en la misma propiedad. Por ejemplo, supongamos que tenemos un div cuya clase es "contact-form" y dentro tenemos una etiqueta p cuya clase es "contact-form__p". El código css<br/>
+  		<pre>
+  			<code>
+  				.contact-form {font-size: 20px}
+  				.contact-form__p {font-size: 5em;}
+  			</code>
+  		</pre>
+  		Indica que ahora el valor de 1em para la etiqueta p será de 20px y ya no de 16px. Podemos ver que el elemento contenido heredará el valor de medida que se le dé a la misma propiedad en el elemento contenedor para establecer cuánto valor 1em. Esto se aplica a cualquier propiedad que trabaje con unidades de medida.
+  	</p>
+  	<hr/>
+  	<p>
+  		Otra unidad de medida es el viewport y se divide en viewport width (vw) y viewport heigth(vh). Esta medida tiene en cuenta el tamaño total de la pantalla donde se está visualizando la página web. Los valores pueden ser, por ejemplo: <code>heigth: 50vh;width:50vw</code>.<br/>
+  		En el código anterior se le da a una etiqueta html cualquiera un alto y un ancho del 50% del total de la pantalla.
+  	</p>
+  	<hr/>
+  	<p>
+  		La siguiente medida relativa es el porcentaje expresado como <b>x%</b>. El porcentaje se usa para referirse al x porciento, pero de la caja contenedora.
+  	</p>
+  </body>
+  </html>

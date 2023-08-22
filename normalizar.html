@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Normalizar</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/estiloMedidas.css">
+  </head>
+  <body>
+  	<h1 class="tituloPrincipal">Normalizar</h1>
+    <p>Los navegadores traen un estilo por defecto. Eso quiere decir que el navegador aplica algunos valores a ciertos atributos para la etiquetas. Por ejemplo, las etiquetas div pueden empezar con margen o padding establecidos. Con la normalización lo que hacemos es reiniciar los atributos del documento para poder trabajar mejor con ellos.<br/>
+      Si haces click <a href="https://necolas.github.io/normalize.css/">aquí</a> puedes ir a la página para descargar el archivo css que ayudará a la normalización.</p>
+       <div style="display: flex; margin-left:10px;">
+        <div style="display: flex">
+            <h3>Página</h3>
+            <img src="img/normalizar1.jpg" style="width:75%"/>
+        </div>
+        <div style="display: flex;margin-left:20px;">
+            <h3>Archivo</h3>
+            <img src="img/normalizar2.jpg">
+        </div>
+
+    </div>
+    <p>Cuando se haga click en la opción download de la página se abrirá el archivo mostrado en la segunda 
+      imagen. En ese archivo se debe hacer click derecho->guardar como y se guarda en la carpeta css del 
+      proyecto.</p>
+    <hr/>
+    <p>
+      El archivo descargado tendrá ciertos valores que se aplicarán por defecto a todos los elementos html, 
+      pero sería conveniente (según el vídeo claro) asegurarnos ciertos valores para determinados elementos:
+      <br/>
+      <ul>
+        <li>Comprobar en normalize.css que el selector img tenga la propiedad max-width:100%</li>
+        <li>Darle a todos los elementos mediante el selector universal la propiedad box-sizing:border-box.</li>
+        <li>Darle a todos los elementos mediante el selector universal las propiedades padding:0 y margin:0.</li>
+
+      </ul>
+    </p>
+  </body>
+  </html>

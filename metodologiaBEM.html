@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEM</title>
+    <link rel="stylesheet" href="css/estiloBEM.css">
+
+</head>
+<body>
+	<h1 class="tituloPrincipal">Metodología BEM</h1>
+	<p>La metodología BEM permite evitar los conflictos entre los distintos selectores. Nos vamos a basar en los nombres de las clases para ir asignando los estilos. Nos basaremos en el nombre de las clases para saber qué elementos estamos seleccionando. Veamos el siguiente código
+	<pre>
+		<code>
+			&lt;div class="form"&gt;
+				&lt;input type="text" class="name"&sol;&gt;
+				&lt;input type="password" class="pass"&sol;&gt;
+			&lt;&sol;div&gt;
+		</code>
+	</pre>
+	La idea para ir asignando los nombres de las clases es tomar la clase del contenedor (que en nuesto caso es el div) y anexar el valor de su atributo class con el valor del atributo class del objeto contenido de la siguiente manera <code>class="form__name"</code>.<br/>
+	De esa manera se sabe que existe un contenedor de clase form que contiene a un elemento de clase "name".<br/>
+	Las clases quedarían de la siguiente manera:<br/>
+	<pre>
+		<code>
+			&lt;div class="form"&gt;
+				&lt;input type="text" class="form__name"&sol;&gt;
+				&lt;input type="password" class="form__pass"&sol;&gt;
+			&lt;&sol;div&gt;
+		</code>
+	</pre>
+	Un escenario que puede darse es que deseemos cambiar sólo algunos atributos de un elemento del contenedor. Sea el siguiente código<br/>
+	<pre>
+		<code>
+			&lt;div class="contact-form"&gt;
+				&lt;input type="text" class="contact-form__input"&sol;&gt;
+				&lt;input type="text" class="contact-form__input"&sol;&gt;
+				&lt;input type="password" class="pass"&sol;&gt;
+			&lt;&sol;;div&gt;
+		</code>
+	</pre>
+	Es posible que sólo deseemos aplicar estilo al primer input. Para ello hacemos <code>contact-form__input:nth-child(posicionHijo)</code>
+	</p>
+	    <div class="contact-form">
+				<input type="text" class="contact-form__input"/>
+				<input type="text" class="contact-form__input">
+				<input type="password" class="contact-form__pass"/>
+		<div/>
+		<img style="margin-top:20px;" src="img/metodologiaBEM1.jpg"/>
+   <p>
+   Si se escribe en el primer input se notará que las letras se tornan rojas, mientras que las letras de los otros input siguen siendo negras. El nth-child nos permite seleccionar el n-ésimo hijo de un contenedor.<br/>
+   Otra forma de establecer, en el mismo ejemplo, que uno o más de los input tendrán un tratamiento diferenciado es usar una sintaxis similar a esta <br/> <code>&lt;input type="text" class="contact-form__input--nombreEspecial"&sol;&gt;</code><br/>
+   Ese 'nombreEspecial' debe ser un identificador que permita aclarar que ese input (puede ser otro elemento html, el input es sólo para el ejemplo) tiene un tratamiento especial. Por ejemplo, podemos hacer <code>&lt;input type="text" class="contact-form__input--active"&sol;&gt;</code><br/>
+   Con eso aclaramos que ese input será el input activo en nuestro formulario. Luego,  en css se hace <code>.contact-form__input--active</code>
+
+   </p>
+   <p>
+   	Una cuestión particular a tener en cuenta es que los '__' se usan por bloque o secciones. Es decir, en los ejemplos anteriores la sección es
+   	el div con la clase "contact-form". Si algo es hijo de una sección, pero no es una sección o bloque en sí, la nomenclatura cambia.
+   	Sea el siguiente  <br/>
+   	<pre>
+		<code>
+			&lt;div class="contact-form"&gt;
+				&lt;p class="contact-form__p"&gt;
+					&lt;h2 class="contact-form__p-h2"&gt;
+
+					&lt;&sol;h2&gt;
+				&lt;&sol; p&gt;
+				
+			&lt;div&sol;&gt;
+		</code>
+	</pre>
+	Vemos para la clase del h2 que no se ha hecho <code>class="contact-form__p__h2</code> sino <code>class="contact-form__p-h2</code>.<br/>
+	Esto es así porque ese h2 interno a p no es un bloque, sino sólo un elemento interno a otro elemento que sí está en un bloque.
+   </p>
+</body>
+</html>

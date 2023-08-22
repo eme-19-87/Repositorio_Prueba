@@ -1,0 +1,11 @@
+p{
+    font-size:40px;
+}
+body {
+    padding-top:5px;
+}
+.textoFijo {
+    position:fixed;
+    background:red;
+    margin-top:-5px;
+}

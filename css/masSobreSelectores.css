@@ -1,0 +1,241 @@
+.tituloPrincipal {
+    text-align:center;
+    color: red;
+}
+
+.hijos > li {
+    background-color:crimson;
+}
+
+.descendientes b {
+    background-color:crimson;
+}
+
+.hermano-gral ~ li{
+    background-color:crimson;
+
+}
+
+.hermano-adyacente + li{
+    background-color:crimson;
+
+}
+
+.selector-atributo a[href] {
+    text-decoration-line:underline;
+    color:crimson
+}
+
+.selector-atributo-valor a[href="https://www.github.com"] {
+    text-decoration-line:underline;
+    color:crimson
+}
+
+.selector-atributo-valor-comodin2 a[href^="https://www.u"] {
+    text-decoration-line:underline;
+    color:goldenrod;
+    font-weight: bold;
+}
+
+.selector-atributo-valor-comodin3 a[href$=".org"] {
+    color:goldenrod;
+    font-weight: bold;
+}
+
+.selector-atributo-valor-comodin3 a[href$=".com"] {
+    color:crimson;
+    font-weight: bold;
+}
+
+.sitio-http {
+    text-decoration-line:line-through;
+}
+
+.sitio-ar {
+    background-color:lightblue;
+    color:black;
+}
+
+.sitio-com {
+    background-color:green;
+    color: black;
+}
+
+.sitio-https {
+    text-decoration-line:underline overline;
+}
+
+.comodines-4 [class~="sitio-com"] {
+    font-weight: bold;
+    font-style: italic;
+    font-size:xx-large;
+}
+
+.comodines-5 [class|="sitio"] {
+    font-weight: bold;
+    font-style: italic;
+    font-size:xx-large;
+}
+
+.selector-universal-contextual *{
+    font-family: sans-serif;
+    color:crimson;
+}
+
+/*afecta a los input de los formularios a los cuales se le agregó required*/
+.frm-pseudoclases *:required {
+    border-color:yellow;
+}
+
+/*afecta a los input que tengan un valor válido escritos en él*/
+.frm-pseudoclases *:valid {
+    border-color:green
+}
+
+/*afecta a los input cuyos valores escritos en el son inválidos*/
+.frm-pseudoclases *:invalid {
+    border-color:red;
+}
+
+/*permite aplicar estilos cuando un elemento html adquiere el foco*/
+.frm-pseudoclases2 *:focus{
+    background-color: skyblue;
+    color:white;
+}
+
+/*permite aplicar estilos cuando un elemento html tiene la propiedad disabled*/
+.frm-pseudoclases3 *:disabled{
+    background-color: red;
+    color:black;
+}
+
+
+
+.visited-link a:link{
+    color:green;
+    text-decoration-line:none;
+}
+
+.visited-link a:active{
+    color:blueviolet;
+    text-decoration-line:none;
+    border: solid 3px black;
+}
+
+
+.visited-link a:visited{
+    color:crimson;
+    text-decoration: underline;
+    
+}
+
+.efecto-hover:hover{
+    color:red;
+    border:solid 5px blacK;
+}
+
+#titulo:target ul li:nth-child(even) a{
+    color:green;
+}
+.doce-trabajos li:first-child{
+    background-color:crimson;
+    color:black;
+    width:300px;
+}
+.doce-trabajos2 li:last-child{
+    background-color:yellowgreen;
+    color:crimson;
+    width:300px;
+}
+.doce-trabajos3 li:nth-child(even){
+    background-color:yellowgreen;
+    color:crimson;
+    width:300px;
+}
+.doce-trabajos3 li:nth-child(odd){
+    background-color:skyblue;
+    color:black;
+    width:300px;
+}
+.doce-trabajos4 li:nth-child(3n){
+    background-color:skyblue;
+    color:black;
+    width:300px;
+}
+.doce-trabajos5 li:nth-child(3n+1){
+    background-color:black;
+    color:pink;
+    width:300px;
+}
+
+.pseudoclases-pos-tipo p:first-of-type{
+    background-color:black;
+    color:crimson;
+    font-weight: bold;
+    width:300px;
+}
+
+.pseudoclases-pos-tipo2 p:last-of-type{
+    background-color:black;
+    color:crimson;
+    font-weight: bold;
+    width:300px;
+}
+
+.pseudoclases-pos-tipo3 p:nth-last-of-type(odd){
+    background-color:black;
+    color:crimson;
+    font-weight: bold;
+    width:300px;
+}
+
+.pseudoclases-pos-tipo3 p:nth-last-of-type(even){
+    background-color:crimson;
+    color:black;
+    font-weight: bold;
+    width:300px;
+}
+
+.pseudoclases-pos-tipo4 *:not(p){
+    background-color:crimson;
+    color:black;
+    font-weight: bold;
+    width:300px;
+}
+
+
+.pseudoclases-pos-tipo5 *:not(h5,.pseudo-h2, #pseudo-p1,.pseudo-ul1,.pseudo-ul1 li:first-child){
+    background-color:crimson;
+    color:black;
+    font-weight: bold;
+    width:300px;
+}
+
+.pseudoclases-pos-tipo6 .pseudo-ul1 li:first-child{
+    color:green;
+}
+
+.pseudoclases-pos-tipo6 *:not(h5,.pseudo-h2, #pseudo-p1,.pseudo-ul1,.pseudo-ul1 li:first-child){
+    background-color:crimson;
+    color:black;
+    font-weight: bold;
+    width:300px;
+}
+
+.pseudoclases-pos-tipo7 .pseudo-ul1 li:first-child{
+    color:green;
+}
+
+.pseudoclases-pos-tipo7 *:not(h5,.pseudo-h2, #pseudo-p1,.pseudo-ul1 li:first-child){
+    background-color:crimson;
+    color:white;
+    font-weight: bold;
+    width:300px;
+}
+
+.p-varios-selectores .primera-b,
+.p-varios-selectores #segunda-b,
+.p-varios-selectores [name="cuarta-b"]{
+    background-color: crimson;
+    color:white;
+}

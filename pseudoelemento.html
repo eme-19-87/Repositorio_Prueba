@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoelemento</title>
+    <link rel="stylesheet" href="css/estiloGlobal.css">
+    <link rel="stylesheet" href="css/pseudoelemento.css">
+</head>
+<body>
+    <h1 class="tituloPrincipal">Pseudoelemento</h1>
+    <ul id="menu">
+        <li>
+			<a href="index.html">Volver Menu Inicial</a>
+			
+		</li>
+        <li>
+            <a href="pseudoelemento.html#concepto">Concepto</a>
+        </li>
+        <li>
+            <a href="pseudoelemento.html#first-line">first-line</a>
+        </li>
+        <li>
+            <a href="pseudoelemento.html#first-letter">first-letter</a>
+        </li>
+        <li>
+            <a href="pseudoelemento.html#placeholder">placeholde</a>
+        </li>
+        <li>
+            <a href="pseudoelemento.html#selection">selection</a>
+        </li>
+        <li>
+            <a href="pseudoelemento.html#after-before">after y before</a>
+        </li>
+    </ul>
+    <article id="concepto">
+        <h2 class="tituloPrincipal">Concepto Pseudoelemento</h2>
+        Un pseudoelemento es un elemento que no afecta al DOM, aunque podamos ver cambios.<br/>
+        Estos pseudoelementos darán estilos a partes específicas de un elemento. Las pseudoclases se 
+        identifican por los ":", mientras que los pseudoelementos se identifican por "::". 
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="pseudoelemento.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+
+    <hr/>
+
+    <article id="first-line">
+        <h2 class="tituloPrincipal">first-line</h2>
+        <p>
+        
+            Un pseudoelemento ::first-line el cual no funciona en elementos inline. Su sintaxis es:<br/>
+            <pre>
+                <code>
+                    selector::first-line{cuerpo css}
+                </code>
+            </pre>
+            El <code>selector</code> puede ser una clase, etiqueta, id, etc.  El first-line hace referencia 
+            a la primera línea, generalmente de un texto. Por ejemlo, el siguiente texto tendrá la primera 
+            línea azul.<br/>
+        </p>
+        <p class="primeraLinea">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+             Numquam perspiciatis saepe assumenda tempora, quod fuga. 
+             Voluptate provident accusantium modi! Itaque quas corporis ratione repellat dolor dolore, a facere beatae nisi.
+        </p>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="pseudoelemento.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+
+    <hr/>
+
+    <article id="first-letter">
+        <h2 class="tituloPrincipal">first-letter</h2>
+        <p class="primeraLetra">
+            Se puede aplicar también estilo a la primera letra de un texto mediante first-letter.<br/>
+            Según se explicó los pseudoelementos no forman parte del DOM, pero firts-letter y first-line sí.
+            Si usamos las herramientas de desarrollador podemos seleccionarlos y verlos.
+            La sintaxis es la siguiente:<br/>
+            <pre>
+                <code>
+                    selector::first-letter{cuerpo css}
+                </code>
+            </pre>
+            Donde, nuevamente, <code>selector</code> puede ser una etiqueta, un id, una clase, etc.
+        </p>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="pseudoelemento.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+   
+    <hr/>
+
+    <article id="placeholder">
+        <h2 class="tituloPrincipal">placeholder</h2>
+    <p>
+        El siguiente pseudoelemento es placeholder que permite darle estilo al atributo 
+        placeholder de las etiquetas form.
+    </p><br/>
+    <form class="formulario" >
+        <input class="textoForm" type="text" placeholder="Contenido input"/>
+    </form><br/>
+    <p>
+        El código del formulario anterior será en css:<br/>
+        <pre>
+            <code>
+                .formulario{
+                    margin:auto;
+                    padding:20px;
+                    background:black;
+                    width: 50%;
+                    align-content: center;
+                    display:flex;
+                }
+                
+                .textoForm {
+                    margin:auto;
+                    padding:20px;
+                    width:50%
+                }
+                
+                .textoForm::placeholder{
+                    color:red;
+                }
+            </code>
+        </pre>
+    </p>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="pseudoelemento.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+    </article>
+
+    <hr/>
+
+    <article id="selection">
+        <h2 class="tituloPrincipal">selection</h2>
+    <p>
+        El siguiente pseudoelemento es el selection. El selection es el pseudoelemento que,
+        al seleccionar un texto en un input por ejemplo, dota a este elemento de un fondo 
+        azul y un color de letras blanco. Podemos darle estilo también a ese pseudoelemento 
+        usando selection en css.
+    </p>
+    <img src="img/pseudoelemento1.jpg"/>
+    <p>Por favor, seleccione el texto para notar cómo se aplica un efecto de fondo negro y
+        letras rojas. Lo importante es que selection trata al elemento seleccionado como un 
+        elemento inline, así que no podemos aplicarle padding, margin y demás propiedades.
+    </p>
+    <form class="formulario" >
+        <input class="textoSelection" type="text" placeholder="Contenido input"/>
+    </form><br/>
+    <p class="p-selection">
+        También el <code>selection</code> puede afectar un texto cuando lo seleccionamos con el ratón. 
+        Por favor, selecciona todo este texto para notar cómo se pone de color carmesí y letras blancas.
+    </p>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="pseudoelemento.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+   </article>
+
+    <hr/>
+    <article id="after-before">
+
+    <h1 class="tituloPrincipal">Pseudoelementos after y before</h1>
+    <p>
+        Estos dos pseudoelementos no forman parte del DOM. Eso significa que, si usamos las
+        herramientas de desarrollador, no podremos seleccionarlos o analizarlos.
+        Lo que hacen after y before es agregar contenido a un elemento inline mediante un 
+        atributo llamado content. Si usamos before, lo que pongamos en content irá antes del 
+        contenido agregado en el elemento inline. Si usamos after, lo que pongamos en content
+        irá después del contenido agregado en el elemento inline.
+        Veamos lo siguiente, supongamos que tenemos una etiqueta con el contenido
+         <b class="boquita">Boca</b>.
+        Pase por favor el ratón sobre la palabra <b>Boca</b> anterior. Se puede notar que, al pasar el ratón 
+        sobre la palabra, se coloca antes de la palabra el texto "Club Atlético" y después de la 
+        palabra se agrega el texto "Junior". Esto se hace mediante el siguiente código:<br/>
+        <pre>
+            <code>
+                .boquita:hover::before {
+                    content:"Club Atlético ";
+                }
+                .boquita:hover::after {
+                    content:" Juniors";
+                }
+            </code>
+        </pre>
+        El hover sólo sirve par aplicar los textos al pasar el ratón sobre la palabra 
+        <b class="boquita">Boca</b>
+    </p>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="pseudoelemento.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+  </article>
+</body>
+</html>

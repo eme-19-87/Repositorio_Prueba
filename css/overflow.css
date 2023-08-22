@@ -1,0 +1,74 @@
+.tituloPrincipal {
+    text-align:center;
+    color: red;
+}
+
+.cajaDesbordada {
+    margin:auto;
+    width:300px;
+    height:50px;
+    border:2px solid red;
+    margin-bottom:100px;
+    background:yellow;
+}
+
+.cajaAuto {
+    margin:auto;
+    width:300px;
+    height:100px;
+    border:2px solid red;
+    background:yellow;
+    margin-bottom:50px;
+    overflow:auto;
+}
+
+.cajaScroll,.caja-x-y, .caja-hidden {
+    margin:auto;
+    width:300px;
+    height:100px;
+    border:2px solid red;
+    background:yellow;
+    margin-bottom:50px;
+    
+    
+}
+
+.caja-hidden{
+    overflow:hidden;
+}
+.cajaScroll{
+    overflow:scroll;
+}
+.caja-x-y{
+    overflow-x:hidden ;
+    overflow-y:auto;
+    max-width:400px;
+}
+.cajaImagen {
+    margin:auto;
+    width:100px;
+    height:100px;
+    border:2px solid red;
+    background:yellow;
+    margin-bottom:50px;
+    
+}
+.cajaImagenHidden {
+    margin:auto;
+    width:100px;
+    height:100px;
+    border:2px solid red;
+    background:yellow;
+    margin-bottom:50px;
+    overflow:hidden;
+    
+}
+img{
+    width:100px;
+    height:100px;
+    position:relative;
+    top:20px;
+    left:20px;
+    outline:5px solid blue;
+   
+}

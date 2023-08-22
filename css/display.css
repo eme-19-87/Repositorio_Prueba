@@ -1,0 +1,60 @@
+.tituloPrincipal {
+    text-align:center;
+    color: red;
+}
+.div-enlinea-1,
+.div-enlinea-2{
+    display:inline;
+    border:solid 5px black;
+    color:white;
+    margin:30px;
+}
+
+.div-enlinea-1{
+    background-color:crimson;
+}
+.div-enlinea-2{
+    background-color:blueviolet;
+}
+
+.elementos-bloque b{
+    display:block;
+}
+
+.elementos-bloque2 b{
+    display:block;
+    height: 50px;
+}
+
+.caja-none, .caja-hidden, .caja-comun{
+    background-color:crimson;
+    border:solid 6px black;
+    text-align:center;
+    color:white;
+}
+
+.caja-hidden:active{
+    visibility: hidden;
+}
+.caja-none:active{
+    display:none;
+}
+
+.elementos-inline div{
+    display:inline-block;
+    margin:20px;
+    padding:20px;
+    border: solid 5px black;
+    color: white;
+}
+
+.elementos-inline div:first-child{
+    background-color:crimson
+}
+
+.elementos-inline div:nth-child(2){
+    background-color:firebrick;
+}
+.elementos-inline div:last-child{
+    background-color:blueviolet
+}

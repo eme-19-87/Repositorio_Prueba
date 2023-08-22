@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display y Position</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/display_position.css">
+</head>
+<body>
+    <h1 class="tituloPrincipal">Display y Position</h1>
+    <p>La propiedad <code>position</code> permite posicionar los elementos. Que esté posicionado significa que adquiere nuevas propiedades.<br/>
+    Un elemento al estar posicionado afecta al flujo html. El flujo html se puede decir que es 'el orden en el que ponemos los elementos'. Es decir, que si colocamos en orden cuatro etiquetas h2, se mostrarán en pantalla esas cuatro etiquetas en el mismo orden en que fuimos colocándolas.<br/>
+    Con position podemos hacer caso omiso a ese flujo y 'pintar' los elementos de una manera diferente a la señalada por el flujo html<br/>.
+     El primer valor que puede adquirir es 'static' el cual es el valor por defecto. Básicamente con statci se puede decir que el objeto no está 'posicionado' y, por lo tanto, no adquiere esas nuevas propiedades.<br/>
+     El segundo valor es 'relative'. Cuando posicionamos un elemento adquiere cuatro nuevos elementos: top, rigth, bottom y left. Para entender mejor a relative debe saberse que, cuando creamos elementos html, esos elementos ocupan un espacio en el DOM. Con relative el elemento sigue ocupando su mismo espacio y aunque modifiquemos los cuatro atributos anteriores y dicho elemento se desplace, ningún otro elemento ocupará el espacio del elemento relative porque dicho espacio sigue siendo conservado por éste. 
+ </p>
+ <h2 class="caja1">Elemento 1-Static</h2>
+ <h2 class="caja2">Elemento 2-Static <h2>
+ <h2 class="caja3">Elemento 3-Static</h2><br/>
+  <h2 class="caja1">Elemento 1-Static</h2>
+ <h2 class="caja2 cajaRelative">Elemento 2-Relative<h2>
+ <h2 class="caja3">Elemento 3-Static</h2><br/>
+ <img src="img/positionDisplay.jpg"/>
+
+ <p>Si se pasa el ratón sobre el segundo elemento de las últimas tres filas se podrá notar el cambio. Podemos notar cómo los primeros 3 elementos, que son en bloque, ocupa cada uno un espacio. De los otros tres, el segundo es un elemento con la propididad <code>position:relative</code> y si bien parece ser que ocupa menos espacio porque se ha movido hacia arriba puede notarse también que el elemento 3 permanece aún en su posición. Eso sucede porque si bien, a la vista, el elemento 2 se ha desplazado sigue ocupando su mismo lugar.<br/>
+ 	El punto de referencia siguen siendo las posiciones arriba, abajo, izquierda y derecha desde el lugar que ocupaba. Es decir, que si le decimos <code>top: 10px</code> se moverá usando como referencia el top de su posición original. Es más, incluso podemos darle valores negativos a las nuevas propiedades señaladas.
+ </p>
+ <div class="contenedor">
+  <h2 class="caja1">Elemento 1-Static</h2>
+ <h2 class="caja2 relativeTop">Elemento 2-RelativeTop<h2>
+ <h2 class="caja3">Elemento 3-Static</h2><br/>
+
+
+ <h2 class="caja1">Elemento 1-Static</h2>
+ <h2 class="caja2 relativeBottom">Elemento 2-RelativeBottom<h2>
+ <h2 class="caja3">Elemento 3-Static</h2><br/>
+
+ <h2 class="caja1">Elemento 1-Static</h2>
+ <h2 class="caja2 relativeLeft">Elemento 2-RelativeLeft<h2>
+ <h2 class="caja3">Elemento 3-Static</h2><br/>
+
+ <h2 class="caja1">Elemento 1-Static</h2>
+ <h2 class="caja2 relativeRight">Elemento 2-RelativeRight<h2>
+ <h2 class="caja3">Elemento 3-Static</h2><br/>
+ <img src="img/positionDisplay2.jpg"/>
+</div><br/>
+<p>Entre las cuatro nuevas propiedades adquiridas: top, rigth, bottom y left, las que pueden considerarse más 'importantes' son top y left. Ellas adquirirán prioridad si se definen juntos, por ejemplo, top y bootom. Si top y left no están, entonces ganan prioridades las otras dos.</p>
+<hr/>
+<h2 class="tituloPrincipal">Z-Index</h2>
+<p>El z-Index es otra propiedad que adquiere una caja cuando se utiliza position. Este atributo permite ordenar a los objetos en el eje z el cual es, a fines práctico, el eje de profundidad de la pantalla. Los elementos se ordenan según su valor en z-indez, el de mayor valor estará delante de la pantalla y los demás se irán ordenando detrás de él según sus valores de z-index.<br/>
+Algo a tener en cuenta respecto del z-index es que se comporta distinto para elementos padres e hijos. La única forma de lograr que el padre esté delante del hijo es colocar el valor z-index:-1 para el hijo y no colocarle la propiedad z-index al padre.<br/>
+Otra cuestion es que conviene establecer los valores de z-index en rangos de 10 en 10 para así, si se desea colocar un elemento con un z-index intermedio entre los existentes, existan valores dentro del rango para usar.</p>
+<hr/>
+<h2 class="tituloPrincipal">position:absolute</h2>
+<p>
+ Si, por ejemplo, colocamos tres elementos h2 uno después del otro y le damos a uno el atributo en css <b>position:absolute</b> lo que obtendremos es que la caja debajo de este parece desaparecer. En realidad, lo que sucede es que la caja inferior ahora está ocupando la posición que le corresponde a la caja con absolute. Esto con relative no pasaba. Con relative cada espacio estaba ocupado por una y una sola caja. Por más que la caja se moviera al ser relative, la caja inferior no ocupaba su lugar. Puede verse mejor un ejemplo 
+ <a href="prueba/positionAbsolute.html" target="_blank">aquí</a><br/>
+ Vamos a intentar ilustrar lo explicado anteriormente con las siguientes imagenes
+</p>
+  <div style="display: flex; margin-left:10px;">
+        <div style="display: flex;margin-left:20px;margin-right: 100px;">
+            <img src="img/positionDisplay3.jpg"/>
+        </div>
+        <div style="display: flex;margin-left:20px;margin-right: 100px;">
+            <img src="img/positionDisplay4.jpg">
+        </div>
+        <div style="display: flex;margin-left:20px;margin-right: 100px;">
+            <img src="img/positionDisplay5.jpg">
+        </div>
+    </div>
+<p>La primera imagen representa a la situación donde el position es static para las tres cajas. Puede verse que cada caja tiene un espacio rservado en el documento html, espacio el cual ocupa. Si bien las proporciones de los rectángulo no son exactamente iguales, cabe señalar que los rectángulos de color rojo, verde y azul tratan de representar ese espacio ocupado y los rectángulos negros son las cajas en sí.<br/>
+Cuando a la caja que tiene el espacio reservado verde se le da <b>position:relative</b> pasa lo que se ve en la segunda imagen. La caja se puede mover relativo a su espacio reservado, pero la caja de espacio reservado azul se queda en su espacio reservado, no 'invade' el espacio reservado verder.<br/>
+En cambio, cuando la caja de espacio reservado verde tiene <b>position:absolute</b>, el espacio reservado verde puede ser ocupado por la caja con espacio reservado azul y pasa a colocarse 'debajo' de la caja absolute.<br/>
+Otro detalle importante de una caja que tenga position absolute es que la
+ posición que usa para aplicar top, left, bottom, rigth es respecto del contenedor 
+ que sea realtive y si no está dentro de un contenedor relative usará al viewport 
+ (toda la pantalla que podemos ver, donde se muestra el html) como referencia.<br/>
+Otra característica de una caja con position absolute es que, aunque la caja sea un objeto en bloque, el ancho
+se ajustará al contenido de la caja.</p><br/>
+<hr/>
+<h2 class="tituloPrincipal">Centrarl Cajas Absolute</h2>
+<p>
+  Para seguir ilustrando el concepto y el comportamiento de los distintos position entre
+   sí, se intentará colocar 4 cajas en las esquinas de un contenedor y una caja en el 
+   centro. Por favor, haga click 
+   <a href="prueba/centrarCajasAbsolute.html" target="_blank">aquí para ver el ejemplo</a>
+</p>
+<hr/>
+<h2 class="tituloPrincipal">position fixed</h2>
+   <p>Fixed es igual que absolute, pero el contenido queda fijo. El efecto es que a medida que se baja el 
+       scroll de la pantalla. Veamos el efecto <a href="prueba/positionFixed.html" target="_blank ">aquí</a>.
+   </p>
+   <hr/>
+   <h2 class="tituloPrincipal">position sticky</h2>
+      <p>Con sticky lo que se hace es establecer desde qué punto, en el cual aparece la Caja
+          sticky, se empieza a comportar como fixed. Para ello conviene darle un margen
+          específico (yo probé dándole un margen superior) para observar el comportamiento.
+           Veamos el efecto <a href="prueba/positionSticky.html" target="_blank ">aquí</a>.
+      </p>
+</body>
+</html>

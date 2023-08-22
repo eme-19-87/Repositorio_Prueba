@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudoclases</title>
+    <link rel="stylesheet" href="css/pseudoclases.css">
+</head>
+<body>
+    <h1 class="tituloPrincipal">Pseudoclases</h1>
+    <p>
+        Las pseudoclases escuchan un evento. Algunas de las pseudoclases son<br/>
+        <ul>
+            <li>
+                <code>:hover</code>->sirve para realizar una acción cuando el ratón está encima del 
+                elemento.
+            </li>
+            <li>
+                <code>:link</code>->permite darle estilo a un enlace el cual aún no se ha visitado. Sólo
+                se establece el link si la página se visita efectivamente.
+            </li>
+            <li>
+                <code>:visited</code>->permite darle estilo a un enlace el cual ya se ha visitado. 
+            </li>
+            <li>
+                <code>:active</code>->permite modificar los estilos cuando se mantiene presionado el 
+                botón del ratón sobre el elemento. Si se suelta el botón, el estilo deja 
+                de tener efecto y si se suelta durante una transición, la transición no se 
+                completa. 
+            </li>
+            <li>
+                <code>:focus</code>->se aplica más a los input y se activa cuando el elemento tiene el foco. 
+            </li>
+            <li>
+                <code>:lang(lenguaje)</code>->requiere que la etiqueta tenga el atributo lang="nombreIdioma". Cuando 
+                hagamos en css objeto:lang(nombreIdioma) podremos darle estilo al texto en el idioma 
+                establecido.
+            </li>
+        </ul>
+    </p>
+    <p>
+        Una propiedad interesante que puede usarse con las pseudoclases es la propiedad 
+        <code>transiction</code>. Esta propiedad permite establecer un tiempo para la transición 
+        desde el valor de una propiedad a otra. Por ejemplo, supongamos el siguiente código: <br/>
+        <pre>
+            <code>
+                .cajaHover{
+                    background:hotpink;
+                    
+                }
+                
+                .cajaHover:hover{
+                    background:khaki;
+                    transition: background 0.5s;
+                }
+            </code>
+        </pre>
+        Si colocamos a un div la clase cajaHover, el div tendrá un color rosado. Luego, con 
+        cajaHover:hover establecemos el cambio de los atributos que sufrirá el div cuando se 
+        pase el ratón sobre él. Podemos notar la propiedad <code>transition: background 0.5s</code>
+        nos está indicando que se tome 0.5s para pasar del color rosa al color khaki.
+    </p>
+    <hr/>
+    <h1 class="tituloPrincipal">Ejemplo De hover</h1>
+    <div class="cajaHover">
+        Ejemplo de hover
+    </div>
+
+</body>
+</html>

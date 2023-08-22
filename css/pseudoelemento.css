@@ -1,0 +1,54 @@
+.tituloPrincipal {
+    text-align:center;
+    color: red;
+}
+
+.primeraLinea::first-line{
+    color:blue;
+}
+
+.primeraLetra::first-letter{
+    font-size:40px;
+}
+
+.formulario{
+    margin:auto;
+    padding:20px;
+    background:black;
+    width: 50%;
+    align-content: center;
+    display:flex;
+}
+
+.textoForm {
+    margin:auto;
+    padding:20px;
+    width:50%
+}
+
+.textoForm::placeholder{
+    color:red;
+}
+
+.textoSelection {
+    margin:auto;
+    padding:20px;
+    width:50%
+}
+.textoSelection::selection{
+    color:red;
+    background:black;
+}
+
+.boquita:hover::before {
+    content:"Club Atlético ";
+}
+.boquita:hover::after {
+    content:" Juniors";
+}
+
+.p-selection::selection, .p-selection code::selection{
+    background-color:crimson;
+    color:white;
+}
+

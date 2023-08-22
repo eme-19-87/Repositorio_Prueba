@@ -1,0 +1,63 @@
+https://unneconferencias.webex.com/meet/mirtafernandez 
+Otras páginas para programar: https://www.youtube.com/channel/UCXR7VjA26PcHP3vb6F2X3VQ
+
+Link Repositorio:
+https://gitlab.com/sietecorrientes/documentacion-html-css.git
+
+Páginas con instrucciones para conectar codeigniter con heroku
+https://medium.com/an-idea/deploy-codeigniter-to-heroku-successfully-a2f5a97bdf80
+https://dev.to/jorenrui/6-ways-to-deploy-your-personal-websites--php-mysql-web-apps-for-free-4m3a#heroku-4
+
+Enlaces De Referencia Para La Documentación CSS:
+-cssreference.io: aporta una guía oficial de los diferentes atributos css.
+-caniuse.com: da más información sobre los atributos.
+-https://codeguide.co/: sirve para tener una guía de buenas prácticas para escribir html y css.
+-https://emojipedia.org: no es documentación, pero sirve para obtener emojis.
+
+Más Páginas De Referencia
+🟠 Repositorio de Códigos en GitHub - https://github.com/jonmircha/youtube-...
+🔵 Configuración de VisualStudio Code:
+    ➡️ Artículo - https://jonmircha.com/vscode
+    ➡️ Video - https://www.youtube.com/watch?v=twrKk...
+    ➡️ Atajos Windows - https://code.visualstudio.com/shortcu.
+🟢 Emmet.io - https://emmet.io/
+🔵 Enlaces de la documentación de CSS:
+  - https://es.wikipedia.org/wiki/Hoja_de...
+  - https://www.w3.org/html/logo/
+  - https://www.w3.org/standards/webdesig...
+  - https://www.w3.org/TR/css-2020/
+  - https://developer.mozilla.org/es/docs...
+
+🔵 CSS Reference - https://cssreference.io/
+🔵 Can I Use - https://caniuse.com/
+🔵 Code Guide - https://codeguide.co/
+🔵 Pseudoclases - https://developer.mozilla.org/es/docs...
+🔵 Pseudoelementos - https://developer.mozilla.org/es/docs...
+🔵 Propiedades hederables - https://web.dev/learn/css/inheritance...
+🔵 Reset CSS - https://meyerweb.com/eric/tools/css/r...
+🔵 Normalize CSS - https://necolas.github.io/normalize.css/
+🔵 Autoprefixer CSS - https://autoprefixer.github.io/
+🔵 Modelo de Caja - https://developer.mozilla.org/es/docs...
+🔵 Tamaño de Caja Paul Irish - https://www.paulirish.com/2012/box-si...
+🔵 960 Grid System - https://960.gs/
+
+Páginas Usadas Para La Documentación 
+-https://www.youtube.com/watch?v=K3xmRF8ab1o&list=PLvq-jIkSeTUZYcX9SYwVe7f66afwd9qk_&index=2
+
+Herramientas para crear plantillas:
+-Elementor, Helix
+
+Página Para Medir Velocidad De Página:
+-https://developers.google.com/speed/pagespeed/insights/?hl=es
+
+Pasos para subir el proyecto a gitlab:
+
+1-Realizar git init dentro de la carpeta deseada.
+2-Realizar git add . para agregar todos los documentos pertinentes
+3-Realizar commits: git commit -m mensajeDelCommit.
+4-Escribir la siguiente línea git remote add nombreRepositorio URLRepositorio.
+    Por ejemplo: git remote add docCSS https://gitlab.com/sietecorrientes/documentacion-html-css.git
+5-Realizar la siguiente línea git push nombreRepositorio nombreRama
+    Por ejemplo: git push docCSS modificacion29-10-2021
+6-Colocar nombre de usuario (usualmente es el mail) y contraseña.
+

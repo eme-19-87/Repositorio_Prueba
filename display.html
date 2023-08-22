@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estiloGlobal.css">
+    <link rel="stylesheet" href="css/display.css">
+    <title>Display</title>
+</head>
+<body>
+    <h1 class="tituloPrincipal">Propiedad display</h1>
+    <article id="menu">
+        <ul>
+            <li>
+                <a href="index.html">Volver Menu Inicial</a>
+            
+            </li>
+            <li>
+                <a href="display.html#conceptos">
+                    Concepto
+                </a>
+            </li>
+            <li>
+                <a href="display.html#valor">
+                    Valores De display
+                </a>
+                <ul>
+                    <li>
+                        <a href="display.html#valor-inline">
+                            inline
+                        </a>
+                    </li>
+                    <li>
+                        <a href="display.html#valor-block">
+                            block
+                        </a>
+                    </li>
+                    
+                    
+                    <li>
+                        <a href="display.html#valor-inline-block">
+                            inline-block
+                        </a>
+                    </li>
+                        
+                    
+                    <li>
+                        <a href="display.html#valor-none">
+                            none
+                        </a>
+                        <ul>
+                            <a href="display.html#none-vs-visiblity">
+                                none vs visibility
+                            </a>
+                        </ul>
+                    </li>
+                        
+                    
+                    <li>
+                        <a href="display.html#valor-table">
+                            table
+                        </a>
+                    </li>
+                        
+                    <li>
+                        <a href="display.html#valor-list-item">
+                            list-item
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="display.html#valor-flex">
+                            flex
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="display.html#valor-grid">
+                            grid
+                        </a>
+                    </li>
+                    
+                </ul>
+            </li>
+        </ul>
+    </article>
+    <hr/>
+    <article id="conceptos">
+        <h2 class="tituloPrincipal">Conceptos</h2>
+        <p>
+            La propiedad display modifica el comportamiento de las cajas. El comporamiento de 
+            una caja en particular. La mayoria de los elementos html son de tipo block o de tipo
+            inline, excepto las listas, tablas y otros elementos.<br/>
+            Los elementos en bloque son aquellos que ocupan todo el ancho de su ubicación. Si, por
+            ejemplo, tenemos texto dentro de un div, por más que el texto sea pequeño el bloque 
+            ocupará todo el ancho de la pantalla.<br/>
+            Los elementos en línea ocupan sólo el espacio de su contenido. Si hay texto dentro de 
+            un elemento inline, dicho elemento inline tendrá un ancho igual a su contenido.<br/>
+            Los inline-block pueden recibir ciertas modificaciones como el alto o el ancho, modificaciones
+            que los elementos inline no pueden recibir en esos atributos. Es decir, le decimos al
+            objeto que se comporte como un bloque, pero que siga siendo un inline para posicionarse.<br/>
+            Luego tenemos grid y flex donde ambas se comportan como block, por eso existe la 
+            variante inline-flex e inline-grid.<br/>
+        </p>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="display.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+    <hr/>
+    <article id="valor">
+        <h2 class="tituloPrincipal">Valores De display</h2>
+        <p>
+            Veamos diferentes valores para la propiedad <code>display</code>
+        </p>
+        <div id="valor-inline">
+            <h3 class="tituloPrincipal">Valor inline</h3>
+            <p>
+                Ese valor es el que traen por defectos los elementos en linea. Cuando un elemento html
+                tiene este valor es tratado como un elemento en línea. Podemos ver el comportamiento con los 
+                dos <code>div</code> siguientes
+            </p>
+            <div class="div-enlinea-1">
+                primer div en línea
+            </div>
+            <div class="div-enlinea-2">
+                segundo div en línea
+            </div>
+            <p>
+                Debe recordarse que los <code>div</code> son elementos en bloque y que, como tales, ocupan 
+                todo el ancho disponible imposibilitando que dos elementos <code>div</code> estén uno a lado 
+                del otro. Pero, al darle la propiedad <code>display:inline</code> se logra que se comporten 
+                como si fueran elementos en línea. Incluso, puede notarse que hay una separación entre ellos 
+                lo cual se logra mediante <code>margin:30px</code>. Ahora bien, de la manera en que se muestra
+                el <code>margin</code> se tuvo que haber aplicado 30 pixeles de margen en las cuatro direcciones,
+                pero sólo se aplica horizontalmente, no en vertical. Esto muestra que su comportamiento está 
+                siendo similar al de un elemento en línea.
+            </p>
+
+        </div>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="display.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+        <hr/>
+        <div id="valor-block">
+            <h3 class="tituloPrincipal">Valor block</h3>
+            <p>
+                Este valor sirve para darle a un elemento que se comporta como un elemento en línea pasen a 
+                comportarse como elementos en bloque. Veamos primero la etiqueta <code>b</code> la cual es un 
+                elemento en linea<br/>
+                <b>Primer elemento b</b>
+                <b>Segundo elemento b</b>
+                <b>Tercer elemento b</b><br/>
+                Puede notarse que cad elemento se coloca uno a lado del otro, tal y como carbía esperar de un 
+                elemento en línea. Ahora, vea que sucede cuando le damos la propiedad <code>display:block</code>
+            </p>
+            <div class="elementos-bloque">
+                <b>Primer elemento b</b>
+                <b>Segundo elemento b</b>
+                <b>Tercer elemento b</b>
+            </div>
+            <p>
+                Se ve todos ahora pasan a ocupar todo el ancho cada uno, exactamente como un elemento en 
+                bloque. Además, ahora podremos darle algunas propiedades como el witdh y el heigth
+            </p>
+            <div class="elementos-bloque2">
+                <b>Primer elemento b</b>
+                <b>Segundo elemento b</b>
+                <b>Tercer elemento b</b><br/>
+            </div>
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="display.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+        <hr/>
+        <div id="valor-inline-block">
+            <h3 class="tituloPrincipal">Valor inline-block</h3>
+            <p>
+                El valor <code>inline-block</code> permite que una caja se comporte como un elemento en línea,
+                pero a la vez se le pueden aplicar algunas propiedades de los elementos en bloque.
+                Veamos este ejemplo nuevamente con las etiquetas <code>div</code>. Recordar que la etiqueta
+                <code>div</code> es un elemento en bloque. Ahora quiero que se comporte como un elemento en línea 
+                para colocar una etiqueta a lado de otra, pero también quiero modificar el padding y margin como
+                si fuera un elemento en bloque.<br/>
+                Debe notarse que ahora los elementos tienen una separación de margen tanto vertical como 
+                horizontal y que también tienen afectado el padding en las cuatro direcciones. Eso es un 
+                comportamiento en bloque. Pero, a parte de eso, se tiene que están uno a lado del otro ocupando 
+                sólo el espacio que requieren como lo haría un elemento en línea.
+            </p>
+            <div class="elementos-inline">
+                <div>Primer elemento div</div>
+                <div>Segundo elemento div</div>
+                <div>Tercer elemento div</div>
+            </div>
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="display.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+        <hr/>
+        <div id="valor-none">
+            <h3 class="tituloPrincipal">Valor none</h3>
+            <p>
+                El valor none lo que hace es que la caja no se muestre. Esto se logra haciendo
+                <code>display:none</code>.
+                Puedes revisar esto manteniendo pulsado el botón izquierdo del ratón sobre la caja mostrada debajo y 
+                nota cómo desaparece. Eso sucede porque se cambia su valor a none en display
+            </p>
+            <div class="caja-none">
+                Por favor, menten pulsado el botón izquierdo del ratón sobre mí para cambiar mi 
+                valor de <code>display</code> al valor <code>none</code>.
+            </div>
+            <p>
+                Debe tenerse en cuenta que, aunque el contenido se oculte, éste igual se sigue cargando.
+            </p>
+            <hr/>
+            <div id="none-vs-visibility">
+                <h3 class="tituloPrincipal">none vs visibility</h3>
+                <p>
+                    Para ver la diferencia entre display: none y visibility: hidden, haz click izquierdo y 
+                    manten pulsado el botón sobre las cajas display:none y visibility:hidden.
+                </p>
+                <div class="caja-none">
+                    caja con <code>display: none</code>
+                </div>
+
+                <div class="caja-hidden">
+                    caja con <code>visibility:hidden</code>
+                </div>
+
+                <div class="caja-comun">
+                    caja común
+                </div>
+                <p>
+                    Lo que tuvo que notar es que cuando se cambia el valor de <code>display</code> al valor
+                    <code>none</code>, la caja desaparece (aunque está cargada) y el espacio que ésta ocupaba
+                    pasa a ser ocupada por la caja inferior. Es como si la caja dejara de ocupar su lugar 
+                    una vez que desaparece de la pantalla.<br/>
+                    En cambio, cuando la caja con <code>visibility: hidden</code> desaparece, la caja inferior 
+                    se mantiene en su lugar. Es decir, la caja con <code>visibility:hidden</code> es como si 
+                    conservara su lugar a pesar de que no se muestre en pantalla.
+                </p>
+            </div>
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="display.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+        <hr/>
+        <div id="valor-table">
+            <h3 class="tituloPrincipal">Valor table</h3>
+            <p>
+                Hay tres valores en esta categoria: 
+                <code>display: table, display: table-row y display: table-cell</code>.<br/>
+                Estos valores se les otorga de manera automática a las etiquetas 
+                <code>table, tr, td</code>,respectivamente, cuando son creadas.
+            </p>
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="display.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+        <hr/>
+        <div id="valor-list-item">
+            <h3 class="tituloPrincipal">Valor list-item</h3>
+            <p>
+                Este es el valor por defecto que traen las etiquetas <code>li</code>.
+            </p>
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="display.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+        <hr/>
+        <div id="valor-flex">
+            <h3 class="tituloPrincipal">Valor flex</h3>
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="display.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+        <hr/>
+        <div id="valor-grid">
+            <h3 class="tituloPrincipal">Valor flex</h3>
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="display.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+    </article>
+   
+</body>
+</html>

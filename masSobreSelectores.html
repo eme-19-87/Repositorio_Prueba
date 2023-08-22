@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores</title>
+	<link rel="stylesheet" href="css/estiloGlobal.css">
+    <link rel="stylesheet" href="css/masSobreSelectores.css">
+
+</head>
+<body>
+	<h1 class="tituloPrincipal">Selectores</h1>
+	<article id="titulo">
+	<ul>
+		<li>
+			<a href="index.html">Volver Menu Inicial</a>
+			
+		</li>
+		<li>
+			<a href="masSobreSelectores.html#selectores">Selectores</a>
+			
+		</li>
+		<li>
+			<a href="masSobreSelectores.html#selUniversal">Selector Universal</a>
+			
+		</li>
+		<li>
+			<a href="masSobreSelectores.html#selTipo">Selector De Tipo</a>
+			
+		</li>
+		<li>
+			<a href="masSobreSelectores.html#selClase">Selector De Clase</a>
+			
+		</li>
+		<li>
+			<a href="masSobreSelectores.html#selId">Selector Por Id</a>
+			
+		</li>
+		<li>
+			<a href="masSobreSelectores.html#selAtributo">Selector Por Atributo</a>
+			
+		</li>
+		<li>
+			<a href="masSobreSelectores.html#selHijo">Selector Por Descendiente</a>
+			
+		</li>
+		<li>
+			<a href="masSobreSelectores.html#selHermano">Selector Hermano</a>
+			
+		</li>
+		<li>
+			<a href="masSobreSelectores.html#selPseudoClase">Selector Por Pseudoclase</a>
+			
+		</li>
+		<li>
+			<a href="masSobreSelectores.html#selVarios">Estilos A Varios Elementos Simultáneos</a>
+			
+		</li>
+		<li>
+			<a href="masSobreSelectores.html#variasClases">Varias Clases A Un Mismo Elemento</a>
+			
+		</li>
+	</ul>
+</article>
+	<article id="selectores">
+		<p>Podemos establecer que la estructura básica cuando escribimos un código css es la siguiente <br/>
+			<pre>
+				<code>
+					selector {
+						atributo1: valorAtributo1;
+						atributo2: valorAtributo2;
+						..........................
+						atributoN: valorAtributoN;
+					}
+				</code>
+			</pre>
+		</p>
+		<p>Un selector podemos entenderlo como el objeto html al cual le aplicaremos estilos. Podemos referirnos a todos los elementos de un tipo particular (por ejemplo, todas las etiquetas p, todas las etiquetas h1, etc), a una etiqueta dentro de otra etiqueta (por ejemplo, etiquetas a
+		dentro de etiquetas p), a un único elemento identificado con la propiedad id en la etiqueta html, etc.<br/>
+		Existen diversos selectores y vamos a intentar explicar cada uno de ellos.
+
+		</p>
+</article>
+    <hr/>
+	<artticle id="selUniversal">
+    <h2 class="tituloPrincipal">Selector Universal</h2>
+    <p>
+    	El selector universal tiene la siguiente forma <br/>
+    	<pre>
+			<code>
+				* {
+					atributo1: valorAtributo1;
+					atributo2: valorAtributo2;
+					..........................
+					atributoN: valorAtributoN;
+			    }
+			</code>
+		</pre>
+		Este selector establece que todos los elementos html sufrirán las modificaciones a los atributos que 
+		se indique dentro de las llaves.<br/>
+		El selector universal también puede usarse contextualmente. Es decir, podemos usar el selector universal 
+		para decir que todos los elementos dentro de una determinada etiqueta con una específica clase se le 
+		apliquen un estilo. Vamos hacer eso con la siguiente lista donde se cambiará el texto de cada item al 
+		estilo sans-serif y a un color carmesí.
+    </p>
+	<ul class="selector-universal-contextual">
+		<li>
+			Lobo
+		</li>
+		<li>
+			Ciervo
+		</li>
+		<li>
+			Cordero
+		</li>
+
+	</ul>
+	<img src="img/selectores11.jpg"/>
+	<ul>
+		<li >
+			<a class="inicio-pagina" href="masSobreSelectores.html#titulo" >
+				⏫
+			</a>
+		</li>
+		<li>
+			<a class="volver-index" href="index.html">🏠</a>
+		</li>
+			
+	</ul>
+</artticle>
+    <hr/>
+	<article id="selTipo">
+    <h2 class="tituloPrincipal">Selector De Tipo</h2>
+    <p>El selector de tipo es aquel que en la parte de la sintaxis que dice 'selector' lo reemplazamos por el nombre de la etiqueta que sufrirá
+    	el estilo. Por ejemplo <br/>
+    	<pre>
+			<code>
+				h1 {
+					color:#1467b1;
+			    }
+			</code>
+		</pre>
+		<pre>
+			<code>
+				p {
+					color: #a38712;
+			    }
+			</code>
+		</pre>
+		En el primer ejemplo de código se modificará el color del texto de todas las etiquetas h1 y en el segundo caso modificará el color del
+		texto de lás etiquetas p.
+    	</p>
+		<ul>
+			<li >
+				<a class="inicio-pagina" href="masSobreSelectores.html#titulo" >
+					⏫
+				</a>
+			</li>
+			<li>
+				<a class="volver-index" href="index.html">🏠</a>
+			</li>
+				
+		</ul>
+
+	</article>
+    <hr/>
+	<article id="selClase">
+    <h2 class="tituloPrincipal">Selector De Clases</h2>
+    <p>Esto selectores se definen con un nombre precedido por un punto. Por ejemlo <br/>
+    	<pre>
+			<code>
+				.titular {
+					/*cuerpo del código*/
+			    }
+			</code>
+		</pre>
+		En el código anterior se definirá una clase denominada 'titular' que podrá ser usada repetidamente por elementos diversos de html.
+		Las etiquetas html tienen un atributo denominada 'class'. Su forma es <br/><code>&lt;h1 class='titular'&gt;</code>. De esta manera,
+		esa etiqueta h1 en particular recibirá el estilo definido en el cuerpo de la clase 'titular'. La clase 'titular' podrá ser usada 
+		por cualquier etiqueta que pueda recibir las modificaciones en los atributos señalados. Es decir, que si tenemos una clase
+		llamada 'nombreClase' donde modificamos el borde, el color del texto y el tamaño de la letra, toda etiqueta que tenga class="nombreClase" sufrirá las modificaciones en esos atributos.
+		<br/>
+		Las clases nos permiten reutilizar código, así que conviene empezar a maquetar todo el documento mediante clases.
+    </p>
+	<ul>
+		<li >
+			<a class="inicio-pagina" href="masSobreSelectores.html#titulo" >
+				⏫
+			</a>
+		</li>
+		<li>
+			<a class="volver-index" href="index.html">🏠</a>
+		</li>
+			
+	</ul>
+</article>
+    <hr/>
+	<article id="selId">
+    <h2 class="tituloPrincipal">Selector Por Id</h2>
+    <p>Un selector por id es útil cuando queremos dar estilo a una o sólo una etiqueta en particular. Su sintaxis es:<br/>
+    	<pre>
+			<code>
+				#titular {
+					/*cuerpo del código*/
+			    }
+			</code>
+		</pre>
+		Debe notarse que para las clases, el nombre de la clase es precedida por un punto mientras que para los selectores por id son precedidos
+		por un numeral. Las etiquetas html a parte de tener el atributo class, tienen otro atributo denominado id<br/>
+		<code>&lt;h1 id='titular'&gt;</code>.<br/>
+		Ese atributo identifica unívocamente a la etiqueta y dos etiquetas no pueden tener dos valores de id iguales. Por lo tanto, podemos asegurar que sólo la etiqueta con el valor id indicado en el selector por id sufrirá las modificaciones de sus atributos.<br/>
+		Aunque podría repetirse el valor del atributo id para diferentes etiquetas, <b>esto no es recomendable.</b><br/>
+		Además, empezar a definir estilos css mediante el atribuot id se considera un antipatrón.
+    </p>
+	<ul>
+		<li >
+			<a class="inicio-pagina" href="masSobreSelectores.html#titulo" >
+				⏫
+			</a>
+		</li>
+		<li>
+			<a class="volver-index" href="index.html">🏠</a>
+		</li>
+			
+	</ul>
+	</article>
+      <hr/>
+	<article id="selAtributo">
+    <h2 class="tituloPrincipal">Selector Por Atributo</h2>
+    <p>
+    	Las etiquetas html pueden recibir atributos 'personalizados' con un determoinado valor. Por ejemplo:<br/>
+    	<code>&lt;h1 titulo='experto'&gt;</code><br/>
+    	En el código anterior metimos un atributo llamado 'titulo' que tiene el valor 'experto'. Para hacer referencia a la etiqueta que tiene
+    	el atribut 'titulo' con el valor 'experto' en css hacemos <br/>
+    	<pre>
+			<code>
+				[titulo='experto'] {
+					/*cuerpo del código*/
+			    }
+			</code>
+
+			<code>
+				[nombreAtributo='valorAtributo'] {
+					/*cuerpo del código*/
+			    }
+			</code>
+		</pre><br/>
+		El primer código es para nuestro ejemplo, mientras que el segundo es la sintaxis general. La idea aquí es
+		que se puede usar como referencia cualquier atributo de la etiqueta de referencia. La forma general será <br/>
+		.nombreClase etiquetaDescendiente[nombreAtributo=valorAtributo]<br/>
+		El valor del atributo puede ser obviado. Veamos el siguiente ejemplo.
+    </p>
+	<ul class="selector-atributo">
+		<li>
+			<a href="https://www.youtube.com" target="_blank">
+				Youtube
+			</a>
+		</li>
+		<li>
+			<a href="https://www.github.com" target="_blank">
+				Github
+			</a>
+		</li>
+	</ul>
+	<p>
+		En el ejemplo mostrado la lista se colorea a un color carmesí para todas las etiquetas a que 
+		tenga el atributo href, sin importar el valor de éste. Ahora, sólo colorearemos el elemento que dice
+		"Github"
+	</p>
+	<ul class="selector-atributo-valor">
+		<li>
+			<a href="https://www.udemy.com" target="_blank">
+				Udemy
+			</a>
+		</li>
+		<li>
+			<a href="https://www.github.com" target="_blank">
+				Github
+			</a>
+		</li>
+	</ul>
+	<p>
+		En el último ejemplo vemos que sólo está coloreado de carmesí la opción de Github. Ambos códigos se 
+		pueden apreciar en las siguiente imágenes<br/>
+	</p>
+	<div>
+		<img src="img/selectores5.jpg"/>
+	</div>
+	<p>
+		Algo muy interesante que puede hacerse es usar ciertos comodines o expresiones regulares para indicar
+		qué etiquetas se verán afectadas. Por ejemplo, veamos la siguiente lista
+	</p>
+	<ul class="selector-atributo-valor-regexp">
+		<li>
+			<a href="https://www.udemy.com" target="_blank">
+				Udemy
+			</a>
+		</li>
+		<li>
+			<a href="https://www.github.com" target="_blank">
+				Github
+			</a>
+		</li>
+		<li>
+			<a href="https://www.gitlab.com" target="_blank">
+				Gitlab
+			</a>
+		</li>
+	</ul>
+	<img src="img/selectores6.jpg"/>
+	<p>
+		Podemos ver la expresión <code>a[href*="git"]</code>. Eso significa que aplicará el estilo a todas 
+		las etiquetas <code>a</code> que en el valor de su atributo <code>href</code> tenga incluida la palabra 
+		"git."<br/>
+		Aparte del "*" existen otros comodines. Si usamos "^" podemos establecer que se le aplique estilo a 
+		las etiquetas cuyo valor en el atributo empiece con los caracteres indicados.
+	</p>
+	<ul class="selector-atributo-valor-comodin2">
+		<li>
+			<a href="https://www.udemy.com" target="_blank">
+				Udemy
+			</a>
+		</li>
+		<li>
+			<a href="https://www.unne.como.ar" target="_blank">
+				UNNE
+			</a>
+		</li>
+		<li>
+			<a href="https://www.github.com" target="_blank">
+				Github
+			</a>
+		</li>
+		<li>
+			<a href="https://www.gitlab.com" target="_blank">
+				Gitlab
+			</a>
+		</li>
+	</ul>
+	<img src="img/selectores7.jpg"/> 
+	<p>
+		En este ejemplo notamos que sólo se colorean en dorado los textos de las etiquetas cuyo href comience 
+		con "https://www.u".<br/>
+		También existe un comodín para indicar que se le de estilo al valor del atributo que termine con 
+		determinados caracteres. Este símbolo es "$". Vamos ahora a colorear de manera diferentes a las direcciones 
+		que terminen en .com y a las que terminen en .org.
+	</p>
+	<ul class="selector-atributo-valor-comodin3">
+		<li>
+			<a href="https://www.udemy.com" target="_blank">
+				Udemy
+			</a>
+		</li>
+		<li>
+			<a href="https://www.unicef.org" target="_blank">
+				UNICEF
+			</a>
+		</li>
+		<li>
+			<a href="https://www.aprende.org" target="_blank">
+				Aprende.org
+			</a>
+		</li>
+		<li>
+			<a href="https://www.gitlab.com" target="_blank">
+				Gitlab
+			</a>
+		</li>
+	</ul>
+	<img src="img/selectores8.jpg"/>
+	<p>
+		Continuando con los comodines, tenemos "~". Este comodin nos sirve para buscar un conjunto de 
+		caracteres cuando éste forma parte de un conjunto mayor y está separado a izquierda y derecha por un 
+		espacio en blanco. Es bueno cuando, por ejemplo, tenemos una etiqueta afectada por varias clases y 
+		queremos aplicarle estilo a las etiquetas que estén afectada por una clase particular.
+		Para ejemplificar esto vamos a usar una lista nuevamente con direcciones .com y .ar . Además,
+		vamos a darle estilos a direciones http:// y https://. Posteriormente, sólo a las etiquetas .com 
+		vamos a darle un estilo particular usando el comodin señalado.
+	</p>
+	<ul class="comodines-4">
+		<li>
+			<a class="sitio-http sitio-ar" href="http://www.femeba.org.ar/" target="_blank">
+				Femeba
+			</a>
+		</li>
+		<li>
+			<a class="sitio-http sitio-ar" href="http://www.hidro.gov.ar/" target="_blank">
+				Servicio Hidrovia
+			</a>
+		</li>
+		<li>
+			<a class="sitio-https sitio-com" href="https://www.gihub.com" target="_blank">
+				Github
+			</a>
+		</li>
+		<li>
+			<a class="sitio-https sitio-com" href="https://www.gitlab.com" target="_blank">
+				Gitlab
+			</a>
+		</li>
+	</ul>
+	<img src="img/selectores9.jpg"/>
+	<p>
+		Veamos paso a paso cómo funciona esto. Primero tenemos el código css y por último el código html.
+		Notemos los estilos que le aplicamos a los sitios terminados en .como y a los terminados en .ar, así como
+		los estilos para los sitios http y los sitios https. Lo que hicimos es separar los estilos: cuando sea 
+		.com sufrirá un estilo y cuando sea .ar otro, lo mismo para http y https.
+		La lista tiene en su etiqueta <code>ul</code> la clase "comodin-4" y usando esa clase como referencia le 
+		decimos que sólo las etiquetas que tengan la clase "sitio-com" sufran la modificación en cuestión. En este 
+		caso son las etiquetas de Gitlab y de Github.<br/>
+		Existe otro comodin más el cual es "|" y sirve para encontrar una palabra dentro de una lista de palabras 
+		separadas por espacios en blanco, pero que después de la palabra en cuestión siga el guión medio ("-").<br/>
+		Podemos usar la misma lista anterior para ejemplificar este comodin
+	</p>
+	<ul class="comodines-5">
+		<li>
+			<a class="sitio-http sitio-ar" href="http://www.femeba.org.ar/" target="_blank">
+				Femeba
+			</a>
+		</li>
+		<li>
+			<a class="sitio-http sitio-ar" href="http://www.hidro.gov.ar/" target="_blank">
+				Servicio Hidrovia
+			</a>
+		</li>
+		<li>
+			<a class="sitio-https sitio-com" href="https://www.gihub.com" target="_blank">
+				Github
+			</a>
+		</li>
+		<li>
+			<a class="sitio-https sitio-com" href="https://www.gitlab.com" target="_blank">
+				Gitlab
+			</a>
+		</li>
+	</ul>
+	<img src="img/selectores10.jpg"/>
+	<p>
+		Debe notarse que en esta ocasión, todas las clases que tengan "sitio-" sufrirán el estio indicado en 
+		la clase <code>comodines-5</code>. Esto funciona para "sitio-com" o "sitio-ar", pero no a "sitio com"
+		o a "sitio ar" porque "sitio" no es seguido de un guion medio.
+	</p>
+	<ul>
+		<li >
+			<a class="inicio-pagina" href="masSobreSelectores.html#titulo" >
+				⏫
+			</a>
+		</li>
+		<li>
+			<a class="volver-index" href="index.html">🏠</a>
+		</li>
+			
+	</ul>
+</article>
+
+    <hr/>
+
+<article id="selHijo">
+    <h2 class="tituloPrincipal">Selector Por Hijos o Por Descendientes</h2>
+    <p>
+    	El selector por hijos es útil para darle diversos estilos a los diversos hijos de una etiqueta. Una etiqueta hijo es una etiqueta
+    	dentro de otra etiqueta. Si le damos estilo sólo a la etiqueta contenedora (la etiqueta padre), todos los hijos pueden sufrir esas
+    	modificaciones. Pero, si usamos este selector, podremos definir qué tipo de hijos recibirán el estilo. La sintaxis es:<br/>
+    	<pre>
+			<code>
+				tipoSelector tipoSelectorHijo{
+					/*cuerpo del código*/
+			    }
+			</code>
+
+			<code>
+				tipoSelector tipoSelectorHijo1 tipoSelectorHijo2 ... tipoSelectorHijoN {
+					/*cuerpo del código*/
+			    }
+			</code>
+
+			<code>
+				nombreClase tipoSelector{
+					/*cuerpo del código*/
+			    }
+			</code>
+		</pre><br/>
+		La idea es que las etiquetas hijos también pueden tener etiquetas hijos, por lo tanto, la segunda sintaxis muestra cómo vamos profundizando en las etiquetas hasta llegar al descendiente deseado. Lo indicado como 'tipoSelector', 'tipoSelector1', 'tipoSelector2',
+		'tipoSelectorN' hace referencia a un tipo de selector como ser p, h1, h2, b, a, etc.
+    </p>
+	<p>
+		Podemos diferenciar dos tipos de hijos: directos y descendientes. Los directos son los elementos del primer 
+		nivel respecto del elemento usado como referencia. Por ejemplo, veamos el siguiente código
+		<pre>
+			<code>
+			&lt; ul class="hijos-directos"&gt;
+				&lt;li&gt;Primer hijo directo&lt;&sol;li&gt;
+				&lt;li&gt;Segundo hijo directo&lt;&sol;li&gt;
+			&lt;ul&sol;&gt;
+			</code>
+		</pre>
+		Aquí, las etiquetas <code>li</code> son hijos directos de la etiqueta <code>ul</code> porque esas 
+		etiquetas están en el primer nivel.<br/>
+		En css podemos acceder a los hijos directos de la siguiente manera<br/>
+		<pre>
+			<code>
+				.hijos-directos > li {
+					background-color:red;
+				}
+			</code>
+		</pre><br/>
+	</p>
+	<img src="img/selectores1.jpg"/>
+	<p>
+		En el ejemplo de la foto, se ve como el asistente nos marca cuál etiqueta es el hijo directo. En el caso 
+		mostrado se da que la etiqueta <code>li</code> es el hijo directo de la etiqueta <code>ul</code>.<br/>
+		El caso de los descendientes, como se explicó, tiene que ver con los hijos de los hijos. Veamos el siguiente 
+		código:<br/>
+		<pre>
+			<code>
+			&lt; ul class="hijos-directos"&gt;
+
+			  &lt;li&gt;
+			   &lt;b&gt;
+				Primer hijo directo
+			   &lt;&sol;b&gt;
+			  &lt;&sol;li&gt;
+
+			  &lt;li&gt;
+			   &lt;b&gt;
+				Segundo hijo directo
+			   &lt;&sol;b&gt;
+			  &lt;&sol;li&gt;
+			&lt;ul&sol;&gt;
+			</code>
+		</pre>
+		En este caso, las etiquetas <code>b</code> son hijas de las etiquetas <code>li</code> que a su vez son 
+		hijas de la etiqueta <code>ul</code>. Por favor, note la diferencia en las dos siguientes listas
+	</p>
+	<ul class="hijos">
+		<li>
+			Primer hijo directo
+		</li>
+		<li>
+			Segundo hijo directo
+		</li>
+	</ul>
+
+	<ul class="descendientes">
+		<li>
+			<b>
+				Primer descendiente
+			</b>
+			
+		</li>
+		<li>
+			<b>
+				Segundo descendiente
+			</b>
+			
+		</li>
+	</ul>
+	<p>
+		Lo que sucede en las listas es que la primera tiene afectado el estilo de sus hijos directos, las 
+		etiquetas <code>li</code>. La segunda lista tiene afectada a sus etiquetas descendiente, hijas de 
+		sus hijas, la etiqueta <code>b</code>. El código de ambas es el siguiente:
+	</p>
+	<img src="img/selectores2.jpg"/>
+	<p>
+		Por favor, nótese la diferencia entre ambos textos de ayudas que aparecen. Para el caso de la clase 
+		<code>hijo</code> se nota que el único hijo es la etiqueta <code>li</code>. En el segundo caso se ve
+		cómo aparece unos puntos suspensivos y luego aparece la etiqueta <code>b</code>. Con eso nos indica que 
+		afectará a las etiquetas <code>b</code> de los hijos de la etiqueta <code>ul</code>.
+	</p>
+	<ul>
+		<li >
+			<a class="inicio-pagina" href="masSobreSelectores.html#titulo" >
+				⏫
+			</a>
+		</li>
+		<li>
+			<a class="volver-index" href="index.html">🏠</a>
+		</li>
+			
+	</ul>
+</article>
+     <hr/>
+	 <article id="selHermano">
+		<h2 class="tituloPrincipal">Selector Hermano</h2>
+		<p>
+			Estos selectores sirven para seleccionar etiquetas que se encuentren en el mismo nivel. Habrá de 
+			dos tipos: selector de hermanos en general y selector de hermanos adyacentes.<br/>
+			El primero aplica para todos los hermanos y el segundo aplica solamente al elemento que está 
+			debajo de el elemento referencia. El símbolo usado para hacer referencia a los hermanos generales 
+			es ~. Usaremos una lista como referencia:<br/>
+		</p>
+		<ul>
+			<li>
+				Primavera
+			</li>
+			<li class="hermano-gral">
+				Verano
+			</li>
+			<li>
+				Otoño
+			</li>
+			<li>
+				Invierno
+			</li>
+		</ul>
+		<p>
+			La etiqueta que se usa como referencia es la etiqueta <code>li</code> con la palabra Verano. Esa 
+			etiqueta tiene en su atributo class el valor "hermano-gral" y el código del archivo css es el 
+			siguiente <br/>
+		</p>
+		<img src="img/selectores3.jpg"/>
+		<p>
+			Vemos que la ayuda nos muestra que seleccionará los elementos <code>li</code> que se encuentran en
+			el mismo nivel que él. Pero el resultado sólo colorea los <code>li</code> que se encuentran debajo 
+			de "Verano" y esto se debe a que este tipo de selector afecta a los hermanos que se encuentran 
+			después de la etiqueta usada como referencia. Como la etiqueta que tiene la clase es la etiqueta de 
+			"Verano", sólo afecta a "Otoño" e "Invierno", pero no a "Primavera" porque esta se encuentra 
+			antes.<br/>
+			Veamos ahora cómo se comportan los selectores de hermanos adyacentes usando el mismo ejemplo. Aquí,
+			el símbolo usado en css es el "+".
+		</p>
+		<ul>
+			<li>
+				Primavera
+			</li>
+			<li class="hermano-adyacente">
+				Verano
+			</li>
+			<li>
+				Otoño
+			</li>
+			<li>
+				Invierno
+			</li>
+		</ul>
+		<p>
+			Nuevamente, el elemento de referencia es el <code>li</code> que tiene el texto "Verano". Notamos que
+			ahora sólo se ha coloreado "Otoño" y esto se debe a que sólo se aplicará el estilo css al hermano 
+			siguiente más próximo respecto de la etiqueta tomada como referencia. No aplicará a los anteriores a
+			la referencia ni a todos los hermanos siguientes, sólo al siguiente más próximo.
+		</p>
+		<img src="img/selectores4.jpg"/>
+		<p>
+			Por favor, presta atención a ambas imágenes para los selectores de hermano notando la ayuda presentada
+			para cada uno
+		</p>
+		<div clase="efecto-uno-a-lado">
+			<img src="img/selectores3.jpg"/>
+			<img src="img/selectores4.jpg"/>
+		</div>
+		<p>
+			Si se observa con detenimiento se notará cómo para "hermano-gral" aparecen los puntos suspensivos 
+			verticales y luego la etiqueta <code>li</code>, mientras que para "hermano-adyacente" sólo aparece 
+			la etiqueta <code>li</code>. Esto nos muestra que en el primera caso afectará a todos los 
+			<code>li</code> que vengan después del elemento de referencia, mientras que en el segundo caso sólo 
+			afectará al <code>li</code> ubicado inmediatamente después del elemento de referencia.
+		</p>
+		<ul>
+			<li >
+				<a class="inicio-pagina" href="masSobreSelectores.html#titulo" >
+					⏫
+				</a>
+			</li>
+			<li>
+				<a class="volver-index" href="index.html">🏠</a>
+			</li>
+				
+		</ul>
+	 </article>
+     <hr/>
+<article id="selPseudoClase">
+    <h2 class="tituloPrincipal">Selector Por Pseudoclase</h2>
+    <p>
+    	Una pseudoclase se define mediante <code>nombreSelector:pseudoClase</code> o 
+		<code>.nombreClase nombreSelector:pseudoClase</code>. <br/>
+		Algunas pseudoclases son hover, active, link. Se le dará estilo al elemento dependiendo su contexto o 
+		dependiendo de ciertos estados que tendrá el elemento html. Vamos a ir viendo alguno de estas 
+		pseudoclases.<br/>
+		La primera de ellas es <code>required.</code> Vamos a crear un formulario de prueba para mostrar el 
+		funiconamiento de esta pseudoclase
+    </p>
+	<form class="frm-pseudoclases">
+		<input type="text" name="nombre" placeholder="Coloque su nombre" required/>
+		<input type="email" name="email" placeholder="Coloque su mail" required>
+		<input type="submit">
+	</form>
+	<p>
+		Si probamos escribir en el formulario notaremos que los campos requeridos están en 
+		amarillos, aquellos que tienen escrito un valor válido se tornan verdes y los que 
+		tienen un valor inválido se tornan rojos. Haga la prueba por favor.
+	</p>
+	<img src="img/selectores12.jpg"/>
+	<p>
+		Existen otras pseudoclases como focus. Este permite darle el estilo al elemento html 
+		cuand éste adquiere el foco. Por ejemplo, cuando se selecciona un input para agregar 
+		datos. El siguiente formulario, al hacerse foco en un input, esté cambiará a un color 
+		de fondo skyblue y a una letra blanca.
+	</p>
+	<form class="frm-pseudoclases2">
+		<input type="text" name="nombre" placeholder="Coloque su nombre" required/>
+		<input type="email" name="email" placeholder="Coloque su mail" required>
+		<input type="submit">
+	</form>
+	<img src="img/selectores13.jpg"/>
+	<p>
+		Así como se le puede aplicar a una etiqueta html la propiedad required, también se 
+		le puede aplicar la propiedad disabled la cual permite inhabilitar al elemento en 
+		cuestión. Este atributo también es una pseudoclase en css y podemos darle estilo a los
+		elementos que tengan esta propiedad. Por ejemplo, en el siguiente formulario se 
+		deshabilitará el botón y se le dará un fondo rojo con letras negras para resaltarlo.
+		Se puede probar que no es posible hacer click sobre el botón.
+	</p>
+	<form class="frm-pseudoclases3">
+		<input type="text" name="nombre" placeholder="Coloque su nombre" required/>
+		<input type="email" name="email" placeholder="Coloque su mail" required>
+		<input type="submit" disabled>
+	</form>
+	<img src="img/selectores14.jpg"/>
+	<p>
+		Las siguiente pseudoclase es <code>hover</code> el cual permite dar estilo a un 
+		elemento html cuando el ratón se posa sobre él. Por ejemplo, podemos aplicarlo a un 
+		enlace con la etiqueta <code>a</code><br/>
+		<a href="https://www.youtube.com" class="efecto-hover">Enlace a Youtube</a><br/>
+		Si se coloca el ratón sobre el enlace anterior se puede ver cómo el texto cambia de 
+		color y le aparece un borde.<br/>
+		Las siguientes pseudoclases tienen que ver con los estados de los enlaces. Cuando 
+		un enlace aun no es visitado se dice que está en estado <code>link</code> y cuando ya
+		ha sido visitado se dice que está en estado <code>visited</code>. Una vez más, los 
+		estados <code>visited y link</code> son pseudoclases que se pueden usar en css. Algo 
+		importante a destacar es que la pseudoclase <code>hover</code> debe ir después de la 
+		pseudoclase <code>visited</code> para evitar que el estilo de la primera sea opacada 
+		por el estilo de la segunda. Vemos esto con los siguientes ejemplos donde haremos que 
+		los enlaces que no se visitaron todavía sean de color verde y las visitadas estén 
+		subrayadas y sean de color carmesí.
+	</p>
+	<ul class="visited-link">
+		<li>
+			<a href="https://www.otakufreaks.com" target="_blank">
+				Otakufreaks
+			</a>
+		</li>
+		<li>
+			<a href="https://www.wikipedia.org" target="_blank">
+				Wikipedia
+			</a>
+		</li>
+	</ul>
+	<p>
+		Sólo las enlaces que aun no se han visitado estarán en verde, los demás estarán en 
+		rojo.<br/>
+		La siguiente pseudoclase es <code>active</code> y sirve para darle estilo al elemento 
+		cuando mantenemos pulsado el ratón sobre el o cuando presionamos sobre él.<br/>
+		Algo importante a tener en cuenta es que, para evitar que un estilo interfiera sobre 
+		otro, el orden en el cual deben colocarse las pseudoclases mencionadas es:
+		<code>link, active, visited, hover</code>. A continuación, se muestra el código de cada 
+		uno
+	</p>
+	<img src="img/selectores15.jpg"/>
+	<p>
+		La siguiente pseudoclase es <code>target</code>. Esta pseudoclase sirve para, 
+		cuando pulsamos un enlace y nos dirigimos a algún elemento con un específico id, 
+		darle estilos a ese elemento siempre que él haya sido el objetivo del enlace.
+		Nota que cuando se presionan las opciones para volver al inicio, los elementos 
+		pares de la lista de opciones se vuelven verde. Eso se logra mediante target y 
+		se verá afectado para todas las situaciones en que sea target. El 
+		código es el siguiente
+	</p>
+	<img src="img/selectores16.jpg"/>
+	<p>
+		Las siguientes pseudoclases son aquellas que están referidas a la posición  que ocupa el 
+		elemento en su contenedor. Para entender el comportamiento de estas pseudoclases vamos a 
+		emplear una lista mucho más larga. Para ello vamos a enlistar las doce tareas de Heracles.<br/>
+		La primera pseudoclase es <code>first-child</code> el cual aplica estilo al primer elemento hijo
+		de la etiqueta de referencia.<br/>
+		En este primer ejemplo señalamos que la etiqueta de referencia tendrá hijos <code>li</code> y que de 
+		esos hijos <code>li</code>, el primero de todos debe tener un fondo carmesí y una letra de color negro.
+	</p>
+	<ol class="doce-trabajos">
+		<li>Matar al león de Nemea.</li>
+		<li>Matar a la hidra de Lerna.</li>
+		<li>Capturar vivo al jabalí de Erimanto</li>
+		<li> Capturar a la cierva de Cerinea.</li>
+		<li>Expulsar a las aves del Estínfalo.</li>
+		<li>Domar al toro de Creta.</li>
+		<li>Limpiar los establos de Augías.</li>
+		<li>Robar las yeguas de Diomedes.</li>
+		<li>Robar el cinturón de Hipólita.</li>
+		<li>Robar el ganado de Gerión.</li>
+		<li>Robar las manzanas doradas del jardín de las Hespérides.</li>
+		<li>Raptar al perro de Hades Cerbero.</li>
+	</ol>
+	<img src="img/selectores17.jpg"/>
+	<p>
+		Podemos hacer lo mismo para el último hijo mediante last-child
+	</p>
+	<ol class="doce-trabajos2">
+		<li>Matar al león de Nemea.</li>
+		<li>Matar a la hidra de Lerna.</li>
+		<li>Capturar vivo al jabalí de Erimanto</li>
+		<li> Capturar a la cierva de Cerinea.</li>
+		<li>Expulsar a las aves del Estínfalo.</li>
+		<li>Domar al toro de Creta.</li>
+		<li>Limpiar los establos de Augías.</li>
+		<li>Robar las yeguas de Diomedes.</li>
+		<li>Robar el cinturón de Hipólita.</li>
+		<li>Robar el ganado de Gerión.</li>
+		<li>Robar las manzanas doradas del jardín de las Hespérides.</li>
+		<li>Raptar al perro de Hades Cerbero.</li>
+	</ol>
+	<p>
+		Ahora, si quisieramos elegir al n-ésimo hijo podemos usar la clase nth-child. Esta clase puede estar 
+		acompañado de dos variables: even y odd. Even sirve para determinar el estilo de los hijos pares, 
+		mientras que odd sirve para determinar el estilo de los hijos impares. Vamos a cambiar los colores de 
+		fondo y letras según el elemento sea par o impar
+	</p>
+	<ol class="doce-trabajos3">
+		<li>Matar al león de Nemea.</li>
+		<li>Matar a la hidra de Lerna.</li>
+		<li>Capturar vivo al jabalí de Erimanto</li>
+		<li> Capturar a la cierva de Cerinea.</li>
+		<li>Expulsar a las aves del Estínfalo.</li>
+		<li>Domar al toro de Creta.</li>
+		<li>Limpiar los establos de Augías.</li>
+		<li>Robar las yeguas de Diomedes.</li>
+		<li>Robar el cinturón de Hipólita.</li>
+		<li>Robar el ganado de Gerión.</li>
+		<li>Robar las manzanas doradas del jardín de las Hespérides.</li>
+		<li>Raptar al perro de Hades Cerbero.</li>
+	</ol>
+	<img src="img/selectores18.jpg"/>
+	<p>
+		Existen otras formas de determinar el elemento que recibirá el estilo. Por ejemplo, se puede usar 
+		un indicador del tipo An, donde A es un número entero y n es una forma de señalar que será el elemento
+		que se halle en una posición múltiplo del A indicado. Si queremos que sólo los elementos múltiplos de 
+		3 sean los afectados podemos hacer lo siguiente
+	</p>
+	<ol class="doce-trabajos4">
+		<li>Matar al león de Nemea.</li>
+		<li>Matar a la hidra de Lerna.</li>
+		<li>Capturar vivo al jabalí de Erimanto</li>
+		<li> Capturar a la cierva de Cerinea.</li>
+		<li>Expulsar a las aves del Estínfalo.</li>
+		<li>Domar al toro de Creta.</li>
+		<li>Limpiar los establos de Augías.</li>
+		<li>Robar las yeguas de Diomedes.</li>
+		<li>Robar el cinturón de Hipólita.</li>
+		<li>Robar el ganado de Gerión.</li>
+		<li>Robar las manzanas doradas del jardín de las Hespérides.</li>
+		<li>Raptar al perro de Hades Cerbero.</li>
+	</ol>
+	<img src="img/selectores19.jpg"/>
+	<p>
+		También se puede usar la expresión An+k, con k siendo un numero natural. Al usar esta expresión lo 
+		que hace es moverse al múltiplo de An, pero no aplica el estilo a An sino a An+k. Esto sucede para 
+		todos los múltiplos presentes en la lista, y si la lista se agota en el último múltiplo, entonces 
+		vuelve al principio de los elementos y aplica el estilo al elemento +k empezando desde el principio.
+		Para entenderlo mejor supongamos que hacemos 3n+1. Esto significa que buscará todos los múltiplos de 3
+		que en nuestra lista serán 3°, 6°, 9° y 12°. Pero no aplicará el estilo a esos elementos sino a los 
+		elementos 4° (3+1), 7° (6+1), 10° (9+1) y 1° (como el 12° es el último vuelve al inicio y ese inicio
+		es el +1 que falta para completar la expresión).
+	</p>
+	<ol class="doce-trabajos5">
+		<li>Matar al león de Nemea.</li>
+		<li>Matar a la hidra de Lerna.</li>
+		<li>Capturar vivo al jabalí de Erimanto</li>
+		<li> Capturar a la cierva de Cerinea.</li>
+		<li>Expulsar a las aves del Estínfalo.</li>
+		<li>Domar al toro de Creta.</li>
+		<li>Limpiar los establos de Augías.</li>
+		<li>Robar las yeguas de Diomedes.</li>
+		<li>Robar el cinturón de Hipólita.</li>
+		<li>Robar el ganado de Gerión.</li>
+		<li>Robar las manzanas doradas del jardín de las Hespérides.</li>
+		<li>Raptar al perro de Hades Cerbero.</li>
+	</ol>
+	<img src="img/selectores20.jpg"/>
+	<p>
+		Otro tipo de etiquetas son las etiquetas que también tienen que ver con la posición de la etiqueta, 
+		pero tiene en cuenta también el tipo etiqueta. Para ilustrar esto vamos a colocar dentro de un 
+		<code>div</code> de manera intercalada las etiquetas <code>h</code> y etiquetas <code>p</code>.<br/>
+		Vamos a darle un estilo al primer párrafo y apra ello usamos la clase first-of-type el cual aplica 
+		el estilo al primer elemento que sea del tipo señalado
+	</p>
+	<div class="pseudoclases-pos-tipo">
+		<h2>Etiqueta h2</h2>
+		<p>Primer Párrafo</p>
+		<h3>Etiqueta h3</h3>
+		<p>Segundo Párrafo</p>
+		<h4>Etiqueta h4</h4>
+		<p>Tercer Párrafo</p>
+		<h5>Etiqueta h5</h5>
+		<p>Cuarto Párrafo</p>
+	</div>
+	<img src="img/selectores21.jpg"/>
+	<p>
+		También existe last-of-type el cual da estilo al último elemento que sea del tipo señalado. En la 
+		sintaxis sólo debes reemplazar <code>first-of-type</code> por <code>last-of-type.</code>
+	</p>
+	<div class="pseudoclases-pos-tipo2">
+		<h2>Etiqueta h2</h2>
+		<p>Primer Párrafo</p>
+		<h3>Etiqueta h3</h3>
+		<p>Segundo Párrafo</p>
+		<h4>Etiqueta h4</h4>
+		<p>Tercer Párrafo</p>
+		<h5>Etiqueta h5</h5>
+		<p>Cuarto Párrafo</p>
+	</div>
+	<p>
+		También tenemos un nth-of-type para establecer qué elementos sufrirán el estilo dependiendo su 
+		posición y su tipo. Apliquemosle estilos distinto a los párrafos dependiendo si son pares o 
+		impares. También se puede aplicar las expresiones An y An+k.
+	</p>
+	<div class="pseudoclases-pos-tipo3">
+		<h2>Etiqueta h2</h2>
+		<p>Primer Párrafo</p>
+		<h3>Etiqueta h3</h3>
+		<p>Segundo Párrafo</p>
+		<h4>Etiqueta h4</h4>
+		<p>Tercer Párrafo</p>
+		<h5>Etiqueta h5</h5>
+		<p>Cuarto Párrafo</p>
+	</div>
+	<img src="img/selectores22.jpg"/>
+	<p>
+		El siguiente selector servirá para negar la aplicación del estilo. Es decir, el tipo de etiqueta que 
+		se indique no se verá afectado por el estilo indicado. Su sintaxis es 
+		<code>:not(tipo-etiqueta)</code>
+	</p>
+	<div class="pseudoclases-pos-tipo4">
+		<h2>Etiqueta h2</h2>
+		<p>Primer Párrafo</p>
+		<h3>Etiqueta h3</h3>
+		<p>Segundo Párrafo</p>
+		<h4>Etiqueta h4</h4>
+		<p>Tercer Párrafo</p>
+		<h5>Etiqueta h5</h5>
+		<p>Cuarto Párrafo</p>
+	</div>
+	<img src="img/selectores23.jpg"/>
+	<p>
+		Como se ve, los estilos fueron aplicados a todas las etiquetas <code>h</code> , 
+		pero a ninguna etiqueta <code>p</code>.<br/>
+		Este negador puede usarse también de la siguiente manera
+		<code>:not(etiqueta1,etiqueta2,....,.clase1,.clase2,...,#id1,#id2,...,)</code>
+		Por ejemplo, vamos a tener ahora nuevamente los párrafos y etiquetas h, pero ahora tendrán clases
+		e id. Veamos ahora cómo quedan los estilos
+	</p>
+	<div class="pseudoclases-pos-tipo5">
+		<h2 class="pseudo-h2">Etiqueta h2</h2>
+		<p id="pseudo-p1">Primer Párrafo</p>
+		<h3>Etiqueta h3</h3>
+		<p>Segundo Párrafo</p>
+		<h4>Etiqueta h4</h4>
+		<p>Tercer Párrafo</p>
+		<h5>Etiqueta h5</h5>
+		<p>Cuarto Párrafo</p>
+		<ul class="pseudo-ul1">
+			<li>Primer elemento</li>
+			<li>Segundo elemento</li>
+		</ul>
+	</div>
+	<img src="img/selectores24.jpg"/>
+	<p>
+		En la imagen puede verse <code>.pseudo-ul1,.pseudo-ul1 li:first-child</code> con el cual primero 
+		se le quita el estilo al padre, para luego quitarselo al primer hijo del padre. Esto debe hacerse 
+		así para lograr que los hijos pierdan el estilo. Si sólo se coloca <code>.pseudo-ul1 li:first-child</code>,
+		el padre no pierde el estilo y el hijo en consecuencia lo arrastra también. Esto creo se debe al selector
+		universal: si expresamente no decimos que padre e hijo no reciban el estilo, entonces se forzará el estilo 
+		en el padre y a su vez se forzará en el hijo (al menor, así parece ser). Veamoslo más detenidamente 
+		con otro ejemplo.
+	</p>
+	<p>Ejemplo Número 1</p>
+	<div class="pseudoclases-pos-tipo6" style="border:solid 3px black;">
+		<h2 class="pseudo-h2">Etiqueta h2</h2>
+		<p id="pseudo-p1">Primer Párrafo</p>
+		<h3>Etiqueta h3</h3>
+		<p>Segundo Párrafo</p>
+		<h4>Etiqueta h4</h4>
+		<p>Tercer Párrafo</p>
+		<h5>Etiqueta h5</h5>
+		<p>Cuarto Párrafo</p>
+		<ul class="pseudo-ul1">
+			<li>Primer elemento</li>
+			<li>Segundo elemento</li>
+		</ul>
+	</div>
+	<p>
+		En este primer ejemplo hemos aplicado un estilo de color verde en las letras al primer elemento 
+		<code>li</code> y luego aplicamos estilos a los demás elementos donde excluimos a varios incluido a 
+		la clase del <code>ul</code> y al primer <code>li</code>
+	</p>
+	<p>Ejemplo Número 2</p>
+	<div class="pseudoclases-pos-tipo7" style="border:solid 3px black;">
+		<h2 class="pseudo-h2">Etiqueta h2</h2>
+		<p id="pseudo-p1">Primer Párrafo</p>
+		<h3>Etiqueta h3</h3>
+		<p>Segundo Párrafo</p>
+		<h4>Etiqueta h4</h4>
+		<p>Tercer Párrafo</p>
+		<h5>Etiqueta h5</h5>
+		<p>Cuarto Párrafo</p>
+		<ul class="pseudo-ul1">
+			<li>Primer elemento</li>
+			<li>Segundo elemento</li>
+		</ul>
+	</div>
+	<p>
+		Para este segundo ejemplo sólo removemos a la etiqueta <code>li</code>, pero no a la etiqueta 
+		<code>ul</code>. Puede verse que se mantiene el fondo carmesí a pesar de haber removido al 
+		<code>li</code>, pero este fondo carmesí es por el <code>ul</code> no por el <code>li</code>.<br/>
+		Esto último podemos notarlo porque las letras verdes se mantienen, lo que quiere decir que el estilo 
+		de letras blancas que se aplica al resto de elementos no está presente en el <code>li</code>.<br/>
+		Por favor, presta atención a ambos códigos mostrados en la siguiente imagen
+	</p>
+	<img src="img/selectores25.jpg"/>
+	<ul>
+		<li >
+			<a class="inicio-pagina" href="masSobreSelectores.html#titulo" >
+				⏫
+			</a>
+		</li>
+		<li>
+			<a class="volver-index" href="index.html">🏠</a>
+		</li>
+			
+	</ul>
+</article>
+
+     <hr/>
+<article id="selVarios">
+    <h2 class="tituloPrincipal">Dar Estilos A Varios Elementos A La Vez</h2>
+    <p>
+    	La forma de hacer esto es mediante la siguiente sintaxis:
+		<code><span style="color:blue">selector1, selector2,...,selectorN {cuerpo css;}</span></code> <br/>
+		Donde <code>selector</code> hace referencia a una etiqueta, clase, id, etc. La selecciones puede 
+		hacerse usando todos los tipos de selectores, pero deben seprarse por coma cada uno de ellos. 
+		 Veamos unos ejemplos<br/>
+    	<code>h1,h2,p{color:black,background-color:red;}</code><br/>
+    	<code>.caja1,caja2{color:black,background-color:red;}</code><br/>
+    	En el primer caso se le da un color de letra negro y un fondo rojo a las etiquetas h1, h2 y p. 
+		En el segundo se le dá el mismo estilo a las clases caja1 y caja2.<br/>
+		Vamos a ver uno más complejo donde tendré varias etiquetas <code>b</code> dentro de una etiqueta p y
+		sólo se dará estilo a ciertas etiquetas<br/>
+		<p class="p-varios-selectores">
+			<b class="primera-b">Primera etiqueta b</b>
+			<b id="segunda-b">Segunda etiqueta b</b>
+			<b>Tercera etiqueta b</b>
+			<b name="cuarta-b">Cuarta etiqueta b</b>
+		</p>
+		El código para esto es el siguiente
+    </p>
+	<img src="img/selectores26.jpg"/>
+	<ul>
+		<li >
+			<a class="inicio-pagina" href="masSobreSelectores.html#titulo" >
+				⏫
+			</a>
+		</li>
+		<li>
+			<a class="volver-index" href="index.html">🏠</a>
+		</li>
+			
+	</ul>
+</article>
+
+<hr/>
+
+<article id="variasClases">
+	<h2 class="tituloPrincipal">Aplicar Varios Estilos A La Vez</h2>
+	<p>
+		También es posible darle varias clases a un objeto html de la siguiente manera <br/>
+		<code>
+			&lt;h1 class="nombreClase1 nombreClase2 ... nombreClaseN"&gt;
+		</code><br/>
+		En el ejemplo, a la etiqueta h1 se le pueden aplicar varias clases sólo separando los nombres de cada
+		clase combinandolas.
+	</p>
+	
+	<ul>
+		<li >
+			<a class="inicio-pagina" href="masSobreSelectores.html#titulo" >
+				⏫
+			</a>
+		</li>
+		<li>
+			<a class="volver-index" href="index.html">🏠</a>
+		</li>
+			
+	</ul>
+	
+</article>
+</body>
+</html>

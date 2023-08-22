@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Estilos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <style>
+        h1 {
+            color:red;
+            text-align: center;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>¿Cómo agregar estilos CSS?</h1>
+    <p>
+        Una de las primeras formas de agregar estilos CSS a una etiqueta HTML es hacerlo de manera inline. Esto
+        se refiere a usar el atributo <b>style</b> de la etiqueta de la siguiente manera:<br/>
+        <code>&lt;h1 style="modificacionDeAtributos"&gt;</code><br/>
+        Por ejemplo, para cambiar el color del texto de una etiqueta h1 se hace:<br/>
+        <code>&lt;h1 style="color:rgb(valorRojo,valorVerde,valorAzul)"&gt;</code><br/>
+        En este ejemplo, "color" es un atributo, una caracteristica de la etiqueta que podemos modificar para que
+        tenga ciertas características.<br/>
+        Un problema que se tiene al usar estilos inline es que si deseamos aplicar el mismo color a varias 
+        etiquetas debemos aplicar style="restoDelCodigo" a cada una de ellas. Esto puede ser tedioso e impráctico.<br/>
+        Otra forma de aplicar estilos css al documento HTML es mediante el CSS interno. En la estructura de HTML
+        una de las primeras etiquetas es la etiqueta &lt;head&gt;. Dentro de esta etiqueta debemos colocar la
+        etiqueta &lt;style&gt;&lt;&sol;style&gt;. Dentro de la etiqueta style debemos usar los llamados selectores.<br/>
+        Un selector servirá para indicar qué etiquetas html queremos reciban el estilo creado. Veamos el siguiente código <br/>
+        <pre>
+            <code class="resaltarCodigo">
+                &lt;head&gt;
+                    &lt;style&gt;
+                    h1 {
+                        color: red;
+                        background-color:black;
+                    }
+                    &lt;&sol;style&gt;
+                &lt;&sol;head&gt;
+            </code>
+        </pre><br/>
+        El código superior modificará el color de la letra y el color de fondo de todas las
+        etiquetas h1 que haya en el documento en el cual se definió la etiqueta style. En
+        este caso ek selector es esa palabra h1 que se coloca antes de las llaves.<br/>
+        Algo que debe resaltarse es que si se aplica un estilo inline y un estio interno a
+        la misma etiqueta, el estilo que afectará a la etiqueta será el estilo inline.<br/>
+        La tercera forma de aplicar estilos css es mediante un archivo externo. Normalmente
+        los arhivos externos css deberán ir dentro de una carpeta denominada css.<br/>
+        Para vincular un archivo css a un arhivo html debemos usar la etiqueta link dentro
+        de la etiqueta head: <br/>
+        <pre>
+            <code class="resaltarCodigo">
+                &lt;head&gt;
+                &lt;link href="rutaDelArchivoCss" rel="stylesheet"&sol;&gt;
+                &lt;&sol;head&gt;
+            </code>
+        </pre><br/>
+        Ahora dentro del archivo css podemos usar el selector h1 y darle el estilo que 
+        se desee a la etiqueta h1.<br/>
+        Al igual que sucedia entre un estilo css inline y un estilo css interno, cuando un
+        documento html tiene definido un estilo interno y está vinculado a un archivo CSS
+        externo, el estilo que se aplique a un selector tendrá prioridad para el estilo 
+        interno. Entonces, las prioridades serán: inline->interno->archivo externo.<br/>
+        Por lo que he experimentado, si se tienen dos estilos sobre una etiqueta (por 
+        ejemplo un estilo interno y un archivo css externo) y ambos estilos están modificando
+        el mismo atributo gana el que tenga más prioridad. Pero, si en ambos selectores se estan
+        modificando atributos distintos, estos se combinan. Un ejemplo de lo expuesto puede 
+        verse en este documento donde en la etiqueta style se está modifica el color de letra
+        y la alineación del texto, mientras que en el archivo estilos.css para el mismo selector
+        se está modificando color de letra, posición del texto y color de fondo.<br/>
+        El resultado del título es una texto que tiene el color de letra y posición del texto 
+        indicados en la etiqueta style, pero su color de fondo está indicado en estilos.css.<br/>
+        También podemos forzar que un estilo en un archivo externo tome prioridad respecto de los
+        estilos inline e interno. Eso se logram mediante la sentencia <b>!important</b><br/>
+        <pre>
+            <code class="resaltarCodigo">
+                h1 {
+                    color: green !important;
+                    background-color:violet !important;
+                }
+            </code>
+                    
+                
+        </pre><br/>
+        Lsa última cuestiones importantes sobre prioridades es que la etiqueta style debe estar
+        definida después de las etiquetas link que conectan el documento html con archivos css.
+        Además, si los navegadores web tienen estilos propios estos tienen la prioridad más baja
+        de todas.
+    
+    </p>
+    <p>
+        Existe una forma de "llamar" una hoja de estilos dentro de otra hoja de estilos. La forma de hacerlo es
+        mediante <br/>
+        <code>@import url(rutaHojaEstilo)</code><br/>
+        A pesar de lo señalado se considera mala práctica usar <b>@import</b> porque al momento de cargar la
+        página web se deben descargar ciertos recursos como ser fuentes, imagenes, etc. Cuando el navegador lee 
+        @import se detiene hasta leer todo el contenido y continúa cuando termina. Esto puede ralentizar la carga 
+        de la página. Con los preprocesarores como SASS, el @import si se puede usar, pero no en css puro.
+    </p>
+    <hr/>
+    <p>
+        Otro selector es el selector id. Los selectores id están ligados a un atributo de las
+        etiquetas denominado id. El id de una etiqueta sirve para darle a esa etiqueta un 
+        identificador propio que los diferencie de cualquier otra etiqueta en el documento. 
+        Por lo tanto, dos etiquetas no pueden tener exactamente el mismo valor en su id.<br/>
+        Para colocar un id a una etiqueta se hace <code>&lt;h1 id="nombreId"&gt;</code><br/>
+        En el archivo css hacemos: <br/>
+        <pre>
+            <code class="resaltarCodigo">
+                #nombreId {
+                    color: green !important;
+                    background-color:violet !important;
+                }
+            </code>
+                    
+                
+        </pre><br/>
+        Podemos ver una característica interesante en la siguiente imagen
+    </p>
+    <img src="img/selectorId.jpg"/>
+    <p>Como muestra la imagen superior, una vez declarado el selector id en el documento
+        css podemos posarnos sobre el nombre que le dimos al id. Eso nos señalará que para
+        usar el estilo definido en el selector debemos darle al atributo id de un elemento html
+        el mismo nombre del selector id, sólo que esta vez no le colocamos el numeral.<br/>
+        El selector
+    </p>
+    <hr/>
+    <p>
+        La siguiente forma de establecer estilos es mediante clases. Las clases, a diferencia de
+        los id, se pueden utilizar repetidas veces. La forma de declararlas en el documento css es
+        haciendo <code>.nombreClase{modificarAtributos}</code>.<br/>
+        Luego se puede aplicar a un elemento html haciendo <code> &lt;h1 class="nombreClase"&gt;</code>
+    </p>
+    <img src="img/selectorClass.jpg"/>
+    <p>
+        Un elemento html puede tener varias clases. Sólo debemos colocar en el atributo class el
+        nombre de las clases separadas por un espacio en blanco.
+    </p>
+    <img src="img/selectorClass2.jpg"/>
+    <hr/>
+    <p>
+        El siguiente es el selector universal. Este selector es el asterisco. Ese selector universal
+        aplica un estilo a todo el documento html.
+    </p>
+    <img src="img/selectorUniversal.jpg"/>
+    <hr/>
+    <p>
+        Es posible aplicar un estilo a varios elementos html usando agrupación de selectores.
+    </p>
+    <img src="img/agruparSelectores.jpg"/>
+    <p>
+        En la imagen superior notamos que los selectores se separan por comas. Esto quiere decir 
+        que se aplicará un texto centrado y un color de texto rojo a las etiquetas h1, h2 y p.
+    </p>
+    <hr/>
+    <p>
+        Ahora, el concepto que se tratará es el de subclases. Veamos un ejemplo en la siguiente imagen<br/>
+    </p>
+    <img src="img/selectoSubclase.jpg"/>
+    <p>
+        El la imagen podemos notar la sintaxis <code>p.centrar</code>. Este código significa que primero 
+        seleccionará a todas las etiquetas p en el documento, pero sólo aplicará el estilo a aquellos que
+        tengan la clase "centrar". Nótese la diferencia entre las dos imagenes inferiores
+    </p>
+    <div style="display: flex; margin-left:10px;">
+        <div style="display: flex">
+            <h3>Selector de Clase</h3>
+            <img src="img/selectorClass.jpg"/>
+        </div>
+        <div style="display: flex;margin-left:20px;">
+            <h3>Selector Subclase</h3>
+            <img src="img/selectorSubclase2.jpg">
+        </div>
+    </div>
+    <p>
+        Debe notarse que para el selector de clase el texto de ayuda muestra <code>element class="centrar"</code><br/>
+        En cambio, el selector de subclase muestra <code>p class="centrar"</code><br/>
+        Esto último indica que el estilo sólo se aplicará a las etiquetas p con la clase "centrar". Sólo funcionará con las
+        etiquetas p ya que sólo ellas fueron definidas para la subclase "centrar". Si se coloca en el atributo
+        class="centrar" y ese atributo class no es de una etiqueta p, el estilo no se aplicará.<br/>
+        La siguiente forma de trabajar con estilos es colocar un mismo estilo a varias clases de la siguiente
+        manera
+        
+    </p>
+    <img src="img/estiloVariasClases.jpg">
+    <p>La última imagen muestra cómo se le aplicará un fondo blanco a las dos clases señaladas: rojo y rosa.</p>
+</body>

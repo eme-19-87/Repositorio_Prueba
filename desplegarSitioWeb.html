@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/desplegarSitioWeb.css">
+    <title>Desplegar Sitio Web</title>
+</head>
+<body>
+    <h1 class="tituloPrincipal">Desplegar Sitio Web en 000webhost</h1>
+    <p>
+        Antes que nada, necesitamos crearnos una cuenta en el siguiente enlace
+         <a href="https://wwww.000webhost.com" target="_blank">000webhost</a>.<br/>
+         Cuando accedamos a la página nos pedirá crear una cuenta o podremos iniciar sesión mediante nuestra 
+         una cuenta de google, facebook y demás.<br/>
+         Una vez creada la cuenta e iniciada la sesión nos aparecerá la siguiente pestaña
+    </p>
+    <img src="img/desplegarweb1.jpg"/>
+    <p>
+        Esas pestañas aparecen una vez creada la web. La parte señalada en rojo es la parte que nos permite 
+        crear un sitio web nuevo, pero al ser una versión gratuita la que usaremos sólo tendremos disponible
+        1 página web. Los primeros pasos serán determinar el nombre de nuestro sitio y para ello deberemos 
+        establecer un nombre. En mi caso, el nombre de mi sitio web es <b>https://yacaresoft.000webhostapp.com/</b>.<br/>
+        Esa parte que dice yacaresoft es el nombre del sitio, mientras que 000webhostapp indica que está albergado en
+        webhost.<br/>
+        Una vez determinado el nombre del sitio debemos primero realizar ciertas configuraciones para poder cargar 
+        nuestra página web y para poder tener nuestra base de datos activa. Debes hacer lo siguiente:
+        
+    </p>
+    <ol>
+        <li>
+            Exportar tu base de datos desde phpMyAdmin.
+        </li>
+        <li>
+            Asegurate que tus controladores y los modelos tengan todos los nombres en mayúscula. Por ejemplo, no tengas 
+            controladores del tipo 'controlProducto.php', sino que diga 'ControlProducto.php'
+        </li>
+        <li>
+            En la raíz de codeigniter existirá un archivo llamado 'index.php'. Asegurate de colocar casi al
+            principio la sentencia <strong>ob_start();</strong>. Puedes colocarla después de los primeros 
+            comentarios del documento.
+        </li>
+        <li>
+            Asegurate que el archivo autoload.php que se encuentra en la carpeta controllers se tenga la línea 
+            $autoload['model'] = array(). Dentro de los paréntesis del arreglo coloca todos los nombres de tus 
+            modelos separados por comas y asegurate que vayan entre comillas. Por ejemplo<br/>
+            $autoload['model'] = array('ModeloProducto','ModeloCliente');
+           
+
+        </li>
+        <li>
+            En el archivo config.php que se encuentra en application->config existe una línea que es <br/>
+            <span>$config['base_url'] = 'http://localhost/nombreProyecto'.</span>  En caso de que haya problemas al ejecutar
+            el sitio web debes cambiarlo por<br/>
+            <span>
+                $config['base_url'] = 'http://https://nombreSitio.000webhostapp.com/nombreProyecto';
+            </span>
+            <br/>
+            En mi caso es 
+            <span>
+                $config['base_url'] = 'http://https://yacaresoft.000webhostapp.com/ci_proyecto2019';
+            </span>
+            
+        </li>
+    </ol>
+    <p>
+        Vamos a ir paso por paso realizando las diferentes acciones para ver si funciona o no el sitio web.
+    </p>
+    <hr/>
+    <h2 class="tituloPrincipal">
+        Preparando A La Base De Datos
+    </h2>
+    <p>
+        Primero que nada, abramos el xammp y hagamos clic en la opción que se señala en rojo en la imagen 
+        inferior
+    </p>
+    <img src="img/desplegarweb2.jpg"/>
+    <p>
+        Esa opción nos abrirá phpMyAdmin. Seleccionamos la base de datos de nuestro proyecto y elegimos la opción 
+        exportar.
+    </p>
+    <img src="img/desplegarweb3.jpg"/>
+    <p>
+        Lo señalado con la elipse roja es la tabla, y lo marcado con azul es la opción que debe seleccionarse.
+        Algo que debe tenerse en cuenta es que aquí, la base de datos tiene un procedimiento almacenado. 
+        Si se tiene procedimientos almacenados deberán abrir la sentencia sql y moodificar la consulta de la 
+        función o procedimiento pues puede traer problemas.
+        Una vez seleccionada la opción de exportar aparecerá la siguiente ventana
+    </p>
+    <img src="img/desplegarweb4.jpg"/>
+    <p>
+        Selecciona el formato SQL y luego haz clic en el botón continuar. Automáticamente empezará a descargar
+        el archivo SQL requerido.
+    </p>
+    <p>
+        Una vez que se tenga el archivo SQL. Volvamos a 000webhost. Seleccionemos de las pestañas que nos muestra 
+        la indicada en la siguiente imagen
+    </p>
+    <img src="img/desplegarweb5.jpg"/>
+    <p>
+        Es posible que la primera vez no se vea ese mensaje de color verde que dice 'running'. Eso es porque al
+        principio no tenemos nada en nuestro hosting. Cuando psaemos el ratón por la pestaña señalada en la 
+        imagen anterior, aparecerá ese mensaje que dice 'Manage Website'. Hagamos clic sobre ese mensaje.<br/>
+        Después de unos segundos nos aparecerá la siguiente ventana
+    </p>
+    <img src="img/desplegarweb6.jpg"/>
+    <p>
+        Desde este pestaña podremos ver estadísticas de nuestro sitio web y podremos también realizar la 
+        administración de algunas características del mismo. De entre las opciones de la barra izquierda 
+        elijamos primero tools. Aparecerán las siguientes opciones
+    </p>
+    <img class="imagenEspecial" src="img/desplegarweb7.jpg"/>
+    <p>
+        De las opciones mostradas elegimos la que dice Database Managment. Eso nos mostrará lo siguiente
+    </p>
+    <img  src="img/desplegarweb8.jpg"/>
+    <p>
+        Ahora bien, desde esta ventana podremos crear nuestra base de datos. Nos aparecerán las bases de datos que
+        tengamos creadas y nos dará la posibilidad de crear dos base de datos para la versión gratuita. Elijamos 
+        la opción que dice New Database y nos aparecerá la siguiente ventana
+    </p>
+    <img src="img/desplegarweb9.jpg"/>
+    <p>
+        Completa los campos y no olvides anotar la contraseña que usaste, será necesaria dentro de poco. Una 
+        vez completados los campos debe presionarse el botón Create. Tomará unos segundo crearla y cuando 
+        se complete quedarán las bases de datos una después de otra en fila.
+    </p>
+    <img src="img/desplegarweb10.jpg"/>
+    <p>
+        Notamos que a la derecha de cada base de datos existe un botón que dice Manage y que tenemos otras 
+        columnas: DB Name, DB User y DB Host. Anota el DB Name y el DB User que aparece para la base de datos.
+        Luego haz click en Manage y selecciona la opción phpMyAdmin.
+    </p>
+    <img src="img/desplegar11.jpg"/>
+    <p>
+        Desde aquí es como en phpMyAdmin para el Xampp: seleccionas la base de datos, seleccionas importar,
+        eliges el archivo SQL y le das al botón de continuar. La base de datos se exportará y sólo me dió 
+        problemas cuando se tenían funciones o procedimientos almacenados. Por lo demás, es como trabajar
+        con el Xampp local.
+        Ahora lo que debemos configurar es el archivo database.php de nuestro proyecto. Este archivo se 
+        encuentra en la carpeta application->config. Inicialmente teníamos algo como esto
+    </p>
+    <img src="img/desplegarweb12.jpg"/>
+    <p>
+        Aquí es donde cobra importancia los datos DB Name, DB User y la contraseña de la base de datos.
+        Debemos modificar el documento de la siguiente manera
+    </p>
+    <img src="img/desplegarweb13.jpg"/>
+    <p>
+        Tengase en cuenta que en Db User y Db Name deben colocar los DB User y DB Name que se tiene para la 
+        base de datos creada. Una vez hecho esto, ya tenemos conectado nuestro trabajo a la base de datos.
+        Pero ahora falta cargar el proyecto en sí al hosting para que funcione.
+    </p>
+    <hr/>
+    <h2 class="tituloPrincipal">
+        Cargando codeigniter a 000webhost
+    </h2>
+    <p>
+        Hay varias formas de subir los archivos. Yo voy hacer aquí la más fácil. Hay tutoriales también donde 
+        usan filezilla para mover los archivos desde nuestra pc hacia 000webhost.<br/>
+        Primero que nada se deben realizar todas las modificaciones que se dijeron anteriormente en los 
+        archivos indicamos. Una vez hecho eso entramos a la carpeta de codeigniter de nuestro proyecto y 
+        comprimimos el archivo en .zip, no en .rar. Una vez que tengamos el archivo zip volvamos al panel de
+        administración de nuestra página pero esta vez en lugar de elegir Database Manager, elegimos la opción 
+        File Manager. Esto nos abrirá la siguiente ventana
+
+    </p>
+    <img src="img/desplegarweb14.jpg"/>
+    <p>
+        Damos clic en la opción Upload File y nos abrirá otra ventana.
+    </p>
+    <img src="img/desplegarweb15.jpg"/>
+    <p>
+        Notamos que hay dos carpetas: tmp y public_html. Hacer doble clic en la carpeta public_html. Cuando 
+        la carpeta se abra sólo debería existir un archivo .htaccess. En la esquina superior derecha debe 
+        haber el ícono de una nube señalado con verde en la imagen anterior. Ese es el ícono para subir archivos.
+        Lo que hacemos es subir el archivo zip que se creo anteriormente.<br/>
+        Cuando el archivo zip esté subido totalmente a la carpeta public_html debemos hacer click derecho 
+        sobre el archivo y elegir la opción extract.
+    </p>
+    <img src="img/desplegarweb16.jpg"/>
+    <p>
+        <strong>
+            Nota: usar el comando extract me ha dado muchos problemas. Intenté descomprimir directamente en la 
+            raíz, crear una nueva carpeta y descomprimir allí el contenido, etc. Así que si les da problemas aquí 
+            está una solución que encontré por internet. Se trata de un archivo php conocido como unzipper que 
+            permite descomprimir cualquier archivo. El link es el siguiente: 
+            <a href="https://github.com/ndeet/unzipper" target="_blank"> unzipper</a>
+            Lo que debe hacerse el lo siguiente <br/>
+            <ul>
+                <li>
+                    Descargar el archivo de github y descomprimirlo en una carpeta.
+                </li>
+                <li>
+                   Cuando se desee subir el archivo, selecciona todos los archivos dentro de la carpeta. 
+                   No permite subir toda una carpeta como un bloque, pero si varios archivos sueltos. Así que 
+                   selecciona los cuatro archivos a la vez y subelos.
+                </li>
+                <li>
+                    Una vez subido los archivos, vuelve al administrador de tu página (el que tenía las 
+                    opciones de Database Manage y File Manage) y selecciona la opción View Site (se encuentra 
+                    en la esquina superior izquierda cerca de un ícono con forma de ojo). Debe aparecerte la
+                    siguiente ventana.
+                </li>
+
+            </ul>
+        </strong>
+    </p>
+    <img src="img/desplegarweb17.jpg"/>
+   <p>
+       <strong>
+        <ul>
+            <li>
+                En el url de esa ventana, al final de la url, coloca /unzipper.php y debe aparecerte la siguiente 
+            ventana
+            </li>
+            
+        </ul>
+       </strong>
+   </p>
+   <img src="img/desplegarweb18.jpg"/>
+   <p>
+    <strong>
+     <ul>
+         <li>
+            Crea una nueva carpeta dentro de public_html y luego en la ventana de unzipper.php elige el 
+            archivo zip y escribe el nombre de la carpeta. Luego presiona el botón unzip archive y listo.
+            Ahora tienes el archivo de tu trabajo de codeigniter descomprimido en la carpeta. 
+         </li>
+         
+     </ul>
+    </strong>
+    Vuelve a la venta de administración de tu proyecto y selecciona nuevamente la opción 
+    View Site. Cuando se abra una vez más la pestaña que tiene la imagen del zorro el cual 
+    te avisa que tu página está andando, al final de la url de esa pestaña coloca /nombreCarpeta.<br/>
+    Ese 'nombreCarpeta' es el nombre de la carpeta donde descomprimiste los archivos y carpetas 
+    de codeigniter. Si todo salió bien deberías ver la página principal de tu proyecto codeigniter.
+</p>
+</body>
+</html>

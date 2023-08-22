@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colores Y Bordes</title>
+    <link rel="stylesheet" href="css/estiloGlobal.css">
+    <link rel="stylesheet" href="css/estilosColoresYBordes.css">
+</head>
+<body>
+    <h1 class="tituloPrincipal">Colores Y Bordes</h1>
+    <article id="menu">
+        <ul>
+            <li>
+                <a href="coloresYBordes.html#colores">
+                    Colores
+                </a>
+            </li>
+            <li>
+                <a href="coloresYBordes.html#bordes">
+                    Bordes
+                </a>
+                <ul>
+                    <li>
+                        <a href="coloresYBordes.html#bordes-valores-css">
+                            Valores Propios De CSS
+                        </a>
+                    </li>
+                    <li>
+                        <a href="coloresYBordes.html#bordes-border-style">
+                            border-style
+                        </a>
+                    </li>
+                    <li>
+                        <a href="coloresYBordes.html#bordes-mas-width">
+                            Mas sobre width
+                        </a>
+                    </li>
+                    <li>
+                        <a href="coloresYBordes.html#bordes-mas-valores-css">
+                            Mas valores css
+                        </a>
+                    </li>
+                    <li>
+                        <a href="coloresYBordes.html#bordes-border-color">
+                            border-color
+                        </a>
+                    </li>
+                    <li>
+                        <a href="coloresYBordes.html#bordes-border-radius">
+                            border-radius
+                        </a>
+                    </li>
+                    <li>
+                        <a href="coloresYBordes.html#bordes-direcciones">
+                            Direcciones En Las Propiedades
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="coloresYBordes.html#margenes-padding">
+                    Margenes Y Padding
+                </a>
+            </li>
+            <li>
+                <a href="coloresYBordes.html#en-linea">
+                    Cajas En Linea
+                </a>
+            </li>
+            <li>
+                <a href="coloresYBordes.html#caja-bloque">
+                    Cajas De Bloque
+                </a>
+            </li>
+        </ul>
+
+    </article>
+    
+    <hr/>
+
+    <article id="colores">
+        <h2 class="tituloPrincipal">Colores</h2>
+        <p>Para conocer los diferentes códigos y nombres de colores podemos ir
+            a la siguiente página
+            <a href="https://htmlcolorcodes.com/code-name" target="_blank">Color Codes</a>.<br/>
+            Para usar los colores sólo deben hacer algo como <code>color: nombreColor</code>. Los colores
+            de html por nombre están listados en la página del enlace anterior.
+        </p>
+        <p>
+            Existen muchas formas de darle color a los elementos de html. Veamos los siguientes 
+            ejemplos.
+        </p>
+        
+        <div style="display:flex;flex-wrap:wrap; margin:50px; border:2px solid black;">
+            <div class="colorNombreHTML">
+                Color por nombre HTML
+            </div>
+            <img src="img/coloresYBordes8.jpg"/>
+            
+        </div>
+        
+        <div style="display:flex;flex-wrap:wrap;margin:50px; border:2px solid black;">
+            <div class="colorRGB">
+                Color Mediante RGB(rojo,verde,azul)
+            </div>
+            <img src="img/coloresYBordes9.jpg"/>
+        </div>
+        
+        <div style="display:flex;flex-wrap:wrap;margin:10px 5px; border:2px solid black;">
+            <div class="colorRGBA1">
+                Color Mediante RGBA con alfa 0
+            </div>
+            <div class="colorRGBA2">
+                Color Mediante RGBA con alfa 0.5
+            </div>
+            <div class="colorRGBA3">
+                Color Mediante RGBA con alfa 0.1
+            </div>
+            <img src="img/coloresYBordes10.jpg"/>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;margin:10px 5px; border:2px solid black;">
+            <div class="colorHexaSeis">
+                Color Mediante hexadecimal con 6
+            </div>
+            <div class="colorHexaTres">
+                Color Mediante hexadecimal con 3
+            </div>
+            <div class="colorHexaOcho">
+                Color con 8 (ultimos dos transparencia)
+            </div>
+            <img src="img/coloresYBordes11.jpg"/>
+        </div>
+        <div style="display:flex;flex-wrap:wrap; margin:50px; border:2px solid black;">
+            <div class="colorHSL">
+                Color HSL(matiz,saturación,brillo)
+            </div>
+            <div class="colorHSLA">
+                Color HSLA(matiz,saturación,brillo,transparencia)
+            </div>
+            <img src="img/coloresYBordes12.jpg"/>
+        </div>
+        <p>
+            Una nota importante es destacar que si colocamos los colores en hexadecimal se establece 
+            exactamente el color que se usará y el navegador no tiene forma de confundise. Eso no lo podemos 
+            asegurar cuando usamos códigos de colores como red, black, green, etc.
+        </p>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="coloresYBordes.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+    
+    <hr/>
+
+    <article id="bordes">
+        <div id="bordes-general">
+            <h2 class="tituloPrincipal">Bordes</h2>
+            <p>
+            Vamos a seguir trabajando con colores y vamos agregar un atributo más. Este atributo son los bordes.<br/>
+            La propiedad css es <code>border: tamañoPx estilo color</code>
+           </p>
+            <img src="img/coloresYBordes1.jpg"/>
+            <p>En la imagen superior se ve la sintaxis para borde y, entre comentarios, la sintaxis para el 
+                color. Existen otros estilos a parte de solid, como dashed o double.
+            </p>
+        </div>
+
+        <hr/>
+
+        <div id="bordes-valores-css">
+            <h2 class="tituloPrincipal">Valores De Bordes En CSS</h2>
+            <h2 class="solida">Línea sólida</h2>
+            <h2 class="punteada">Línea punteada (dashed)</h2>
+            <h2 class="doble">Línea doble</h2>
+            <h2 class="dotted">Línea punteada (dotted)</h2>
+            <img src="img/coloresYBordes2.jpg" /><br/>
+            <h2 class="surco">Línea surcoclass="cresta">Línea cresta</h2>
+            <h2 class="recuadro">Línea recuadro</h2>
+            <h2 class="outset">Línea outset</h2>
+            <h2 class="sinBorde">Sin borde</h2>
+            <h2 class="oculto">Borde Oculto</h2>
+            <h2 class="mixto">Borde Mixto</h2>
+            <img src="img/coloresYBordes3.jpg">
+        </div>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="coloresYBordes.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+
+        <hr/>
+
+        <div id="bordes-border-style">
+            <h2 class="tituloPrincipal">border-style</h2>
+            <p>
+                Existen también otras propiedades que podemos modificar en el borde. Con 
+                el atributo <code>border-style: estilo</code>, se puede colocar el estilo que
+                se desee: dotted, dashed, solid, etc.<br/>
+                Los bordes tienen otras propiedades interesantes como 
+                <code>border-width:pixelesSup pixelesDer pixelesInf pixelesIzq</code>
+            </p>
+            <img src="img/coloresYBordes4.jpg"/>
+            <div>
+                <h2 class="mixtoAncho">Borde Mixto</h2>
+            </div>
+
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="coloresYBordes.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+        
+        <hr/>
+
+        <div id="bordes-mas-width">
+            <h2 class="tituloPrincipal">Más Sobre width</h2>
+            <p>
+                Para el caso de la propiedad <code>border-width</code> se da el mismo caso que con border en cuanto a los 
+            valores colocados después de los dos puntos:<br/>
+            <ul>
+                <li>
+                    <code>
+                    border-width:tamañoPixeles->se le da ancho a los cuatro border.
+                    </code>
+                </li>
+                <li>
+                    <code>
+                    border-width:pixelesSup/inf pixelesDer/Izq->el primer valor para el borde superior e inferior,
+                    el segundo para el borde derecho e izquierdo.
+                    </code>
+                </li>
+                <li>
+                    <code>
+                    border-width:pixelesSup pixelesDer/Izq pixelesInf->el primer valor para el borde superior,
+                    el segundo para el borde derecho e izquierdo, el tercero para el borde inferior.
+                    </code>
+                </li>
+            </ul>
+            </p>
+            <ul>
+                <li >
+                    <a class="inicio-pagina" href="coloresYBordes.html#menu" >
+                        ⏫
+                    </a>
+                </li>
+                <li>
+                    <a class="volver-index" href="index.html">🏠</a>
+                </li>
+                    
+            </ul>
+        </div>
+         <hr/>
+
+         <div id="bordes-mas-valores-css">
+            <h2 class="tituloPrincipal">Más Valores CSS</h2>
+            <p>Existen otros valores para <code>border-width</code> que son thin, medium y thick.</p>
+        <div>
+            <h2>Valor thin</h2>
+            <h3 class="claseThin">Borde delgado</h3>
+            <h2>Valor medium</h2>
+            <h3 class="claseMedio">Borde Medio</h3>
+            <h2>Valor thick</h2>
+            <h3 class="claseThick">Borde Thick</h3>
+        </div>
+        <img src="img/coloresYBordes6.jpg"/>
+
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="coloresYBordes.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </div>
+    
+    <hr/>
+
+    <div id="bordes-border-color">
+        <h2 class="tituloPrincipal">border-color</h2>
+        <p>También puede aplicarse la siguiente sintaxis al atributo <code>border-color</code></p>
+        <img src="img/estilosYBordes7.jpg"/>
+        <h3 class="mixtoAncho3">Borde delgado</h3>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="coloresYBordes.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </div>
+    
+    <hr/>
+
+    <div id="bordes-border-radius">
+        <h2 class="tituloPrincipal">border-radius</h2>
+        <p>Existe otra propiedad, denominada <code>border-radius</code> que permite
+            dar bordes redondeados al contenedor. Esta propiedad funciona de la misma
+            manera que las anteriores en cuanto a los valores superior, derecha, inferior, izquierda.
+        </p>
+        <h1 class="bordesRedondeados">Efecto bordes redondeados</h1>
+        <img src="img/coloresYBordes7.jpg"/>
+        
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="coloresYBordes.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </div>
+    <hr/>
+    <div id="bordes-direcciones">
+        <h2 class="tituloPrincipal">shorthand y direcciones</h2>
+        <p>
+            Normalmente usamos una versión para el borde denominada <b>shothand</b>. La forma del shorthand para
+            la propiedad border es <code>border:estilo grosor color</code><br/>
+            Pero también podemos establecer valores a cada dirección por se parado. Las direcciones son top,
+            right, bottom, left.<br/>
+            <pre>
+                <code>
+                    .mixtoDireccion {
+                        border-top:dotted 5px red;
+                        border-right: double 8px blue;
+                        border-bottom: dashed 12px yellow;
+                        border-left:  solid 15px crimson;
+                    }
+                </code>
+            </pre>
+            <p/>
+            <div class="mixtoDireccion">
+                Dando valores a las cuatro direcciones por separado
+            </div>
+            <p>
+            También es posible darle estilos a una sola dirección<br/>
+            <pre>
+                <code>
+                    .estilo-superior{
+                        border-top-color:blue;
+                        border-top-style: dashed;
+                        border-top-width: 10px;;
+                    };
+                </code>
+            </pre>
+           </p>
+            <div class="estilo-superior">
+                Modificando sólo la parte superior
+            </div>
+            <p>
+                Se puede dar estilo a cada lado en particular sólo se debe cambiar top por el nombre de las 
+                otras direcciones.
+            </p>
+    </div>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="coloresYBordes.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+    </article>
+
+    <hr/>
+
+    <article id="margenes-padding">
+        <h2 class="tituloPrincipal">Margen y Padding</h2>
+        <p>
+            Recordemos que el padding es la distancia en las cuatro direcciones desde el borde hacia el 
+            contenido de la caja. Al igual que border se tendrá un shorthand que es <code>padding</code> y se
+            tendrá un padding para cada dirección: <code>padding-top,padding-right,padding-bottom,padding-left.</code><br/>
+            Para el caso del margen se tiene que son los espacios entre los elementos html. Al igual que con el borde 
+            y el padding existirá un shorthand y un atributo para el margen en cada dirección. Sólo debe reemplazarse
+            la palabra <code>padding</code> por la palabra <code>margin</code>.<br/>
+            Los atributos <code>margin y padding</code> pueden recibir varios valores al igual que <code>border</code>
+            <div class="margin-4-valores">
+                margin con cuatro valores
+            </div>
+            <div class="margin-3-valores">
+                margin con tres valores
+            </div>
+            <div class="margin-2-valores">
+                margin con dos valores
+            </div>
+        </p>
+        <img src="img/margenes1.jpg"/>
+        <p>
+            El mismo criterio puede usarse para el padding, sólo cambia <code>margin</code> por <code>padding</code>. Si
+            se usa un solo valor para las medidas de <code>margin y padding</code>, aplica dicho valor a las cuatro 
+            direcciones.
+        </p>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="coloresYBordes.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+    <hr/>
+    <article id="en-linea">
+        <h2 class="tituloPrincipal">Cajas En Línea</h2>
+        <p>
+            Las cajas en línea tienen las siguientes características:<br/>
+            <ol>
+                <li>
+                    Ocupan el espacio necesario para mostrar su contenido.
+                </li>
+                <li>
+                    No se pueden modificar sus dimensiones como el alto y acho.
+                </li>
+                <li>
+                   Permiten que otros elementos se coloquen a su lado.
+                </li>
+                <li>
+                    <code>padding y margin</code> solo empujan a elementos adyacentes en horizontal,
+                    <b>nunca en vertical</b>. Esto quiere decir que, si aplicamos <code>margin</code> en las 
+                    cuatro direcciones, sólo se moverá horizontalmente (aunque la caja del inspector muestre que 
+                    en top y bottom haya un valor.)
+                 </li> 
+            </ol>
+        </p>
+
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="coloresYBordes.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+
+    </article>
+
+    <hr/>
+
+    <article id="caja-bloque">
+        <h2 class="tituloPrincipal">Cajas De Bloque</h2>
+        <p>
+            Las cajas de bloque tienen las siguientes características:<br/>
+            <ol>
+                <li>
+                    Ocupan todo el espacio disponible, lo que genera saltos de línea.
+                </li>
+                <li>
+                    Sus dimensiones como el alto y acho son modificables.
+                </li>
+                <li>
+                   No permiten otros elementos a su lado. Aunque especifique un ancho, siguen ocupando 
+                   todo el espacio disponible a lo ancho y esto genera saltos de línea
+                </li>
+            </ol>
+        </p>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="coloresYBordes.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+
+</body>
+</html>

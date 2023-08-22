@@ -1,0 +1,17 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.efecto-uno-a-lado{
+    display:flex;
+    flex:wrap;
+    margin:10px;
+}
+
+.volver-index:hover::after {
+    content: "Volver Página Inicial";
+}
+
+.inicio-pagina:hover::after{
+    content:"Inicio De La Página";
+}

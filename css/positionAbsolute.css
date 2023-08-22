@@ -1,0 +1,46 @@
+*{
+	margin:0;
+	padding:0;
+}
+ 
+p{
+	font-size: 30px;
+}
+.caja1{
+	background-color:red;
+	width:200px;
+	height: 200px;
+	
+}
+
+.caja2{
+	background-color:green;
+	width:200px;
+	height: 200px;
+
+}
+
+.caja3 {
+	background-color:blue;
+	width:200px;
+	height: 200px;
+}
+
+.cajaAbsolute {
+	position: absolute;
+
+}
+.cajaAbsolute:hover {
+	opacity:.1;
+}
+
+.cajasHorizontales {
+	width: 800px;
+}
+
+.centrarCajas {
+	margin:auto;
+}
+.mazoCajas {
+	display:flex;
+}

@@ -1,0 +1,201 @@
+.tituloPrincipal {
+    text-align:center;
+    color: red;
+}
+
+.solida {
+    border:5px solid red;
+}
+
+.punteada {
+    border: 5px dashed blue;
+}
+
+.doble {
+    border: 5px double green;
+}
+
+.dotted {
+    border: 5px dotted gold;
+}
+
+.surco {
+    border: 10px groove;
+}
+
+.cresta {
+    border: 10px ridge;
+}
+
+.recuadro {
+    border: 10px inset red;
+}
+
+.outset{
+    border: 10px outset red;
+}
+
+.sinBorde {
+    border:none;
+}
+
+.oculto {
+    border:10px hidden blue;
+}
+.mixto{
+    border-top: 5px dotted red;
+    border-left: 5px double blue;
+    border-bottom: 5px dashed green;
+    border-right: 5px groove sienna;
+}
+.mixtoAncho{
+    border-top: 5px dotted red;
+    border-left: 5px dotted blue;
+    border-bottom: 5px dotted green;
+    border-right: 5px dotted sienna;
+    border-width: 10px 5px 30px 15px;
+}
+
+.mixtoAncho2{
+    border:solid;
+    border-color: red lime goldenrod steelblue;
+    border-width: 10px 5px 30px 15px;
+    margin:0;
+    
+}
+
+.mixtoAncho3{
+    border:solid;
+    border-color: crimson hotpink gold lime;
+    border-width: 30px;
+    margin:0;
+    
+}
+
+.mixtoDireccion {
+    border-top:dotted 5px red;
+    border-right: double 8px blue;
+    border-bottom: dashed 12px yellow;
+    border-left:  solid 15px crimson;
+}
+
+.estilo-superior{
+    border-top-color:blue;
+    border-top-style: dashed;
+    border-top-width: 10px;;
+}
+.claseThin{
+    border-style:solid;
+    border-width: thin;
+}
+
+.claseMedio{
+    border-style:solid;
+    border-width: medium;
+}
+
+.claseThick{
+    border-style:solid;
+    border-width: thick;
+}
+
+.bordesRedondeados {
+    border: 5px solid red;
+    border-radius: 10px 0 20px 0;
+}
+
+.colorNombreHTML{
+    
+    background-color: greenyellow;
+    margin:auto;
+    text-align: justify;
+    padding:50px;
+}
+
+.colorRGB{
+    
+    background-color:RGB(100,176,87);
+    margin:auto;
+    text-align: justify;
+    padding:50px;
+}
+
+.colorRGBA1{
+    
+    background-color:RGBA(100,176,87,0);
+    margin:10px;
+    text-align: justify;
+    padding:50px;
+}
+
+.colorRGBA2{
+    
+    background-color:RGBA(100,176,87,0.5);
+    margin:10px;
+    text-align: justify;
+    padding:50px;
+}
+
+.colorRGBA3{
+    
+    background-color:RGBA(100,176,87,1);
+    margin:10px;
+    text-align: justify;
+    padding:50px;
+}
+
+.colorHexaSeis {
+    background-color:#89befe;
+    margin:10px;
+    text-align: justify;
+    padding:50px; 
+}
+
+.colorHexaTres {
+    background-color:#afe;
+    margin:10px;
+    text-align: justify;
+    padding:50px; 
+}
+
+.colorHexaOcho {
+    background-color:#ef00ff33;
+    margin:10px;
+    text-align: justify;
+    padding:50px; 
+}
+
+.colorHSL{
+    background-color:hsl(58,50%,70%);
+    margin:10px;
+    text-align: justify;
+    padding:50px; 
+}
+
+.colorHSLA{
+    background-color:hsla(58,50%,70%,0.3);
+    margin:10px;
+    text-align: justify;
+    padding:50px; 
+}
+
+.margin-4-valores{
+    margin:20px 15px 10px 5px;
+    background-color:crimson;
+    color:white;
+    text-align: center;
+}
+
+.margin-3-valores{
+    margin:20px 15px 10px;
+    background-color:goldenrod;
+    color:white;
+    text-align: center;
+}
+
+.margin-2-valores{
+    margin:30px 20px;
+    background-color:blueviolet;
+    color:white;
+    text-align: center;
+}

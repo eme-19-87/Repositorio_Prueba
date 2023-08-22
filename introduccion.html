@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduccion</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/estiloGlobal.css">
+</head>
+<body>
+    <h1 class="estiloTitulo">Introducción CSS</h1>
+    <article id="menu">
+        <ul>
+            <a href="introduccion.html#conceptos">Conceptos Básicos</a>
+        </ul>
+        <ul>
+            <a href="introduccion.html#como-funciona">¿Cómo funciona CSS?</a>
+            <ul>
+                <li><a href="introduccion.html#cascada">Cascada</a></li>
+                <li>
+                    <a href="introduccion.html#especificidad">Especificidad</a>
+                    <ul>
+                        <li>
+                            <a href="introduccion.html#calculo-especificidad">
+                                Calculo Especificidad
+                            </a>
+                        </li>
+                        <li>
+                            <a href="introduccion.html#ej-especificidad">
+                                Ejemplo Práctico Detallado
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="introduccion.html#herencia">
+                        Herencia
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="propiedadInherit.html">
+                                Más Ejemplos de propiedad inherit
+                           </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </ul>
+    </article>
+
+    <article class="conceptos">
+        <h2 class="estiloTitulo">Conceptos Básicos</h2>
+    <p>
+        HTML tiene como objetivo agregar una estructura al documento. Mientras que CSS es una capa de 
+        presentación que permite mejorar visualmente un documento HTML.<br/>
+        Se deben crear entonces dos archivos: un archivo HTML que contendrá la estructura de la página web y
+        un archivo CSS que, al vincularse con el archivo HTML, permitirá darle estilo a todos y cada uno de
+        los elementos HTML que conforman la página. Podemos ver un analogía entre HTML y CSS en la siguiente
+        imagen
+    </p>
+    <div>
+        <img src="img/HTMLvsCSS.jpg"/>
+    </div>
+    <div>
+        <p>
+            Vamos a ver ahora algunos criterios de CSS. Una regla de CSS consta de dos partes<br/>
+            <ol>
+                <li>
+                    Selector: es el elemento html al que podemos aplicarle un bloque de estilo css. Existen 
+                    diferentes tipos. Un ejemplo son las etiquetas donde todas las etiquetas de ese tipo 
+                    sufren el estilo CSS.
+                </li>
+                <li>
+                    Bloques de declaraciones: son cada uno de los atributos que modificamos. La sintaxis es <br/>
+                    atributo:valor;
+                </li>
+            </ol>
+            <pre>
+                <code>
+                    selector {
+                        atributo1:valor1;
+                        atributo2:valor2;
+                        .................
+                        atributoN:valorN;
+                    }
+                </code>
+            </pre><br/>
+            Los comentarios en css se realizan mediante /**/. Lo que esté dentro de el asterisco-barra-barra-asterisco 
+            será considerado un comentario.
+        </p>
+    </div>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="introduccion.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+</article>
+
+<hr/>
+
+<article id="como-funciona">
+    <h2 class="estiloTitulo">¿Cómo Funciona CSS?</h2>
+    <div>
+        <p>
+            La idea es que CSS posee una manera específica de aplicar los estilos. Podemos dividirlo en tres 
+            categorías: cascada, especificidad, herencia. 
+        </p>
+    </div>
+
+    <hr/>
+
+    <div id="cascada"> 
+        <h3 class="estiloTitulo">Cascada</h3>
+            Empecemos por el concepto de cascada. Mediante la cascada se toma el origen del código.
+            Estos orígenes pueden ser de distintas indoles: <br/>
+            <ol>
+                <li>
+                    <b>user agent </b>: esto son los estilos que por defecto el navegador le aplica a las etiquetas.<br/>
+                    Al crearse un documento html y abrirlo en el navegador, se puede acceder a las herramientas de 
+                    desarrollador y al revisarla se notará que ya existen valores para ciertos atributos css a pesar de 
+                    que no se le ha dado ningún estilo css.
+                </li>
+
+                <li>
+                    <b>personalizaciones</b>: son las personalizaciones que el usuario hace al navegador o al 
+                    sistema operativo. Por ejemplo, las opciones de cargar el navegador en modo claro u obscuro.
+
+                </li>
+                
+                <li>
+                    <b>estilos del autor</b>: los estilos css que crea el diseñador mediante hojas de estilo 
+                    propias.
+                </li>
+            </ol><br/>
+            <p>
+                Otra cuestión importante para la cascada es el orden de aparición del código. El documento html 
+                se ejecuta hasta encontrar una hoja de estilo y aplica el estilo de esa hoja. Si dentro de esa
+                hoja se invocó otra hoja mediante <code>@import</code> se alplicará primero los estilos de esa
+                hoja importada porque aparece al principio de la hoja.<br/>
+                Si se sigue leyendo el documento html irá cargando hoja por hoja y la última cargada será 
+                la que afecte el estilo final. Luego si se tiene etiquetas <code>style</code> su estilo se 
+                aplicará porque será la última aplicada. Esto se entiende mejor con la especificidad. En resumen,
+                se debe tener en cuenta<br/>
+                <ol>
+                    <li>Origen del código: explicado anteriormente</li>
+                    <li>La especificidad: que se explica en su propio apartado.</li>
+                    <li>Orden de aparición: se lee de arriba abajo y de izquierda a derecha el código.</li>
+                </ol>
+            </p>
+        </div>
+
+        <hr/>
+
+        <div id="especificidad">
+            <h1 class="estiloTitulo">Especificidad</h1>
+        <p>
+            La especificidad trata sobre qué sucede cuando los estilos se mezclan y entran en conflicto. 
+            Además, nos sirve para entender las prioridades al momento de asignar estilos a los elementos html. 
+            Las jerarquías se pueden ver en la siguiente imagen
+        </p>
+        <a id="tablas-especificidad" href="introduccion.html#calculo-especificidad" >
+            <img src="img/especificidad1.jpg"/>
+        </a>
+       
+        <p>
+        Cuando nos referimos a jerarquías, estamos hablando de qué toma importancia. Por ejemplo, según se ve 
+        en la imagen los selectores de clase tienen menos jerarquía que los selectores por id. Eso quiere decir
+        que si una etiqueta tiene un estilo css ligado a su atributo class y otro estilo ligado a su atributo id, 
+        quien aplica el estilo a la etiqueta es aquel ligado al atributo id.<br/>
+        Normalmente, los estilos se aplican en cascada. Eso quiere decir que el último estilo definido para una 
+        etiqueta es el que cuenta, pero teniendo en cuenta la misma clase o el mismo selector.<br/>
+        Podemos pensar que los selectores tienen pesos. Si un selector tiene más peso que otro selector que se 
+        encuentre al final del código, gana el selector de mayor peso y no el selector final como inicialmente se
+        pensaría debido a la cascada. Podemos ver esto con los siguientes ejemplos <br/>
+        <pre>
+                <code>
+                    h1{
+                        color: red;
+                }
+
+                h1 {
+                    color: blue;
+                }
+                    
+                </code>
+        </pre><br/>
+        El color que se aplica al texto de h1 es el color azul ¿Por qué? porque los estilos se aplican en 
+        cascada: de arriba hacia abajo. En realidad, si se cambio a color rojo el texto, pero posteriormente 
+        volvió a cambiar a un color azul. Cuando se está trabajando en la misma jerarquía los estilos se 
+        aplican en cascada. Eso quiere decir que, si coloco dos veces la definición de una clase y aplico 
+        dicha clase a una etiqueta, el estilo que se aplicará al final del todo será el que esté dentro de 
+        las llaves de la última definición de la clase.
+        En cambio, si tenemos
+        <pre>
+                <code>
+                #estiloTitular{
+                        color: red;
+                }
+
+                .titular {
+                    color: blue;
+                }
+                    
+                </code>
+        </pre><br/>
+        Y luego hacemos <code>&lt;h1 class="titular" id="estiloTitular"&gt;</code>, se aplica el estilo del 
+        selector por id. Esto puede verse en el siguiente ejemplo<br/>
+    </p>
+    <diV>
+        <p class="estiloParrafo" id="parrafo1">Parrafo de ejemplo</p>
+    </diV>
+    <div style="display: flex;justify-content:center;">
+        <img src="img/especificidad2.jpg"/>
+     </div>
+
+     <hr/>
+     <div id="calculo-especificidad">
+        <h3 class="estiloTitulo">Calculo Especificidad</h3>
+        <p>
+            En la imagen inicial se pudieron ver <a href="introduccion.html#tablas-especificidad">dos tablas
+            para la especificidad</a>. Veamos nuevamente la siguiente tabla
+        </p>
+    
+            
+            <ul>
+                <li>Etiquetas y pseudoelemntos: (0,0,0,1)</li>
+                <li>clases,atributos y pseudoclases: (0,0,1,0)</li>
+                <li>identificadores: (0,1,0,0)</li>
+                <li>estilos en línea: (1,0,0,0)</li>
+                <li>!important: rompe la especificidad</li>
+            </ul>
+        </div>
+        <p>
+            La idea de esta tabla es la siguiente. Para el primer caso, por cada etiqqueta y por cada 
+            pseudoelemento que se tenga el selector se suma 1 en el último dígito de izquierda a derecha. 
+            El mismo razonamiento puede aplicarse a los demás itemes. El único que rompe la especificidad es 
+            !important porque este le dice al navegador: "no me importa la cascada ni la especificidad, dale 
+            sí o sí este estilo que indico". Esto último es considerado una mala práctica.<br/>
+            Veamos un ejemplo de cómo se calcula la especificidad
+        </p>
+        <img src="img/especificidad3.jpg"/>
+        <p>
+            Debe notarse que la especificidad es (0,0,2,1). La pregunta es ¿por qué? Bueno, debe verse que se 
+            tiene una clase <code>.inicio-pagina</code> y eso nos da (0,0,1,0). Luego se tiene una pseudoclase que
+            es <code>:hover</code> y eso nos da otro (0,0,1,0). Lo siguiente es un pseudoelemento el cual es 
+            <code>::after</code> y eso nos da (0,0,0,1). Se puede apreciar que son como vectores y podemos 
+            pensarlo como una suma de vectores normal:<br/>
+            (0,0,1,0)+(0,0,1,0)+(0,0,0,1)=(0+0+0,0+0+0,1+1+0,0+0+1)=(0,0,2,1)<br/>
+            <b>Tengase en cuenta que eso de "suma de vectores" es sólo una analogia para hacer el cálculo.</b><br/>
+            Una mala práctica es ir muy "profundo" en los diversos niveles de las etiquetas ya que esto aumenta la 
+            especificidad. Es decir, si tenemos algo como .clase1 .clase2 etiqueta1 clase3..., estamos aumentando 
+            mucho la especificidad. Lo recomendables es establecer una clase y luego aplicarle los estilos a los 
+            hijos, hermanos, etc. de esa clase en particular.
+        </p>
+        <img src="img/especificidad4.jpg"/>
+    </div>
+
+    <hr/>
+
+    <div id="ej-especificidad">
+        <h3 class="estiloTitulo">Ejemplo Práctico De Especificidad</h3>
+        <p>
+            Vamos a ver cómo funciona la especificidad usando diferentes de citas de personajes históricos,
+            ficticios, de peliculas y demás. Empecemos ahora
+        </p>
+        <blockquote id="cita-tirion" class="cita-tirion">
+            No daré mi vida por el asesinato de Joffery y como se que este tribunal no me dará justicia 
+            dejaré que los dioses decidan mi suerte ¡Demando un Juicio Por Combate!-
+            <cite>Tyrion Lannister</cite>
+        </blockquote><br/>
+        El código del ejemplo anterior es<br/>
+        <pre>
+            <code>
+                &lt;blockquote <span style="color:red">id="cita-tirion"</span> <span <span style="color:blue">class="cita-tirion"</span>&gt;
+                    No daré mi vida por el asesinato de Joffery y como se que este tribunal no me dará justicia 
+                    dejaré que los dioses decidan mi suerte ¡Demando un Juicio Por Combate!-
+                    &lt;cite&gt;Tyrion Lannister&lt;&sol;cite&gt;
+                &lt;&sol;blockquote&gt;
+            </code>
+        </pre>
+        <p>
+            Notamos que el color de la letra es un color tomato y el código css usado es el siguiente
+        </p>
+        <img src="img/especificidad5.jpg"/>
+        <p>
+            Por cascada debería aplicar el color carmesí al texto, pero aplica el color tomato. Podemos entender
+            esto viendo las especificidades de cada uno de los estilos aplicados.
+        </p>
+        <img src="img/especificidad6.jpg"/>
+        <p>
+            Veamos otros comportamientos de la especificidad con la siguiente frase
+        </p>
+        <blockquote id="cita-aemon" class="cita-aemon">
+            Entonces, Lord Stark es un hombre entre diez mil. La mayoría de nosotros no somos tan fuertes. 
+                ¿Qué es el honor comparado al amor de una mujer? 
+                ¿Qué es el deber contra el sentimiento de un hijo recién nacido en tus brazos? ¿o la sonrisa de un hermano?-
+            <cite>Maestre Aemon Targaryen</cite>
+        </blockquote><br/>
+        El código del ejemplo anterior es<br/>
+        <pre>
+            <code>
+                &lt;blockquote <span style="color:red">id="cita-aemon"</span> <span <span style="color:blue">class="cita-aemon"</span>&gt;
+                Entonces, Lord Stark es un hombre entre diez mil. La mayoría de nosotros no somos tan fuertes. 
+                ¿Qué es el honor comparado al amor de una mujer? 
+                ¿Qué es el deber contra el sentimiento de un hijo recién nacido en tus brazos? ¿o la sonrisa de un hermano?-
+                &lt;cite&gt;Maestre Aemon Targaryen&lt;&sol;cite&gt;
+                &lt;&sol;blockquote&gt;
+            </code>
+        </pre>
+        <p>
+            Veamos una vez más el código detenidamente tanto en su orden como en su especificidad y así se 
+            podrá entender por qué tiene ese color rojizo.
+        </p>
+        <img src="img/especificidad7.jpg"/>
+    </div>
+    <p>
+        Sigamos viendo más ejemplos de especificidad
+    </p>
+    <blockquote id="cita-ned" class="cita-ned" style="color:coral;">
+        La sangre de los primeros hombres corre todavía por las venas de los Stark, y creemos que el hombre que 
+        dicta la sentencia debe blandir la espada. Si le vas a quitar la vida a un hombre, tienes un deber para 
+        con él, y es mirarlo a los ojos y escuchar sus ultimas palabras. Si no soportas eso, quizá es que ese
+        hombre no debe morir.El gobernante que se esconde tras ejecutores a sueldo olvida pronto lo que es 
+        la muerte.-
+        <cite>Eddar Stark</cite>
+    </blockquote><br/>
+    El código del ejemplo anterior es<br/>
+    <pre>
+        <code>
+            &lt;blockquote <span style="color:red">id="cita-ned"</span> <span <span style="color:blue">class="cita-ned"</span> <span style="color:green;">style="color:coral;"</span>&gt;
+                La sangre de los primeros hombres corre todavía por las venas de los Stark, y creemos que el hombre que 
+                dicta la sentencia debe blandir la espada. Si le vas a quitar la vida a un hombre, tienes un deber para 
+                con él, y es mirarlo a los ojos y escuchar sus ultimas palabras. Si no soportas eso, quizá es que ese
+                hombre no debe morir.El gobernante que se esconde tras ejecutores a sueldo olvida pronto lo que es 
+                la muerte.-
+                &lt;cite&gt;Eddar Stark&lt;&sol;cite&gt;
+            &lt;&sol;blockquote&gt;
+        </code>
+    </pre><br/>
+    <img src="img/especificidad8.jpg"/>
+    <p>
+        En este último ejemplo la pregunta es por qué adquiere ese color y la respuesta es porque el style que 
+        se define en la etiqueta tiene la mayor prioridad de todas: más que la de etiqueta, clase, id, etc.
+    </p>
+    <blockquote id="cita-benjen" class="cita-benjen">
+        Mi hermano me dijo una vez que todo lo que viene antes de la palabra pero no cuenta realmente.-
+        <cite>Benjen Stark</cite>
+    </blockquote><br/>
+    El código del ejemplo anterior es<br/>
+    <pre>
+        <code>
+            &lt;blockquote <span style="color:red">id="cita-benjen"</span> <span <span style="color:blue">class="cita-benjen"</span> <span style="color:green;">style="color:coral;"</span>&gt;
+            Mi hermano me dijo una vez que todo lo que viene antes de la palabra pero no cuenta realmente.-
+                &lt;cite&gt;Benjen Starkk&lt;&sol;cite&gt;
+            &lt;&sol;blockquote&gt;
+        </code>
+    </pre>
+    <img src="img/especificidad9.jpg"/>
+    <p>
+        En ese caso important predomina, incluso por encima del style aplicado directamente en la etiqueta. 
+        Si existieran dos important, se aplica el criterio de la cascada: gana el último en aparecer.
+    </p>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="introduccion.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+</article>
+
+<hr/>
+
+<article id="herencia">
+    <h3 class="estiloTitulo">Herencia</h3>
+    <div>
+        La herencia es la capacidad de un selector de obtener (heredar) los valores de sus ancestros más 
+        cercanos. Para aplicarla se emplea el valor <code>inherit</code>. Existen ciertas propiedad que no se
+        heredan como ser: los bordes, el fondo, entre otros. Propiedades que se heredan, por ejemplo, son 
+        todas aquellas que tienen que ver con la tipografía. Vamos a ver ejemplos de herencia nuevamente con las
+        frases
+        <blockquote id="cita-cersei" class="cita-cersei">
+            Ahora hay un agujero en el mundo, en el lugar que ocupaba mi padre, y los agujeros piden a gritos 
+            que los llenen.-
+            <cite>Cersei Lannister</cite>
+        </blockquote><br/>
+        <img src="img/herencia1.jpg"/>
+        <p>
+            Podemos ver que la etiqueta <code>cite</code> hereda la letra blanca, pero no hereda el color de 
+            fondo directamente. Para ello debemos forzarlo con el valor inherit.
+        </p>
+        <img src="img/herencia2.jpg"/>
+        <p>
+            En este caso se puede ver cómo ahora aparece reflejado en las herramientas de desarrollador el 
+            hecho de que la etiquete <code>cite</code> hereda el color de fondo. Antes si bien se veía de 
+            color carmesí, ese color era del padre y como se notó la etiqueta <code>cite</code> no tenía 
+            color de fondo en sí, sólo estaba pintada por el color de fondo del padre (más no heredo el valor 
+            del color de fondo).<br/>
+            La herencia puede ser cancelada dandole al valor heredado un valor distinto o usando el valor 
+            <code>initial</code> que establece el valor a los originales del navegador.
+        </p>
+    </div>
+    <ul>
+        <li >
+            <a class="inicio-pagina" href="introduccion.html#menu" >
+                ⏫
+            </a>
+        </li>
+        <li>
+            <a class="volver-index" href="index.html">🏠</a>
+        </li>
+            
+    </ul>
+
+</article>
+</body>
+</html>

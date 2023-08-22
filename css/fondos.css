@@ -1,0 +1,34 @@
+.tituloPrincipal {
+    text-align:center;
+    
+}
+body{
+    background-color: dodgerblue;
+    color:black;
+    font-size: 15px;
+    /*carga la imagen desde la carpeta, usar al principio ../ para salir de la carpeta
+    de css e ingresar a las otras carpetas*/
+    background-image:url(../img/fondo.png);
+    /*determina cuántas veces se repite la imagen de fondo*/
+    background-repeat: no-repeat;
+    /*determina la posición de la imagen, el efecto sólo se visualiza si la imagen no 
+    ocupa el 100% de la imagen*/
+    background-position:initial;
+    /*permite determinar si la imagen de fondo seguirá al viewport, al scroll o al 
+    contenido*/
+    background-attachment: scroll;
+    /*
+    Con la propiedad background se pueden usar varias propiedades a la vez
+    background: color urlImagenDeFondo valorDeRepeteat valorDePosition
+    Con esto podemos eliminar background-image, background-color, background-repeteat
+    y background-position de la siguiente manera:
+
+    background: dodgerblue url(../img/fondo.png) no-repeat initial scroll
+
+    */
+}
+
+.textoEjemplo {
+    background-color:black;
+    color:whitesmoke;
+}

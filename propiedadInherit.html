@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inherit</title>
+    <link rel="stylesheet" href="css/propiedadInherit.css">
+    <link rel="stylesheet" href="css/estiloGlobal.css">
+</head>
+<body>
+    <h1 class="tituloPrincipal">Propiedad Inherit</h1>
+    <article id="menu">
+        <ul>
+            <li>
+                <a href="index.html">
+                    Volver Inicio
+                </a>
+                
+            </li>
+            <li>
+                <a href="propiedadInherit.html#ejemplo1">
+                    Ejemplo 1
+                </a>
+                
+            </li>
+            <li>
+                <a href="propiedadInherit.html#ejemplo2">
+                    Ejemplo 2
+                </a>
+                
+            </li>
+            <li>
+                <a href="introduccion.html#herencia">
+                    Más sobre herencia
+                </a>
+                
+            </li>
+        </ul>
+    </article>
+    <hr/>
+    <article id="ejemplo1">
+        <p>
+            La propiedad inherit permite que una caja hijo herede las propiedades de una caja 
+            padre. Véase la siguiente caja ejemplo<br/>
+        </p>
+        <div class="padre">
+            <div class="hijo">
+                Prueba
+            </div>
+        </div>
+    
+        <div class="padre2">
+            <div class="hijo2">
+                Prueba
+            </div>
+        </div>
+    
+        <div class="padre3">
+            <div class="hijo3">
+                Prueba
+            </div>
+        </div><br/>
+        <p>
+            En los ejemplos superiores se tienen los siguientes códigos para cada caja de arriba 
+            abajo
+        </p>
+        <div style="display:flex;margin:10px;">
+            <img src="img/inherit1.jpg"/>
+            <img src="img/inherit2.jpg"/>
+            <img src="img/inherit3.jpg"/>
+        </div>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="propiedadInherit.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+
+    <hr/>
+    
+    <article id="ejemplo2">
+        <p>
+            Como se ve, en cada caso, la caja hijo hereda los valores del atributo margin-left. 
+            A medida que el margin-left aumenta también el texto que se encuentra dentro de la 
+            caja hijo aumenta su margin-left ya que va heredando ese valor. 
+            Existen más propiedades que se pueden heredar, pero que expresamente debe expresarse la herencia
+            como se los border. Veamos esto en el siguiente ejemplo<br/>
+            <blockquote class="cuca">
+                A la grande le puse cuca-<br/>
+                <cite>Homero Simpson</cite>
+            </blockquote>
+            En este caso vemos que la etiqueta <code>cite</code>, no hereda el borde. Para ello debemos decirselo
+            expresamente.<br/>
+            <blockquote class="cuca2">
+                A la grande le puse cuca-<br/>
+                <cite>Homero Simpson</cite>
+            </blockquote>
+        </p>
+        <img src="img/herencia3.jpg"/>
+        <ul>
+            <li >
+                <a class="inicio-pagina" href="propiedadInherit.html#menu" >
+                    ⏫
+                </a>
+            </li>
+            <li>
+                <a class="volver-index" href="index.html">🏠</a>
+            </li>
+                
+        </ul>
+    </article>
+</body>
+</html>

@@ -1,0 +1,57 @@
+.tituloPrincipal {
+    text-align:center;
+    color: red;
+}
+
+.padre {
+    padding: auto;
+    border: 1px solid goldenrod;
+    margin-left:10%;
+    background-color: red;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+.hijo{
+    margin-left: inherit;
+}
+
+.padre2 {
+    padding: auto;
+    border: 1px solid goldenrod;
+    margin-left:30%;
+    background-color: red;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+.hijo2{
+    margin-left: inherit;
+}
+
+.padre3 {
+    padding: auto;
+    border: 1px solid goldenrod;
+    margin-left:50%;
+    background-color: red;
+    max-width: 300px;
+    box-sizing: border-box;
+}
+
+.hijo3{
+    margin-left: inherit;
+}
+
+.cuca, .cuca2{
+    border-style: dotted;
+    border-color:green;
+    border-width: 5px;;
+    width:200px;
+    height: 100px;
+    padding:100px 20px;
+}
+
+.cuca2 cite{
+    border-style:inherit;
+    border-color:inherit;
+}

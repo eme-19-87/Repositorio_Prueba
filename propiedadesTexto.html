@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Propiedades De Texto</title>
+    <link rel="stylesheet" href="css/propiedadesTexto.css">
+  </head>
+  <body>
+  	<h1 class="tituloPrincipal">Propiedades De Texto</h1>
+  	<p>La primera propiedad que se verá es line-height. Esta propiedad determina el tamaño que ocupará la letra. El valor de 1 line-height equivale al tamaño de la letra en sí, y se puede pensar que la letra se grafica medio line-height hacia arriba y medio line-height hacia abajo usando el centro de la letra como el punto desde donde 'nace' la misma. Así, si ocupara un espacio line-height de dos la mitad hacia arriba ocuparía 1 unidad de espacio y la mitad para abajo ocuparía la otra unidad de espacio.</p>
+  	<img src="img/propiedadesTexto1.jpg"/>
+  	<hr/>
+  	Vamos a ver ahora cómo exportar tipografías, es decir, tipos de letras. Hay una manera muy sencilla que es mediante una característica de css la cual es @font-face. @font-face debe estar definida en un documento css y su sintaxis es
+
+  	<pre>
+  		<code>
+  			@font-face {
+	  		    font-family: nombre de la familia de la fuente;
+			    src: la ruta donde se encuentra nuestra fuente. Su formato será:
+			    url(rutaDeLaFuente) format(nombreDelFormato)
+			    nombreDelFormato puede ser:
+			    -truetype: si la extensión de la fuente es ttf.
+			    -woff2: si la extensión es woff2.
+			    -woff: si la extensión es woff.
+			    Existen otros más como svg y eot. La mayoría de páginas recomiendan woff2 o woff;
+
+			    font-style:  define el estilo de la fuente (normal, italic, oblique);
+			    font-weight: define el grosor de la fuente (normal, bold, bolder, lighter);
+		  		}
+  		</code>
+  	</pre>
+  	<p>
+  		Existe algunas páginas en la cual podemos obtener familias de fuentes para descargar: 
+  		<a href="https://www.dafont.com/es/" target="_blank">Dafont</a><br/>
+  		Entonces, si queremos cargar una determinada familia de letras podemos hacer:<br/>
+  		<pre>
+  		<code>
+  		@font-face {
+		  	font-family: 'Ephesis';
+			src: url('familiasFuentes/Ephesis-Regular.ttf') format('truetype');
+			font-style: normal;
+			font-weight: 300;
+		}
+  		</code>
+  	</pre>
+  	Luego podemos hacer lo siguiente 
+  	<pre>
+  		<code>
+  		.titular {
+		  	font-family: 'Ephesis';
+		}
+  		</code>
+  	</pre>
+  	Otra forma es usar los links que nos provee google fonts. Un link de google font se ve algo así
+  	<pre>
+  	<code>
+	&lt;link rel="preconnect" href="https://fonts.googleapis.com";&sol;&gt;
+ 	&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&sol;&gt;
+	&lt;link href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap" rel="stylesheet"&sol;&gt;
+    </code>
+    </pre>
+    Son esos links los que debemos colocar en la etiqueta head de nuestro documento html para usar la fuente.
+  	</p>
+   <p>Existen algunas recomendaciones que sería bueno seguir para mejorar el rendimiento:<br/>
+   	<ul>
+   		<li>Es recomendable a veces usar las fuentes desde páginas como google font u otras para la optimización
+             ya que tener muchas fuentes cargandose dará problemas de rendimiento.
+         </li>
+         <li>Siempre revisar si se requiere necesariamente versiones bold, italic y demás.
+         </li>
+   	</ul>
+   	Una carecterística del atributo font-family está en su sintaxis: <code>font-family:fuente1,fuente2,...,fuenteN</code><br/>
+   	Si se halla la primera fuente, se aplicará esa fuente. Pero si no se halla la primera fuente se buscará la segunda, tercera y así
+   	sucesivamente hasta encontrar la fuente número N. Por eso es recomendable dejar alguna fuente por default en caso de que haya problemas al colocar la fuente deseada.
+   </p>
+   <hr/>
+   <h2 class="tituloPrincipal">Más Formato De Texto</h2>
+   <div>
+	   <p>
+		   Existen varias propiedades que se pueden usar para el texto
+	   </p>
+	   <ul>
+		   <li>
+			   color: cambia el color de la letra
+		   </li>
+		   <li>
+			background-color: cambia el color de fondo, es útil para contrastar color de 
+			letra y de fondo.
+			</li>
+			<li>
+				text-align: permite alinear el texto
+			</li>
+			<li>
+				text-transform: permite capitalizar las letras, ponerlas en mayúscula,
+				ponerlas en minúsculas, etc.
+			</li>
+			<li>
+				text-shadow: permite aplicar una sombra al texto indicando pixelesEnX,
+				pixelesEnY, difuminación, colorSombra.
+			</li>
+			<li>
+			letter-spacing: permite establecer una medida para la separación entre caracteres
+			</li>
+			<li>
+				word-spacing: permite establecer una medida para la separación entre palabras
+				completas.
+			</li>
+			<li>
+				direction:permite establecer la dirección en la cual se muestran los caracteres,
+				por ejemplo, de izquierda a derecha.
+			</li>
+			<li>
+				decoration: esta propiedad es similar a la que se usan en los links para quitar
+				el subrayado, permite darle estilo como subrayado, doble raya, etc. No es 
+				recomendado para texto que no sea link. Puede ser útil para darle un formato a los 
+				títulos o subtítulos.
+			</li>
+			<li>
+				text-ident: permite indentar el texto dandole una medida.
+			</li>
+			<li>
+				line-height: permite darle una altura de las líneas, sus valores no son en px u otra 
+				medida, sólo se coloca el valor numérico.
+			</li>
+			<li>
+				white-space: permite modificar el comportamiento del espacio en blanco en el texto. 
+				Por ejemplo, con no-wrap el texto se sale de su caja contenedora, no lo envuelve.
+			</li>
+	   </ul>
+   </div>
+  </body>
+  </html>
